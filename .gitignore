@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+*.pyc
+.vscode
+etc
+.sqlite3
+media_cdn
+static_cdn
