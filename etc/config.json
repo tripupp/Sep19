@@ -1,6 +1,0 @@
-{
-    "SECRET_KEY": "nws4%0&@m)(sf0=!b)iblj17_jd8@^f1x+ptp(6xo9n7ypvy-e",
-    "DATABASE_NAME": "tripupp",
-    "DATABASE_USER": "",          // your mysql user
-    "DATABASE_PASSWORD": ""       // your mysql password
-}
