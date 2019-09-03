@@ -23,7 +23,7 @@ class CustomUser(AbstractUser):
     mobile = models.BigIntegerField(null=True)
     gender = models.CharField(max_length=10,
                               choices=[('Male', 'Male'), ('Female', 'Female'),
-                              ('Other', 'Other')])
+                                       ('Other', 'Other')])
     city = models.CharField(max_length=500)
     state = models.CharField(max_length=500)
     country = models.CharField(max_length=500)

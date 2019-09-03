@@ -1,0 +1,3036 @@
+
+
+div#comments h2.comments-title {
+	text-align:center;
+	padding: 0;
+	color: #4A4A4A;
+}
+
+div#comments #commentform p.comment-form-url, div#comments #commentform p.comment-notes, div#comments #reply-title, div#comments #commentform p label {
+	display: none;
+}
+
+div#comments #commentform p {
+	margin: 15px 0;
+	text-align: center;
+	font-size: 14px;
+}
+
+div#comments #commentform p input, div#comments #commentform p textarea {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    height: 40px;
+    padding: 10px 10px 10px 13px;
+    width: 100%;
+}
+
+div#comments #commentform p textarea {
+	height: 150px;
+}
+
+div#comments #commentform p.form-submit {
+	width: 125px;
+	margin: 0 auto;
+}
+
+div#comments #commentform p input#submit {
+	width: 125px;
+	height: 40px;
+	background: #43AAF0;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+
+div#comments ol.comment-list article {
+	margin-top: 0;
+	position: relative;
+}
+
+div#comments footer.comment-meta {
+	float: none;
+}
+
+div#comments footer.comment-meta div.comment-author {
+	overflow: hidden;
+	width: 250px;
+}
+div#comments footer.comment-meta img {
+	width: 40px !important;
+	height: 40px !important;
+	float: left;
+	background: url('/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/user.png') no-repeat;
+}
+
+div#comments footer.comment-meta cite {
+	float: left;
+	margin-left: 10px;
+	font-size: 16px;
+    text-transform: none;
+	font-weight: 600;
+	letter-spacing: 0.6px;
+	color: #4A4A4A;
+}
+
+div#comments footer.comment-meta cite::after {
+	content: 'said';
+	font-size: 16px;
+	color: #82878e;
+	margin-left: 5px;
+}
+
+div#comments ol.comment-list div.comment-content {
+	border: none;
+	background-color: inherit;
+	margin-left: 0;
+	padding: 0;
+	padding-left: 5px;
+}
+
+div#comments ol.comment-list div.comment-content::before {
+	border: none;
+}
+
+div#comments ol.comment-list div.comment-content::after {
+	border: none;
+}
+
+div#comments ol.comment-list > li.comment {
+	border-bottom: 1px solid #bdc3c7;
+}
+
+div#comments ol.comment-list div.comment-content .comment-metadata  {
+	border-bottom: none;
+}
+
+div#comments ol.comment-list div.comment-metadata  time {
+	position: absolute;
+	left: 50px;
+    top: -27px;
+	font-size: 11px;
+}
+
+
+
+div#comments ol.comment-list p {
+	color: #82878e;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+	text-align: justify;
+}
+
+div#comments ol.comment-list div.comment-metadata .reply-link {
+	font-size: 11px;
+    left: 50px;
+    position: absolute;
+    top: -12px;
+}
+
+/* ---------------------- Comments styles finished -------------- */
+
+
+
+.search-form input.search-field::-webkit-input-placeholder {
+	color: #969696;
+}
+
+.search-form input.search-field::-moz-placeholder {
+	color: #969696;
+}
+
+.search-form input.search-field:-moz-placeholder {
+	color: #969696;
+}
+
+.search-form input.search-field:-ms-input-placeholder {
+	color: #969696;
+}
+
+.search-form button i.icon-search::before {
+	color: #4a4a4a;
+	margin-bottom: 6px;
+}
+
+
+/* ----------------- Seller Contact form styles --------------------- */
+form#seller-c {
+	padding: 40px 60px;
+}
+
+form#seller-c h3:first-of-type { 
+	letter-spacing: 0.3px;
+    text-transform: uppercase !important;
+	background: url('/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/2015/04/callUs.jpg') no-repeat;
+	background-position: 0 2px;
+	padding-left: 30px;
+}
+
+form#seller-c h3 span {
+	color: #43AAF0;
+}
+
+form#seller-c p:first-of-type { 
+	display: none;
+}
+
+form#seller-c label {
+	font-size: 14px;
+    letter-spacing: 0.6px;
+    text-transform: none;
+	color: #4A4A4A;
+	margin-left: 2px;
+}
+
+form#seller-c input {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    height: 40px;
+    padding: 10px 10px 10px 13px;
+    width: 240px;
+}
+
+form#seller-c  > div {
+	float: left;
+	margin-left: 30px;
+	position: relative;
+}
+
+form#seller-c  > div.jq-leaving-from, form#seller-c  > div#num-nights, form#seller-c  > div#name-f, form#seller-c  > div#add-info, form#seller-c > div.pos-abs {
+	margin-left: 0;
+}
+
+form#seller-c .cstm-select-bx {
+	position: relative;
+}
+
+form#seller-c .cstm-select-bx input {
+	margin-top: -25px;
+}
+
+form#seller-c .cstm-select-bx em {
+	border: none;
+	position: absolute;
+    right: 5px;
+    top: 8px;
+	background: transparent;
+}
+
+form#seller-c .jq-leaving-from {
+	height: 80px;
+}
+
+form#seller-c label.cstm-radio {
+	background: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/2015/04/cust-radio-off.png") no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 70px;
+	background-position: 0 38px;
+	height: 60px !important;
+}
+
+form#seller-c .jq-already-booked {
+	width: 240px;
+}
+
+form#seller-c .jq-already-booked label:nth-of-type(2) {
+	left: 2px;
+}
+
+form#seller-c .jq-leaving-date {
+	width: 260px;
+}
+
+form#seller-c .jq-leaving-date input {
+	width: 130px;
+}
+
+form#seller-c .jq-leaving-date #departureDate {
+	position: absolute;
+	top: 27px;
+}
+
+form#seller-c .jq-leaving-date span {
+	position: absolute;
+	left: 143px;
+    top: 0;
+	width: 170px;
+}
+
+form#seller-c .jq-leaving-date label.cstm-chk-bx {
+	background: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/edd/2015/04/cust-check-off.png") no-repeat;
+	position: absolute;
+	top: 0;
+	background-position: 0 36px;
+	height: 65px !important;
+}
+
+form#seller-c #num-nights, form#seller-c #num-travellers, form#seller-c #package-t {
+	height: 90px;
+}
+
+form#seller-c #num-nights label{
+	position: absolute;
+	top: 0;
+}
+
+form#seller-c .place-holder {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    height: 40px;
+    padding: 10px 10px 10px 13px;
+	width: 240px;
+}
+
+form#seller-c #num-nights em {
+	margin-top: 25px;
+}
+
+form#seller-c #num-travellers label {
+	position: absolute;
+	top: 0;
+	width: 160px;
+}
+
+form#seller-c #num-travellers .cstm-select-bx {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    height: 40px;
+    padding: 6px 10px 10px 13px;
+	width: 114px;
+	margin-top: 25px;
+}
+
+form#seller-c #num-travellers .cstm-select-bx p:nth-of-type(3){ 
+	position: absolute;
+    top: -2px;
+    right: 0;
+}
+
+form#seller-c #num-travellers .cstm-select-bx p:nth-of-type(3) span {
+	position: absolute;
+    right: 25px;
+    top: 8px;
+}
+
+form#seller-c #package-t label{
+	position: absolute;
+	top: 0;
+}
+
+form#seller-c #package-t em {
+	margin-top: 25px;
+}
+
+form#seller-c p.nine-one {
+	margin-top: 6px;
+	margin-left: 6px;
+}
+
+form#seller-c #add-info {
+	clear: left;
+}
+
+form#seller-c #add-info em{
+	position: absolute;
+    top: 20px;
+}
+
+form#seller-c #add-info textarea {
+	width: 780px;
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    padding: 6px 10px 10px 13px;
+	height: 110px;
+	margin-top: 25px;
+}
+
+form#seller-c > div.pos-abs {
+	clear: left;
+	margin-top: 40px;
+}
+
+form#seller-c > div.pos-abs button {
+	background: #FF7548;
+	color: #fff;
+    text-transform: none;
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 160px;
+}
+
+/* ----------------- Seller Contact form styles finished ------------ */
+
+/*----------------- Team page styles -------------------------------- */
+#team-page {
+	margin-top: -25px;
+}
+
+#team-page h3 {
+	text-align: center;
+	letter-spacing: 0.4px;
+	text-transform: uppercase !important;
+	margin-bottom: 35px;
+}
+
+#team-page .founders {
+	border-radius: 8px; 
+	background: #fff; 
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	padding: 17px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+#team-page .founders .founder-image {
+	float: left;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	width: 160px;
+	height: 160px;
+}
+
+#team-page .founders > div {
+	float: right;
+	width: 81%;
+	padding-left: 10px;
+	position: relative;
+}
+
+#team-page .founders .founder-name {
+	color: #ff7548;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-top: 3px;
+    text-transform: none;
+	margin-bottom: 8px;
+}
+
+#team-page .founders ul {
+	margin: 0;
+}
+
+#team-page .founders .social_icons {
+	display: inline;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#team-page .founders li {
+	float: left;
+}
+
+#team-page .founders .social_icons li {
+	margin-left: 5px;
+}
+
+#team-page .founders .work-fields li {
+	font-size: 13px;
+	margin-right: 7px;
+	border: 1px solid #82878e;
+	border-radius: 15px;
+	padding: 0 6px;
+	margin-bottom: 15px; 
+}
+
+#team-page .founders h4 {
+	margin: 0 0 5px 0;
+	text-transform: none;
+	letter-spacing: .3px;
+}
+
+#team-page .team-members {
+	margin-top: 80px;
+}
+
+#team-page .team-members div {
+	float: left;
+	margin-right: 105px;
+	margin-bottom: 30px;
+}
+
+#team-page .team-members div:nth-of-type(4n+1) {
+	margin-left: 30px;
+}
+
+#team-page .team-members div:nth-of-type(4n) {
+	margin-right: 0;
+}
+
+#team-page .team-members div img.member-image {
+	width: 155px;
+	height: 155px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+
+#team-page .team-members .member-name {
+	color: #ff7548;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-top: 3px;
+    text-transform: none;
+	margin-bottom: 0;
+    text-align: center;
+}
+
+#team-page .team-members .member-field {
+	font-size: 13px;
+	border: 1px solid #82878e;
+	border-radius: 15px;
+	padding: 2px 12px;
+	text-transform: none;
+	letter-spacing: .3px;
+	display: table;
+	margin: 8px auto;
+}
+
+#team-page .team-members ul {
+	width: 100px;
+	margin: 0 auto;
+}
+
+#team-page .team-members li {
+	display: inline;
+	margin-right: 6px;
+}
+/*----------------- Team page styles finished ----------------------*/
+
+/*----------------- Careers page styles ----------------------------*/
+
+#careers {
+	margin-top: 25px;
+}
+
+#careers .desc-info {
+	border-radius: 8px; 
+	background: #fff; 
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	padding: 40px;
+}
+
+#careers .desc-info p {
+	font-size: 20px;
+}
+
+#careers h3 {
+	text-align: center;
+	letter-spacing: 0.4px;
+	text-transform: uppercase !important;
+	margin-bottom: 40px;
+	color: #4A4A4A;
+	font-size: 21px;
+    font-weight: 600;
+	margin-top: 100px;
+}
+
+#careers #we-offer {
+	overflow: hidden;
+}
+
+#careers .we-offer {
+	padding-left: 50px;
+}
+
+#careers .we-offer:nth-of-type(3n+1) {
+	clear: left;
+}
+
+#careers .we-offer .img-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#careers .we-offer h4 {
+	color: #ff7548;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: none;
+	margin-bottom: 8px;
+	font-size: 22px;
+    margin-top: 6px;
+}
+
+#careers .we-offer h4, #careers .we-offer p {
+	font-size: 18px;
+}
+
+/*----------------- Careers page styles finished--------------------*/
+
+
+/*---------------- Individual careers page styles --------------------*/
+
+.testimonial {
+	border-radius: 8px; 
+	background: #fff; 
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	padding: 40px;
+	margin-top: 40px;
+}
+
+.testimonial h1 {
+	font-size: 22px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px;
+    margin-top: 3px;
+	margin-bottom: 8px;
+	color: #F35C6E;
+}
+
+.testimonial p { 
+	font-size: 19px;
+}
+
+.testimonial h3 { 
+	font-size: 17px;
+    letter-spacing: 0.4px;
+    margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.testimonial ol {
+	margin-left: 25px;
+	margin-bottom: 50px;
+}
+
+.testimonial ol li {
+	padding-left: 15px;
+}
+
+.testimonial li {
+	font-size: 18px;
+}
+
+.testimonial p a.a2 {
+	color: #F35C6E;
+}
+
+/*---------------- Individual careers page styles finished -----------*/
+
+/* --------------- Contact Us Styles -------------------------------- */
+
+.page-template-contact .header-outer .entry-page-title {
+	display:none;
+}
+#contact-us > div {
+	width: 550px;
+	margin: 0 auto;
+}
+
+#contact-us h2 {
+	font-size: 32px !important;
+    font-weight: bold !important;
+    letter-spacing: 0.3px;
+    margin: 50px 0 10px;
+    text-align: center;
+	text-transform: none !important;
+}
+
+#contact-us p {
+	text-align: center;
+}
+
+#contact-us form {
+	margin: 45px auto 70px;
+	max-width: 500px;
+}
+
+#contact-us input, #contact-us textarea  {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    height: 43px;
+    padding: 10px 10px 10px 13px;
+	margin-top: -8px;
+}
+
+#contact-us textarea {
+	width: 100%;
+	max-width: 100%;
+	height: 180px;
+}
+
+#contact-us input#c-submit {
+	width: 130px;
+	height: 40px;
+	background: #43AAF0;
+	color: #fff;
+    display: table;
+    letter-spacing: 0.3px;
+    margin: 15px auto;
+    text-transform: none;
+	border-radius: 7px;
+}
+#contact-us input#c-submit:hover {
+	background: #3596D9;
+}
+
+/* --------------- Contact Us Styles finished ----------------------- */
+
+/* -------------------------- form styles --------------------------- */
+
+.contact-seller-header {
+	margin-top:10px;
+	margin-bottom:30px;
+	padding:30px 20px 40px 20px;
+}
+.contact-seller-image {
+	width:150px;
+	height:90px;
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/contact-seller-image.png");
+	background-repeat: no-repeat;
+	background-size:cover;
+	display:inline-block;
+}
+.contact-seller-heading {
+	margin-left:20px;
+	margin:0 auto;
+	text-align:center;
+}
+
+.contact-seller-heading h2 {
+	font-size: 24px !important;
+	margin-bottom:5px !important;
+	text-transform: none !important;
+}
+
+
+form#c-seller {
+	position: relative;
+	margin-top:16px;
+}
+form#c-seller .col-md-3 {
+	margin-bottom: 35px;
+}
+form#c-seller h3:first-of-type { 
+	letter-spacing: 0.3px;
+    text-transform: uppercase !important;
+	background: url('/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/2015/04/callUs.jpg') no-repeat;
+	background-position: 0 2px;
+	padding-left: 30px;
+	margin-bottom: 45px;
+}
+
+form#c-seller h3 span {
+	color: #43AAF0;
+}
+form#c-seller #info-addi {
+	margin-top:30px;
+}
+form#c-seller h3#alert-text {
+	color: #b94a48;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+	position: absolute;
+	left: 90px;
+    top: 50px;
+	display: none;
+}
+
+form#c-seller label, form#c-seller h4 {
+	display:block;
+	font-size: 14px;
+    letter-spacing: 0.6px;
+    text-transform: none;
+	color: #4A4A4A;
+	margin-left: 2px;
+	margin-bottom: 3px;
+	padding-top: 2px;
+}
+
+form#c-seller input, form#c-seller select, form#c-seller textarea {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    padding: 10px 10px 10px 13px;
+}
+
+form#c-seller input, form#c-seller select {
+	height: 40px;
+    width: 240px;
+}
+
+form#c-seller input[type="radio"], form#c-seller input[type="checkbox"]  {
+	height: auto;
+	width: auto;
+}
+
+form#c-seller select {
+	background: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/edd/2015/04/arrow-down.png") no-repeat right 10px center #fff;
+    padding-top: 8px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+form#c-seller .has-error .help-block{
+	position: absolute;
+	font-size: 12px;
+}
+
+select {
+	background: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/edd/2015/04/arrow-down.png") no-repeat right 10px center #fff;
+    /*padding-top: 8px;*/
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  form#c-seller select {
+		padding-top: 5px;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  ::i-block-chrome, form#c-seller select {
+		background: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/edd/2015/04/arrow-down.png") no-repeat 220px center #fff;
+	}
+}
+
+.page-template-seller-contact .entry-page-title {
+	display:none;
+}
+form#c-seller select::-ms-expand
+{
+    display: none;
+}
+form#c-seller h3 {
+	padding-top:7px;
+}
+
+.need-help-text {
+	margin-bottom:40px;
+	margin-top:20px;
+}
+form#c-seller .row {
+	margin-bottom:34px;
+}
+form#c-seller #flights-require label {
+	float: left;
+	margin-right: 10px;
+}
+
+form#c-seller #flights-require input {
+	margin-right: 8px;
+}
+
+form#c-seller #flights-require span {
+	position: relative;
+	bottom: 2px;
+}
+
+form#c-seller #on-leave label:nth-of-type(2) {
+	top: 34px;
+	left: 129px;
+	font-weight: normal;
+	color: #82878e;
+}
+form#c-seller #on-leave span {
+	position:absolute;
+	top:0;
+	left:148px;
+}
+form#c-seller #on-leave span label {
+	font-weight:normal;
+}
+
+form#c-seller #travel-ca select {
+	display:inline-block;
+	width:48%;
+}
+
+form#c-seller div#mobile-s input {
+	padding-top: 9px;
+}
+
+form#c-seller p#pre-s {
+	position: absolute;
+	top: 32px;
+	left: 8px;
+	padding-left:20px;
+	padding-right:5px;
+}
+
+form#c-seller #info-addi textarea {
+	height: 110px;
+	max-height: 160px;
+	width:100%;
+}
+
+form#c-seller #submit-c input[type="submit"] {
+	float: right;
+	border-radius: 6px;
+	background: #FF7548;
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 160px;
+	color: #fff;
+}
+
+form#c-seller #submit-c input[type="submit"]:hover {
+	background-color: #ED673B;
+}
+
+form#c-seller small{
+	float: left;
+	display: inline-block;
+	color: #9E9E9E;
+	font-size: 14px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+/* -------------------------- form styles finished ------------------ */
+
+/* --------------------- Itinerary page styles ---------------------- */
+
+.itinerary-special-container div.country {
+	padding: 50px 135px; 
+	border-top: 0;
+}
+
+.itinerary-special-container .country h1 {
+	font-size: 32px !important;
+    letter-spacing: 0;
+	clear: none;
+	margin-left: 0;
+}
+.itinerary-special-container .country h3 {
+	font-size: 1.17em;
+	color: #515a63;
+}
+
+.itinerary-special-container p:empty, .itinerary-special-container br {
+	display: none;
+} 
+
+.itinerary-special-container .country img.flag {
+	width: 35px;
+	height: 25px;
+}
+
+.itinerary-special-container .country h2.sec-title {
+	font-size: 14px !important;
+	font-size: 14px !important;
+    padding-left: 0 !important;
+	line-height: normal !important;
+	text-transform: uppercase !important;
+	color: #515a63;
+	font-weight: bold !important;
+	margin: 10px 0 !important;
+}
+
+.itinerary-special-container .country h3.img-title {
+	line-height: 12px;
+	color: #fff;
+	font-size: 11px;
+	text-transform: uppercase !important;
+	
+	position: absolute;
+	top: 0;
+}
+
+#tagsLocation{
+	margin-bottom: 5px;
+}
+.tagsTokens{
+	display: inline-block;
+	margin-top: 5px;
+}
+.token{
+	display: inline-block;
+	float: left;
+	padding: 5px 8px;
+	border-radius: 5px;
+	border: 1px solid #DDD;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+.token .removeToken{
+	padding: 5px;
+	margin-bottom: -3px;
+	margin-left: 5px;
+}
+
+/* End of Rakesh CSS */
+
+
+/* Abhishek CSS */
+
+html {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+.container {
+	max-width:1200px;
+	padding-left:0;
+	padding-right:0;
+}
+
+
+.input-app {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 15px;
+    padding: 10px 10px 10px 13px;
+}
+
+
+.btn.btn-primary:hover {
+	background-color:#EC6336;
+	border:1px solid #EC6336;
+}
+
+
+.orange-text {
+	color:#fb7548 !important;
+}
+a:hover {
+    color:#575757;
+}
+hr {
+    margin: 0;
+}
+.content-grid-download .entry-image .item-price span {
+    border-bottom: medium none;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.user-navigation-plug ul {
+    display: none;
+}
+.user-navigation-plug li a:hover {
+    background: none repeat scroll 0 0 #939393;
+    color: red;
+}
+.user-navigation-plug:hover ul {
+    display: block;
+}
+.page-header.home-page-header {
+    background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/hero-bcg.jpg");
+    background-size: cover;
+	margin:0;
+}
+.home-search .page-header {
+    padding: 100px 0 130px;
+}
+.home-page-header .search-submit {
+    background-color: #f96643 !important;
+    width: 60px;
+}
+.home-page-header h1 {
+    padding: 50px 0;
+	font-family:'Source Sans Pro';
+}
+.home .home-page-header h1 {
+	padding-bottom: 0;
+}
+.home-page-header h5 {
+    color: #fff;
+    font-style: normal !important;
+    font-weight: 400;
+	font-size:20px;
+}
+.home-search .home-page-header .search-form .icon-search::before {
+    color: #fff;
+}
+.home-search .home-page-header .search-form {
+    margin: 46px auto 0;
+    max-width: 65%;
+    position: relative;
+}
+.home-search .home-page-header .search-form label {
+	width:100%;
+}
+.home-search .home-page-header .search-form .search-field {
+    border: medium none;
+    border-radius: 5px;
+    color: #363636;
+    font-size: 24px;
+    height: 56px;
+    max-width: 100%;
+    padding-left: 24px;
+    text-transform: none;
+    width: 100%;
+	font-weight:400;
+}
+.home-search .home-page-header .search-form i {
+    border-radius: 0 5px 5px 0;
+    height: 56px;
+    position: absolute;
+    right: 0;
+	font-size: 32px;
+	font-weight: normal;
+	background-color:#fd7447;
+	padding: 5px 8px 5px 12px;
+	 
+}
+
+
+
+/* Icons before titles */
+
+.home-widget.marketify_widget_recent_posts .home-widget-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -105px -5px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+}
+.home-widget.marketify_widget_recent_downloads .home-widget-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -5px -5px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+	margin-top: -5px;
+}
+.home-widget.widget_woothemes_features .home-widget-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -226px -207px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+	margin-top: -5px;
+}
+
+#enhancedtextwidget-2 .home-widget-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -205px -5px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+	margin-top: -5px;
+}
+#enhancedtextwidget-3 .home-widget-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -155px -5px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+	margin-top: -5px;
+}
+.home-widget.widget_author_avatars .home-widget-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -42px -55px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+	margin-top: -5px;
+}
+.marketify_widget_featured_popular.popular .section-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -5px -5px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+	margin-top: -5px;
+}
+
+
+/* Icons before titles */
+.itinerary-special-container .accomodation .sec-title span:before {
+	content:'';
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:10px;
+	background-position: -55px -151px;
+	width: 45px;
+    height: 45px;
+    overflow: hidden;
+	margin-top: -5px;
+}
+.itinerary-special-container .shareaholic-canvas{
+	display: none !important;
+}
+.itinerary-price{
+	position: absolute;
+	right: 0;
+	bottom: 100px;
+	text-align: right;
+	padding: 0 10px;
+	color: #FFF;
+	font-size: 24px;
+	
+}
+
+
+/* Collection Images */
+.edd-taxonomy-widget .cat-item{
+	width: 240px;
+	height: 130px;
+	overflow: hidden;
+}
+.edd-taxonomy-widget .cat-item a{
+	font-size: 0px;
+	width: 240px;
+	height: 130px;
+}
+.edd-taxonomy-widget .cat-item-75 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/adventure.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-65 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/beach.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-72 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/family.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-73 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/honeymoon.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-76 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/offbeat.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-61 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/sightseeing.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-71 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/pilgrimage.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-74 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/weekend.png");
+	vertical-align:middle;
+	display:block;
+}
+
+.edd-taxonomy-widget .cat-item-1255 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/budget.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-1256 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/hills.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-1252 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/history.png");
+	vertical-align:middle;
+	display:block;
+}
+.edd-taxonomy-widget .cat-item-1254 a:before {
+	content:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/collections/luxury.png");
+	vertical-align:middle;
+	display:block;
+}
+
+.media-mentions {
+    background-color: #fff;
+    padding: 10px 0;
+	text-align:center;
+}
+.media-mentions table {
+    width: 1024px;
+	margin: 0 auto;
+	border-bottom: medium none;
+    border-top: medium none;
+}
+.media-mentions table tr td {
+    text-align: center;
+}
+.entry-page-title.container {
+    background-image: linear-gradient(rgba(255, 255, 255 ,0) 0%, rgba(0, 0, 0, 0.7) 57%);
+     background-image: -moz-linear-gradient(rgba(255, 255, 255 ,0) 0%, rgba(0, 0, 0, 0.7) 57%);
+      background-image: -webkit-linear-gradient(rgba(255, 255, 255 ,0) 0%, rgba(0, 0, 0, 0.7) 57%);
+    margin: 0;
+    max-width: 100%;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
+}
+.entry-page-title .entry-title {
+    margin-top: 10%;
+    padding: 0 15%;
+}
+.itinerary-page-header {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 400px;
+    padding-bottom: 0;
+    position: relative;
+	margin: 0;
+}
+.itinerary-page-header .page-title {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    padding-bottom: 0px;
+    text-align: left;
+}
+.itinerary-page-header .itinerary-excerpt {
+    color: #fff;
+    text-align: left;
+    width: 70%;
+}
+.itinerary-page-header .itinerary-title-container {
+    height: 100%;
+    position: relative;
+}
+.itinerary-page-header .itinerary-title-container .itinerary-title-wrap {
+    position: relative;
+	margin: 0 auto;
+	height: 100%;
+}
+.itinerary-page-header .itinerary-meta-container {
+	position: absolute;
+    width: 100%;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    color: #fff;
+    height: 80px;
+    padding-top: 20px;
+	margin-top: 20px;
+}
+.itinerary-meta-details {
+    margin: 0 auto;
+    overflow: hidden;
+}
+.itinerary-meta-details a {
+    color: #fff !important;
+}
+.itinerary-meta-details .author{
+	margin-top: -2px;
+}
+.itinerary-meta-details img {
+    float: left;
+	height: 40px;
+    width: 40px;
+	border: 1px solid #EDEDED;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+.download-image-grid-preview{
+	display: none !important;
+}
+.itinerary-meta-details .rating {
+	margin-left: 55px;
+}
+.itinerary-special-container{
+	width: 100% !important;
+	padding: 0 15px;
+	background: #FFF !important;
+}
+.itinerary-special-container .type-download{
+	height: 0 !important;
+	margin: 0 !important;
+}
+.itinerary-special-container .entry-content{
+	margin-top: 0;
+}
+.itinerary-special-container .country-container{
+	width: 100%;
+	padding: 50px 0;
+	margin: 0 auto;
+	border-top: 3px solid #fafafa;
+	background: url('/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/map.png') no-repeat top center;
+}
+.itinerary-special-container .country{
+	width: 1010px;
+	padding: 0 !important;
+	margin: 0 auto;
+}
+.itinerary-special-container .flag{
+	margin-right: 10px;
+}
+
+.itinerary-special-container .country .accom, .itinerary-special-container .country .place, .itinerary-special-container .country .things{
+	background-color: rgba(255, 255, 255, 1);
+	display: inline-block;
+	position: relative;
+}
+.itinerary-special-container .country .accom.three-col:nth-of-type(3n), .itinerary-special-container .country .place.three-col:nth-of-type(3n), .itinerary-special-container .country .things.three-col:nth-of-type(3n){
+	margin-right: 0;
+}
+.itinerary-special-container .country .accom.four-col:nth-of-type(3n), .itinerary-special-container .country .place.four-col:nth-of-type(3n), .itinerary-special-container .country .things.four-col:nth-of-type(3n){
+	margin-right: 0;
+}
+
+
+.itinerary-footer, .travelogue-footer, .author-footer{
+	width: 100%;
+	padding: 20px 0;
+	border-top: 4px solid #EDEDED;
+	background: #FFF;
+}
+.itinerary-foot-container, .author-foot-container{
+	width: 1024px;
+	margin: 0 auto;
+}
+.itinerary-foot-details, .travelogue-foot-details, .author-foot-details {
+	width: 480px;
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.itinerary-foot-details h5, .travelogue-foot-details h5, .author-foot-details h5 {
+    font-size: 18px;	
+	margin-top:48px;
+}
+.itinerary-foot-details img, .travelogue-foot-details img, .author-foot-details img {
+	padding-top:24px;
+}
+.itinerary-foot-details a, .travelogue-foot-details a, .author-foot-details a {
+    color: #fff !important;
+	font-weight: bold;
+	background: #fb7548;
+	border: 1px solid #fb7548;
+	margin: 10px 0;
+	padding: 10px 14px;
+}
+
+
+
+.button-custom {
+    background-color: #62bc84;
+    border-radius: 4px;
+    color: #fff !important;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 14px;
+    text-decoration: none;
+}
+.testcolor {
+    background-color: red;
+}
+.white-text {
+    color: #fff;
+}
+.post-type-label {
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+}
+.entry-image {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.entry-image img {
+    border-radius: 4px;
+}
+.entry-image hr {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 1px;
+}
+.entry-image.homepageitineraries-entry-image {
+    height: 242px;
+    position: relative;
+}
+.entry-image.homepageitineraries-entry-image img {
+    height: 240px;
+}
+.entry-image.homepageitineraries-entry-image .entry-header-custom {
+	padding-bottom: 0;
+}
+.entry-meta .author.vcard img{
+	margin-left: 0 !important;
+	margin-right: 10px !important;
+}
+.itineraries-landing .entry-image {
+    height: 240px;
+    position: relative;
+}
+#main-content.edd_downloads_list.download-grid-wrapper {
+	margin-left:0;
+	margin-right:0;
+}
+.itineraries-landing .entry-image img {
+}
+.content-grid-download .entry-image .item-price span {
+    font-size: 20px;
+}
+.entry-header-custom {
+    bottom: 0;
+    left: 0;
+    padding: 0 20px 15px;
+    position: absolute;
+    width: 100%;
+	text-align:left;
+}
+.entry-header-custom hr {
+    opacity: 0.6;
+	margin-right:20px;
+}
+.entry-header-custom .entry-excerpt {
+	color:#fff;
+}
+.entry-header-custom:hover {
+    margin-bottom: 0;
+}
+.entry-meta-custom {
+    color: #fff;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 100%;
+}
+h1.entry-title-articles {
+    margin: 0;
+}
+h1.entry-title-articles a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+	font-size: 21px;
+    font-weight: 600;
+}
+h1.entry-title-articles a:hover {
+    text-decoration: none;
+}
+.img-overlay {
+    background-color: #000;
+    bottom: 0;
+    height: 240px;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.entry-image .img-overlay {
+    border-radius: 4px;
+}
+h1.entry-title-featuredtrips a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+h1.entry-title-featuredtrips a:hover {
+    text-decoration: none;
+}
+.vcard.author.without-avtar a {
+    color: #fff;
+}
+.vcard.author.without-avtar img {
+    display: none;
+}
+.item-price-featuredtrips {
+    display: inline-block !important;
+	float: right;
+	width: auto !important;
+	text-align: right;
+}
+.header:hover {
+    transform: none;
+}
+.blog-archive-image {
+    padding-left: 0;
+    padding-right: 0;
+}
+.blog-archive-image img {
+    border-radius: 0;
+    height: auto;
+    width: 100%;
+}
+
+.section-title-app {
+    text-transform: uppercase;
+    color: #4A4A4A;
+    font-weight:bold;
+    padding-left:15px;
+    padding:30px 0;
+    margin:0;
+}
+.section-title-app .section-title-icon {
+    width:40px;
+    height:40px;
+    vertical-align: middle;
+    display:inline-block;
+	background-repeat:no-repeat;
+}
+.article-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -105px -5px;
+}
+.travelogue-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -226px -207px;
+}
+.itinerary-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -5px -5px;
+}
+.seller-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -105px -5px;
+}
+.featured-seller-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -42px -55px;
+}
+.destination-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -205px -5px;
+}
+.review-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -255px -5px;
+}
+.inclusions-icon {
+	background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/sprites.png");
+	width: 45px;
+    height: 45px;
+    background-position: -105px -151px;
+}
+.section-title-app .section-title-text {
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 10px;
+	font-size:18px;
+}
+.list-row {
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0 0 20px 0;
+	text-align:left;
+	overflow:hidden;
+	height:80px;
+}
+.list-row .entry-meta {
+    color: #9fa0a2;
+}
+
+.list-row .entry-meta a {
+    color:#9fa0a2;
+}
+
+.list-row .entry-meta .author a {
+    color: #575757;
+}
+
+.list-row-header {
+    padding-left: 16px;
+    padding-top: 12px;
+}
+.list-row-header .entry-header .entry-title {
+    
+}
+.list-row .list-row-header .entry-header .my-travelogue-meta .entry-edit-delete {
+	float:right;
+	margin-right:0;
+}
+.list-row .list-row-header .entry-header .my-travelogue-meta .entry-edit-delete .entry-delete {
+	margin-right:10px;
+}
+.list-row-header .entry-title a {
+    width: 100%;
+}
+.list-row-header .entry-header .entry-title {
+    margin: 0 0 10px;
+}
+.article-page-header {
+    background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/article-banner.png");
+    background-size: cover;
+}
+.travelogue-page-header {
+    background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/travelogue-banner.png");
+    background-size: cover;
+}
+.single-article-content {
+	color: rgba(0, 0, 0, 0.8) !important;
+}
+.single-article-content p {
+    text-align: left !important;
+	font-size:19px;
+	line-height:1.7;
+}
+.single-article-content p img {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+.single-article-content div {
+    text-align: left !important;
+}
+.single-article-content div img {
+    height: 100%;
+    width: 100%;
+}
+.entry-page-title.container {
+    height: 460px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.entry-title-article-header {
+    padding-top: 100px;
+}
+.gravatar.gravatar-article {
+    margin-bottom: 0;
+    width: 100px !important;
+}
+.sidebar-margin {
+    margin: -20px 0 !important;
+}
+ul {
+    margin-left: 0;
+}
+ul li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.site-header {
+    background: none repeat scroll 0 0 transparent;
+}
+footer {
+    padding: 0 !important;
+}
+.footer-container {
+	background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    color: #fff;
+}
+.footer-container h4 {
+    display: inline-block;
+    font-size: 14px;
+	font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.footer-container a {
+    color: #fff;
+}
+.footer-content-wrap {
+    margin: 0 auto;
+    max-width: 1030px;
+    width: 100%;
+}
+.footer-head {
+    background-color: rgba(74, 74, 74, 0.3);
+    border-bottom: 2px solid #433531;
+    overflow: hidden;
+    padding: 20px;
+}
+.footer-head h4 {
+    color: #9f938e;
+    display: table-cell;
+    margin-bottom: 0;
+    vertical-align: middle;
+	font-weight:800;
+}
+.footer-head .social {
+    display: table;
+    float: left;
+	padding-top:10px;
+}
+ul.social-icons {
+    display: inline-block;
+    margin-bottom: 0;
+	margin-left:12px;
+}
+ul.social-icons li {
+    display: inline-block;
+}
+.footer input {
+    border-radius: 6px;
+    padding: 4px;
+}
+
+/* newsletter */
+.newsletter {
+    float: right;
+	height: 40px;
+}
+.newsletter .form{
+	margin: 0 !important;
+}
+.newsletter p{
+	margin: 0 !important;
+	float: left;
+}
+.newsletter label {
+    float: left;
+	margin-top:0;
+	padding: 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #848484;
+	vertical-align: top;
+}
+
+.newsletter #mc4wp_email{
+	float: left;
+	width: 230px;
+	background: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/rocket.png") no-repeat scroll 7px 11px;
+	background-color:rgba(255,255,255,0.13);
+	padding: 7px 10px 8px 36px;
+	color: #fff;
+	border:none;
+	border-radius: 4px 0 0 4px;
+	line-height: 25px;
+}
+.newsletter input[type="submit"]{
+	float: right;
+	background: url("https://image.flaticon.com/icons/svg/109/109617.svg") no-repeat scroll 1px 1px;
+    background-color: #fb7548;
+	height:40px;
+	width:45px;
+    border:none;
+    border-radius: 0 4px 4px 0;
+}		
+.newsletter input[type="submit"]:hover{				
+	background: url("https://image.flaticon.com/icons/svg/109/109617.svg") no-repeat scroll 8px 10px;
+	background-color: #fb7548;
+}
+.newsletter .mc4wp-form-submitted{
+	margin: 0;
+	padding: 0;
+}
+.newsletter .mc4wp-alert{
+	display: none;
+}
+
+/* footer */
+.footer-container .footer-body li h4 {
+    color: #fff;
+}
+.footer-body {
+    font-size: 16px;
+    padding: 20px;
+}
+.footer-body ul {
+    margin-left: 0;
+}
+.dot {
+	font-size:40px;
+	opacity:0.12;
+	line-height:0;
+}
+.footer-body li {
+	list-style-type: none !important;
+    margin-top: 8px;
+}
+.footer-body li a {
+    color: #cbc8c9;
+    font-size: 16px;
+}
+.wah-logo-white {
+    background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/wah-logo-white.png");
+    background-size: cover;
+    height: 59px;
+    width: 201px;
+}
+.footer-bottom {
+    border-top: 3px solid rgba(74, 74, 74, 0.3);
+    overflow: hidden;
+    padding: 20px;
+}
+.footer-bottom-left {
+    float: left;
+}
+.footer-bottom-right {
+    float: right;
+	font-size: 14px;
+	line-height:0.5;
+}
+.footer-seal {
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-seal div {
+    display: inline-block;
+}
+.footer-seal img{
+	display: table-cell;
+	float: left;
+	vertical-align: middle;
+}
+.footer-seal-text {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.footer-seal-subtext {
+    color: #d1d3d3;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.footer-contactus-button {
+    background-color: #927f7d;
+    border: none;
+    border-radius: 4px;
+	padding: 12px 26px;
+    color: #fff;
+	font-size: 14px;
+	font-weight: 800;
+    text-transform: none;
+}
+
+.footer-contactus-button:hover {
+	background-color:#83716F;
+}
+
+
+
+
+
+/* Travalogue View Styles */
+.single-travelogue .site-content {
+	background: #F6F9F8;
+}
+.single-travelogue-content p {
+	padding:0 20%;
+	line-height:1.4;
+	text-align:left;
+}
+
+.single-travelogue-content .wp-caption {
+	width:100% !important;
+	border:none;
+}
+
+.travelogue-stats-container {
+	padding: 20px 0;
+	border-bottom:1px solid #EDEDED;
+	position:relative;
+	background: #f4f4f4;
+}
+
+.travelogue-stats-container .row1 {
+	margin-top:20px;
+	position:absolute;
+	top:-50px;
+}
+
+.travelogue-stats-container .row1 .travelogue-user a span.name{
+	color:#FFF;
+	margin-left: 120px;
+	margin-bottom: 20px;
+	font-weight:600;
+}
+.travelogue-stats-container .row1 .travelogue-user a span span{
+	color:#EDEDED;
+}
+.travelogue-stats-container .row1 .travelogue-user img{
+	height:96px;
+	width:96px;
+	margin-left: 0;
+	position:absolute;
+	top:-20px;
+	border-radius:50px;
+	border: 1px solid #EDEDED;
+	-webkit-box-shadow: 0px 5px 5px 0px #EDEDED;
+	-moz-box-shadow:    0px 5px 5px 0px #EDEDED;
+	box-shadow:         0px 5px 5px 0px #EDEDED;
+}
+.travelogue-stats-container .row1 .travelogue-user-date{
+	margin-left: 120px;
+	margin-top: 15px;
+	color: #575757;
+	font-weight:600;
+}
+
+.travelogue-stats-container .row2 {
+	margin-top:42px;
+	
+}
+
+.travelogue-stats-container .row2 .travelogue-stats-wrap {
+	height:90px;
+	border-top:1px solid #D8D8D8;
+	padding-top:12px;
+	padding-bottom:20px;
+}
+.travelogue-stats-container .row2 ul li .travelogue-stats {
+	float:left;
+}
+
+.travelogue-stats-container .row2 ul li .travelogue-stats h2 {
+	margin:0;
+	font-family: 'Arial Narrow' !important;
+	color:#4A4A4A;
+}
+
+.travelogue-stats-container .row2 ul li .travelogue-stats h5 {
+	font-size: 12px;
+	margin: 3px;
+	color: #AAA;
+	font-weight: 600 !important;
+}
+
+.travelogue-stats-container .row2 ul li .travelogue-stats-icon{
+	float:right;
+}
+
+.travelogue-stats-container .row2 ul li .travelogue-map {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/travelogue-map.png");
+	background-size:cover;
+	width:343px;
+	height:75px;
+}
+.icon-delete {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/cross_small.png");
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background-size:cover;
+}
+.icon-stats_month {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/stats_month.png");
+	width:20px;
+	height:20px;
+	background-size:cover;
+}
+
+.icon-stats_days {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/stats_days.png");
+	width:20px;
+	height:20px;
+	background-size:cover;
+}
+
+.icon-stats_friends {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/stats_friends.png");
+	width:20px;
+	height:20px;
+	background-size:cover;
+}
+
+.icon-stats_expenditure {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/stats_expenditure.png");
+	width:28px;
+	height:20px;
+	background-size:cover;
+}
+
+.icon-user-fb {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/success_facebook.png");
+	width:20px;
+	height:20px;
+	background-size:cover;
+	display:inline-block;
+}
+
+.icon-user-twitter {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/success_twitter.png");
+	width:20px;
+	height:20px;
+	background-size:cover;
+	display:inline-block;
+}
+
+.icon-user-googleplus {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/success_googleplus.png");
+	width:20px;
+	height:20px;
+	background-size:cover;
+	display:inline-block;
+}
+
+.destinations-travelled {
+	display: none;
+	width:100%;
+	height:60px;
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/destination-line.png");
+}
+.destinations-travelled li{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 5px;
+	margin: 0 20px;
+	background: #fbfcfd;
+}
+.destinations-travelled li:first-child{
+	margin-left: 10px;
+}
+
+.single-travelogue-content {
+	font-size:18px;
+	line-height:28;
+}
+
+.full-width-container {
+	background-color:#fff;
+	margin-right:0;
+	margin-left:0;
+	max-width:100%;
+	width:100%;
+}
+
+
+.input-field-wrapper.full-width {
+	width:100%;
+}
+ 
+.input-field-wrapper.full-width input {
+	width:100%;
+}
+ 
+.add-travelogue-details-wrapper .row2 {
+	margin-bottom:170px;
+}
+ 
+.btn-primary-main {
+	background-color:#fd7447;
+	border:none;
+	font-weight:600;
+	padding-left:20px;
+	padding-right:20px;
+}
+ 
+.btn-primary-main:hover {
+	background-color:#ED683C;
+ 	border:none;
+}
+ 
+.btn-primary-dark {
+	background-color:#575757;
+	border:none;
+	font-weight:600;
+	padding-left:20px;
+	padding-right:20px;
+}
+ 
+.btn-primary-dark:hover {
+	background-color:#434141;
+	border:none;
+}
+  
+.btn-has-nobackground {
+	background-color:#f6f9fa;
+	border:1px solid #b4b5b5;
+	color:#b4b5b5;
+	font-weight:600;
+	padding:0;
+}
+  
+.btn-has-nobackground:hover {
+	background-color:#ECF2F3;
+	border:1px solid #dae2e6;
+	color:#b4b5b5;
+	font-weight:600;
+}
+  
+.btn-has-nobackground-icon {
+	border-right:1px solid #b4b5b5;
+	padding:6px;
+	display:inline-block;
+}
+  
+.btn-has-nobackground-preview {
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/preview.png");
+	background-size:cover;
+	height:10px;
+	width:16px;
+	display:inline-block;
+}
+  
+.btn-has-nobackground-text {
+	padding:6px;
+	display:inline-block;
+}
+
+.button-row {
+	margin-top:16px;
+}
+
+
+/* Author Page Styles */
+.author-page-header {
+      background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/author-banner.png");
+      background-size: cover;
+	  height:250px;
+}
+.author-page-header .departureCity{
+	float: left;
+	font-size: 14px;
+	color: #FFF;
+	margin-top: 2px;
+	letter-spacing: 0.8px;
+}
+.author-page-header .departureCity span{
+	color: #EDEDED;
+}
+.author-page-header .destination-list{
+	margin-top: 10px;
+}
+
+  
+
+/*review box*/
+.review-box{
+    background: #fff;
+    border: 1px solid #ededed;
+    padding:20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px #C2C2C2;
+    -moz-box-shadow: 0 2px 2px #C2C2C2;
+    -ms-box-shadow: 0 2px 2px #C2C2C2;
+    -webkit-box-shadow: 0 2px 2px #C2C2C2;
+    -o-box-shadow: 0 2px 2px #C2C2C2;
+    margin-bottom: 20px;
+
+}
+.review-box .head{margin-bottom: 20px;}
+.review-box .avt-box{vertical-align: middle;display: inline-block;margin-right: 10px;}
+.review-box .gray{color: #9e9e9e;}
+.review-box .blue{color: #46abf0;}
+.review-box .content-box p{padding:0 0 20px;color: #9e9e9e;margin-bottom: 0px;}
+.review-box .destination-list li{color: #000;}
+.destination-box{
+    padding: 15px;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* careers page */
+#careers .content-grid-download .entry-image .image-placeholder{
+	display: none;
+}
+#careers .content-grid-download .entry-image{
+	width: 25%;
+}
+
+.review-box .vcard a img{
+	width: 32px;
+	height: 32px;
+	margin-right: 10px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+
+.itinerary-special-container .country .things {
+	width:320px;
+	height:200px;
+}
+
+.itinerary-special-container .country .things h4:first-of-type {
+	margin-top:150px;
+}
+.user.with-name .name{
+font-size: 0.85em;
+}
+
+
+
+
+
+
+/* Mobile Styles */
+
+@media(max-width:992px) {
+	.main-navigation .main-menu {
+	     margin-top:-72px !important;
+	}
+
+	.main-navigation .main-menu ul.menu {
+	     display:block !important;
+	}
+	.main-navigation .main-menu ul.menu li.menu-item {
+	     display:inline-block;
+		 width:19.6%;
+	}
+	.main-navigation .main-menu .menu li a {
+	     font-size:13px;
+	     font-weight:700;
+	}
+	.navbar-site .site-header-search form.search-form input.search-field {
+		width:160px !important;
+	}
+	.navbar-site .login_button-wrap {
+		margin-top:16px;
+	}
+	.navbar-site .navbar.navbar-nav {
+		margin-bottom:0;
+		margin-top:0;
+		height:62px;
+		margin-right:0;
+	}
+	.features .feature .cmt {
+		right:15px !important;
+	}
+	.features .feature .btm-travelog {
+		padding-left:14px !important;
+	}
+}
+@media(max-width:768px){
+	#in-page-carousel h2 {
+		margin:10px -44px !important;
+	}
+	.fileUpload {
+		right:50% !important;
+		margin-right:-100px !important;
+	}
+	.dante-editor {
+		width:84% !important;
+	}
+	.travelogue-foot-details {
+		height:300px;
+		width:auto;
+	}
+	.comment-list .comment-author.vcard img {
+		margin-top:0;
+	}
+	.modal-dialog {
+		margin:0 auto;
+		width:90%;
+	}
+	.footer-links li {
+		display:inline-block;
+		margin-right:12px;
+	}
+	
+	.footer-bottom-right {
+		float:left ;
+	}
+	
+	.wah-logo-white {
+		float:left;
+	}
+	
+	.footer-contactus-button {
+		float:left;
+	}
+	
+	.footer-head, .footer-body, .footer-bottom {
+		padding:20px;
+	}
+	
+	.footer-head .social {
+		width:100%;
+		padding-top:0;
+	}
+	
+	.footer-head .social .social-icons {
+		float:right;
+	}
+	
+	.wah-logo-wrap {
+	    border-bottom: 1px solid rgba(255,255,255,0.1);
+	    padding-bottom: 40px;
+		margin-bottom:20px;
+	}
+	.navbar-site-dropdown {
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	.navbar-site .navbar-collapse {
+		background-color:#fff;
+		padding:20px !important;
+		margin-top:60px;
+		position:relative;
+		width:100%;
+		margin-right:0;
+		margin-left:0;
+	}
+	.navbar-site .navbar-collapse .navbar-nav {
+		width:100%;
+		margin:0;
+	}
+	.navbar-site .site-header-search form.search-form input.search-field {
+		width:70% !important;
+	}
+	.nav-menu-link-xs a {
+		color:rgb(249, 102, 67) !important;
+		font-weight:700;
+	}
+	.site-header-search {
+		position:absolute;
+		top:0;
+		width:100%;
+	}
+	.navbar-site .navbar-collapse .navbar-nav hr:first-child {
+		margin-top:41px;
+	}
+	.nav-menu-item-xs a {
+		text-transform:uppercase;
+		color:#4a4a4a !important;
+		font-weight:700;
+		font-size:13px !important;
+	}
+	#travelogue-intro-modal .modal-dialog {
+		margin:0 auto;
+		width:90% !important;
+	}
+	.itemscope {
+		margin-bottom:20px;
+	}
+	.itemscope img {
+		width:100%;
+	}
+	.itemscope .edd_download_inner .edd_price {
+		color:#fff;
+		font-weight:400;
+		font-size:20px;
+	}
+	.itemscope .edd_download_inner .byline {
+		float:left;
+	}
+	.itemscope .edd_download_inner .entry-excerpt {
+		font-size:14px;
+		margin-bottom:-20px;
+	}
+	.itemscope .edd_download_inner .entry-meta {
+		margin-top:10px;
+	}
+	
+	
+	/* Articles Listing */
+	
+	.list-row {
+		height:242px;
+		position:relative;
+		border-radius:5px;
+	}
+	.list-row .list-row-header {
+		position:absolute;
+		bottom:0;
+		width:100%;
+	}
+	.list-row .list-row-header .entry-header {
+		position:relative;
+	}
+	.list-row .list-row-header .entry-header .entry-title a {
+		color:#fff;
+		display:inline-block;
+		width:100%;
+		white-space:normal;
+		text-overflow:initial;
+	}
+	.list-row .list-row-header .entry-header .entry-meta .byline, 
+	.list-row .list-row-header .entry-header .entry-meta .edit-link, 
+	.list-row .list-row-header .entry-header .entry-meta .entry-date {
+		display:none;
+	}
+	.list-row .list-row-header .entry-header .my-travelogue-meta {
+		position:absolute;
+		bottom:190px;
+		color:#fff;
+		width:100%;
+	}
+	.list-row .list-row-header .entry-header .my-travelogue-meta a {
+		color:#fff;
+	}
+	.list-row .list-row-header .entry-header .my-travelogue-meta span {
+		color:#fff;
+	}
+	.list-row .list-row-header .entry-header .my-travelogue-meta .byline {
+		display:block;
+		float:left;
+	} 
+	.list-row .list-row-header .entry-header .my-travelogue-meta .entry-date {
+		display:inline;
+	}
+	.list-row .list-row-header .entry-header .entry-meta .comments-link {
+	    position: absolute;
+	    bottom: 200px;
+	    right: 10px;
+	}
+	.list-row .list-row-header .entry-header .entry-meta .comments-link a {
+		color:#fff;
+		font-size:16px;
+	}
+	.list-row .blog-archive-image, .list-row .blog-archive-image a, .list-row .blog-archive-image a img {
+		width:100%;
+		min-height:240px;
+	}
+	.itinerary-description {
+		width:100% !important;
+	}
+	.itinerary-title-container .page-title {
+		padding-top:20px !important;
+		line-height:1;
+	}
+	.itinerary-title-container .page-title span {
+		font-size:40px;
+	}
+	
+	/* All Itineraries Tiles in Itineraries*/
+	
+}
+
+/* Comments styles */
+.comment-metadata .fn {
+	text-transform:none;
+	font-size: 16px;
+	  font-weight: 600;
+	  color: #4a4a4a;
+}
+@media screen and (max-width:500px) {
+	.comment-list .comment-meta {
+		display:block;
+		margin-top:0;
+		width:100%;
+	}
+	#comments ol.comment-list .comment-content .comment-metadata {
+		margin-left:41px;
+		margin-top:-42px;
+	}
+	div#comments ol.comment-list div.comment-metadata time {
+		top:14px !important;
+	}
+	div#comments ol.comment-list div.comment-metadata .reply-link {
+		top:0 !important;
+	}
+}
+@media(max-width:480px) {
+	.draft-travelogue {
+		top:60px !important;
+	}
+	.list-row .list-row-header .entry-header .my-travelogue-meta .entry-delete a span {
+		display:none;
+	}
+	.list-row .list-row-header .entry-header .my-travelogue-meta .entry-edit a span {
+		display:none;
+	}
+	.entry-page-title.container .entry-author {
+		padding:0 !important;
+	}
+	.search-form {
+		max-width:100% !important;
+	}
+	.search-form .search-field {
+		font-size:18px !important;
+	}
+	.modal-dialog {
+		width:90% !important;
+	}
+	.login_button#show_signup {
+		display:none;
+	}
+	.main-navigation {
+		display:none;
+	}
+	.navbar-site {
+		box-shadow:none !important;
+	}
+	.ajax-auth.auth {
+		width:280px;
+		margin-left:-140px;
+	}
+	.ajax-auth.auth  .header {
+		margin-bottom:30px;
+		height:auto;
+	}
+	.ajax-auth.auth  .header h3 {
+		padding:14px;
+	}
+	.ajax-auth.auth  .login-footer {
+		margin-top:25px;
+	}
+	.ajax-auth.auth  .login-footer img {
+		display:none;
+	}
+	.ajax-auth.auth  .login-footer .btn {
+		margin-left:0;
+	}
+	#socialRegister .wp-social-login-provider.wp-social-login-provider-facebook, #socialRegister .wp-social-login-provider.wp-social-login-provider-twitter, #socialRegister .wp-social-login-provider.wp-social-login-provider-google {
+		background-size:205px 40px !important;
+		margin-bottom:-4px !important;
+	}
+	/* Single Article */
+	.entry-meta-info .entry-title {
+		font-size:36px !important;
+	}
+	.entry-page-title.container .entry-author .byline {
+		margin-left:13px !important;
+	}
+	.home .tag-item a, .edd-taxonomy-widget .tag-item a {
+		margin-bottom:15px;
+	}
+	form#c-seller #submit-c input[type="submit"] {
+		float:left;
+	}
+	form#c-seller small {
+		padding-top:12px;
+	}
+	form#c-seller select, form#c-seller input {
+		width:100%;
+	}
+	.entry-page-title .entry-title {
+		font-size:40px !important;
+		padding:0;
+	}
+}
+
+
+/* Single article when screen size is less than width of article */
+@media (max-width:600px) {
+	.entry-content.single-article-content {
+		width:auto !important;
+	}
+}
+/*
+
+*/
+@media (min-width:1054px) {
+	.container {
+		width:1200px;
+	}
+	.author-page-header .vcard {
+		left:0 !important;
+	}
+	.author-page-header .name {
+		padding-left:140px !important;
+	}
+	.author-page-header .page-title {
+		padding-left:140px !important;
+	}
+}
+@media (max-width:1053px) {
+	.container {
+		width:auto;
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+@media (max-width:992px) {
+	.author-page-header {
+		margin-top:0;
+	}
+	.features .feature.feature-last {
+		padding-left:0;
+		padding-bottom:40px !important;
+	}
+	.features .feature.feature-last a {
+		width:100%;
+	}
+	.features .feature.feature-last .feature-title {
+		width:100%;
+		padding:0 15px;
+	}
+	.features .feature.feature-last .feature-content {
+		width:100%;
+		padding:0 15px;
+	}
+	.features .feature.feature-last .btm-travelog {
+		bottom:14px !important;
+	}
+}
+
+
+
+
+.tag-tokenizer {
+    background-color: #f6f9fa !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 600 !important;
+	padding-left:0 !important;
+}
+.user-list {
+	margin-right:-13px !important;
+}
+#socialLogin.ajax-auth.auth {
+	top:90px !important;
+}
+#socialRegister.ajax-auth.auth {
+	top:90px !important;
+}
+#socialLogin.ajax-auth.auth .close, #socialRegister.ajax-auth.auth .close {
+	opacity:1;
+}
+
+
+
+/* Travelogue Intro Overlay Styles */
+
+
+#travelogue-intro-modal .modal-dialog {
+	width:70%;
+	margin-top:20px;
+}
+.travelogueIntro-wrap {
+    background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/halftone.png");
+    background-repeat: repeat;
+    text-align: center;
+}
+.share-green-icon {
+    width:59px;
+    height:59px;
+    background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/share-green-icon.png");
+    background-size: cover;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.travelogue-intro-heading {
+    font-weight: 600;
+    color:#26A667;
+    display: inline-block;
+}
+.decoration-line {
+    display: inline-block;
+    border-color: #D9D7CF;
+}
+.travelogue-intro-subheading {
+    display: inline-block;
+    color: #585353;
+    margin: 0;
+	font-size:18px;
+	font-weight:800;
+	text-transform:uppercase;
+}
+.travelogue-intro-text {
+    font-size: 18px; 
+    margin-bottom: 34px;
+    margin-top: 20px;
+	color:#424242;
+}
+.photoframe {
+    width:280px;
+    height:230px;
+    background-image: url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/photoframe.png");
+    background-size: cover;
+    display: inline-block;
+}
+.travelogue-intro-header {
+    padding-top:20px;
+    padding-bottom:10px;
+}
+.travelogue-intro-body {
+    padding:20px 20px 40px 20px;
+}
+.travelogue-intro-footer {
+    background: rgba(255,255,255,0.50);
+    padding:20px;
+    border-top:6px solid #F0EDE0;
+}
+.btn-primary-lg {
+    padding:14px 20px;
+    background: #F96643;
+    box-shadow: 0px 1px 1px 0px rgba(98,98,98,0.50);
+    border-radius: 4px;
+    border:none;
+    font-size: 18px;
+	color:#fff !important;
+}
+.btn-primary-lg:hover {
+	background:#EB5734;
+}
+.secondary-link {
+    line-height: 53px;
+    color:#4A90E2 !important;
+	font-size:14px;
+	font-weight:600;
+}
+.secondary-link:hover {
+    color:#3679C8 !important;
+    text-decoration:none;
+}
+
+
+/* End of Travelogue Intro Overlay Styles */
+
+@media (min-width: 768px) {
+	.navbar.navbar-site {
+		border-radius:0 !important;
+	}
+	
+	/* New Itineraries Style */
+	.edd_downloads_list .edd_download_inner{
+		position: relative;
+		height: 140px;
+		overflow: hidden;
+		background: #FFF;
+	}
+	.edd_downloads_list .edd_download_inner .entry-header-custom{
+		height: 140px;
+		padding-left: 226px !important;
+		border: 1px solid #EDEDED;
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 1px 1px 0px #EDEDED;
+		-moz-box-shadow:    0px 1px 1px 0px #EDEDED;
+		box-shadow:         0px 1px 1px 0px #EDEDED;
+		z-index: 99;
+		
+		left: auto;
+	    padding: 0;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	}
+	.edd_downloads_list .edd_download_inner .image-placeholder, .edd_downloads_list .edd_download_inner .entry-image{
+		height: 140px !important;
+		z-index: 100;
+		border-radius: 4px;
+	}
+	.edd_downloads_list .edd_download_inner .entry-image img {
+		height: 140px;
+		width: 210px;
+	    border-radius: 4px 0 0 4px;
+	    -webkit-border-radius: 4px 0 0 4px;
+	    -moz-border-radius: 4px 0 0 4px;
+	    -ms-border-radius: 4px 0 0 4px;
+	    -o-border-radius: 4px 0 0 4px;
+	}
+	.edd_downloads_list .edd_download_inner .entry-header-custom a, .edd_downloads_list .edd_download_inner .entry-header-custom .edd_price, .edd_downloads_list .edd_download_inner .entry-header-custom .entry-excerpt{
+		color: #575757 !important;
+	}
+	.download-archive-widget:first-child {
+		padding-top: 25px;
+	}
+	.download-archive-widget-title {
+		padding: 0 !important;
+		margin-bottom: 35px;
+	}
+
+
+	.itemscope{
+		float: none !important;
+		margin-bottom: 15px !important;
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 1px 1px 0px #EDEDED;
+		-moz-box-shadow:    0px 1px 1px 0px #EDEDED;
+		box-shadow:         0px 1px 1px 0px #EDEDED;
+	}
+	.itemscope .entry-image{
+		border: none;
+	}
+	.itemscope .entry-excerpt{
+		margin-top: 15px;
+		font-size: 14px;
+	}
+	.itemscope .entry-meta{
+		margin-top: 8px;	
+	}
+	.itemscope .entry-title-featuredtrips{
+		line-height: 0.5em;
+		margin-top: 0;
+	}
+	.itemscope .entry-title-featuredtrips a{
+		font-size: 21px;
+		font-weight: bold;
+	}
+	.itemscope .item-price-featuredtrips{
+		position: absolute;
+		bottom: 15px;
+		right: 20px;
+		font-size: 18px;
+		font-weight: normal;
+	}
+	.itemscope .img-overlay{
+		display: none !important;
+	}
+	.rating{
+		margin-top: 5px;
+	}
+}
+
+.main-navigation .container {
+	padding-right:0;
+	padding-left:0;
+}
+
+.navbar-site .site-branding {
+	margin-top:7px;
+}
+
+
+/* Modal Styles */
+
+.modal .modal-content {
+	border-radius:4px;
+	text-align:center;
+}
+
+.modal .modal-content .modal-body .heading {
+	color:#fb7548;
+}
+/* End of Modal Styles */
+
+/* Carousel Styles */
+.carousel-app .carousel-control {
+	background-image:none;
+}
+
+.page-numbers.current {
+	display: none;
+}
+.fourhundredfour-message {
+	text-align:center;
+	margin:40px 0;
+	font-size:24px;
+}
+.fourhunderfour-image-wrap {
+	text-align:center;
+}
+.fourhundredfour-image {
+	display:inline-block;
+	width:600px;
+	height:130px;
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/404-image.png");
+	background-size:cover;
+}
+
+.arrow_left {
+	width:15px;
+	height:30px;
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: block;
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/arrow_left.png");
+	left:50%;
+	background-size:cover;
+}
+.arrow_right {
+	width:15px;
+	height:30px;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	z-index: 5;
+	display: block;
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/arrow_right.png");
+	background-size:cover;
+}
+.arrow_left-custom {
+	width:24px;
+	height:24px;
+	display: block;
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/arrow_left-custom.png");
+	background-size:cover;
+}
+.arrow_right-custom {
+	width:24px;
+	height:24px;
+	display: block;
+	background-image:url("/web/20160420024317im_/http://www.weareholidays.com/wp-content/uploads/common/arrow_right-custom.png");
+	background-size:cover;
+}
+
+.uploading{
+	opacity:1 !important;
+}
+#bannerimg.container {
+	padding:0 !important;
+}
+
+/* Bootstrap Tour Styles */
+
+.popover.tour-tour {
+	opacity:1 !important;
+	display:block !important;
+	z-index:999 !important;
+	overflow:visible !important;
+    color:#4a4a4a;
+}
+.popover.tour-tour .popover-title {
+	padding:8px 0;
+	font-size:16px;
+	font-weight:800;
+	background-color:#fff;
+}
+.popover.tour-tour .popover-content { 
+    overflow-wrap:break-word;
+	padding:8px 0;
+	font-size:14px;
+}
+.popover.tour-tour .popover-navigation {
+	padding:8px 0;
+}
+.popover.tour-tour .popover-navigation .btn-group {
+    display:block;
+}
+.popover.tour-tour .popover-navigation .btn {
+    font-size:13px;
+	font-weight:600;
+}
+.popover.tour-tour .popover-navigation .btn-sm {
+    background-color:#ff7548;
+    color:#fff;
+    border:1px solid #EA663B;
+}
+.header-outer {
+	background-position:center;
+}

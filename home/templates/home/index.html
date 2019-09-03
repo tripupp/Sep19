@@ -1,0 +1,2682 @@
+{% load static %}
+<!--//////////////// HEADER /////////////////////////-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tripupp</title>
+  <!--bootstrap 4 cdn-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!--slick_carousel-->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css" />
+
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css" />
+
+  <!--  Animate CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+  
+
+  <!-- Foots CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+  <!---top_activity-->
+
+  <link rel="stylesheet" href="{% static 'home/css/flickity.min.css' %}" >
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+  <!--foot of home-->
+  <!--navbar hover-->
+  <style type="text/css">
+    #h:hover {
+      background-color: white;
+    }
+  </style>
+  <!--header style-->
+  <style>
+    .imu {
+      background-image: url("{% static 'home\image\home-header.jpeg' %}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 490px;
+    }
+
+    .content {
+      padding-top: 100px;
+      background: rgba(0, 0, 0, 0.1);
+      height: 400px;
+    }
+  </style>
+  <!--top destination style start-->
+
+
+  <link rel='stylesheet' id='goto-theme-style-css'
+    href='http://haintheme.com/demo/wp/goto/wp-content/themes/goto/style.css?ver=5.1.1' type='text/css' media='all' />
+
+
+  <link rel='stylesheet' id='tiny-slider-css'
+    href='http://haintheme.com/demo/wp/goto/wp-content/themes/goto/css/tiny-slider.css?ver=5.1.1' type='text/css'
+    media='all' />
+
+  <link rel="stylesheet" type="text/css"  href="{% static 'home/css/top_activity.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'home/css/frontend.min.css' %}">
+
+  <!--top_destination end-->
+  <!--navbar-->
+  <style type="text/css">
+    .navbar-nav li:hover>ul.dropdown-menu {
+      display: block;
+    }
+  </style>
+  <!--top_destination 1-->
+  <style type="text/css">
+    .top_destination .flickity-button {
+      position: absolute;
+      background: hsla(0, 0%, 100%, .75);
+      border: none;
+      color: black;
+      background-color: #ff704d;
+    }
+
+    .top_destination .carousel-cell {
+      width: 20%;
+      height: 350px;
+      padding-right: 10px;
+      border-radius: 10px;
+      counter-increment: carousel-cell;
+    }
+
+    .top_destination .carousel-cell img {
+      height: 350px;
+
+    }
+
+    .top_destination .content {
+      position: relative;
+      max-width: 400px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .top_destination .content .content-overlay {
+      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      height: 99%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+    }
+
+    .top_destination .content:hover .content-overlay {
+      opacity: 0.9;
+    }
+
+    .top_destination .content-details {
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .top_destination .content:hover .content-details {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+
+    .top_destination .content-details h3 {
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+    }
+
+    .top_destination .content-details p {
+      color: #fff;
+      font-size: 0.8em;
+    }
+
+    .top_destination .fadeIn-bottom {
+      top: 80%;
+    }
+  </style>
+  <!--slick-slider-->
+  <link rel="stylesheet" type="text/css" href="{% static 'home/css/slick.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'home/css/slick-theme.css' %}">
+
+  <style type="text/css">
+    .slider {
+      width: 100%;
+      margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 10px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+      height: 300px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: #ff3300;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+
+    }
+  </style>
+
+
+  <!--css package_in_demand-->
+  <style type="text/css">
+    .package_img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 300px;
+      -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+      -ms-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+    }
+
+    .package_content {
+      padding-top: 170px;
+      background: rgba(0, 0, 0, 0.4);
+      height: 300px;
+      -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+      -ms-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+    }
+
+    .package_img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  <!--holiday_theme-->
+  <style type="text/css">
+    .holiday_img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 150px;
+    }
+
+    .holiday_content {
+      padding-top: 65px;
+      background: rgba(0, 0, 0, 0.5);
+      height: 150px;
+    }
+  </style>
+  <!--package_demand-->
+  <style type="text/css">
+    .hovereffect {
+      width: 100%;
+      height: 100%;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      cursor: default;
+    }
+
+    .hovereffect .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+      transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+    }
+
+    .hovereffect:hover .overlay {
+      background-color: rgba(48, 152, 157, 0.4);
+    }
+
+    .hovereffect img {
+      display: block;
+      position: relative;
+    }
+
+    .content {
+      color: white;
+    }
+
+    .hovereffect:hover .content {
+      display: none;
+    }
+
+    .hovereffect a.info {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px solid #fff;
+      background-color: transparent;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+      transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+      font-weight: normal;
+      margin: -52px 0 0 0;
+      padding: 62px 100px;
+    }
+
+    .hovereffect:hover a.info {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+
+    .hovereffect a.info:hover {
+      box-shadow: 0 0 5px #fff;
+    }
+  </style>
+  <!---holiday_idea-->
+  <style type="text/css">
+    .holiday_idea_img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 250px;
+      -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+      -ms-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+    }
+
+    .holiday_idea_content {
+      background: rgba(0, 0, 0, 0.6);
+      height: 250px;
+      padding-top: 15px;
+    }
+
+    .holiday_idea_img:hover {
+      transform: scale(0.9);
+    }
+  </style>
+
+  <!--weekend_gateway-->
+  <style type="text/css">
+    .weekend_gateway h5 {
+      background: rgba(0, 0, 0, 0);
+      font-size: 24px;
+      color: white;
+      position: absolute;
+      width: 100%;
+
+      margin-top: -146%;
+      height: 300px;
+      padding-top: 125%;
+    }
+
+    .weekend_gateway img {
+      position: relative;
+    }
+  </style>
+
+  <!--holiday_story-->
+  <style type="text/css">
+    .holiday_story img {
+      position: relative;
+    }
+
+    .holiday_story h5 {
+      position: absolute;
+      margin-top: -52%;
+      height: 107px;
+      padding-top: 35%;
+      color: white;
+      width: 100%;
+      padding-left: 5%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .holiday_story h6 {
+      position: absolute;
+      text-align: center;
+      height: 201px;
+      margin-top: -150%;
+      padding-top: 60%;
+      color: white;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+
+  <!--navbar transparent-->
+
+  <style>
+    .navbar.transparent.navbar-inverse .navbar-inner {
+      border-width: 0px;
+      -webkit-box-shadow: 0px 0px;
+      box-shadow: 0px 0px;
+      background-color: rgba(0, 0, 0, 0.0);
+      background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop(0%, rgba(0, 0, 0, 0.00)), color-stop(100%, rgba(0, 0, 0, 0.00)));
+      background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%);
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%);
+    }
+
+    #h:hover {
+      color: orangered;
+      font-weight: bold;
+      background-color: none;
+    }
+  </style>
+
+  <!--weekend image effect -->
+
+  <style>
+    .img-hover-zoom {
+      height: 300px;
+
+      overflow: hidden;
+
+    }
+
+    .img-hover-zoom img {
+      transition: transform .7s ease;
+    }
+
+    .img-hover-zoom:hover img {
+      transform: scale(1.2);
+    }
+  </style>
+
+
+  <!-- /////// Holiday Themes ///////-->
+
+
+
+
+
+
+  <!-- Custom CSS -->
+  <link href="{% static 'home/css/foot.css' %}" media="screen" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+
+
+  {# <!--}}}}}}}}}}}}}}}}}}}}}}}}}}{{{{{{{{{{{{{{{{     Menu    }}]}}}}}}}}}}}}}}}}{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{[--> #}
+
+
+
+
+
+
+
+
+
+
+  <!--////////////// INDEX - navbar -//////////////////-->
+
+
+  <!-- aria-haspopup="true" aria-expanded="false" -->
+
+
+
+
+  <div class="imu">
+
+
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////// Navbar /////////////////////////////////////////////-->
+
+
+
+
+
+
+
+  <div class="container" style="max-width: 1200px!important;">
+    <nav class="navbar navbar-expand-lg bg-transparent navbar-inverse">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color: white"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown ml-1 mr-1">
+            <a class="nav-link dropdown-toggle  font-weight-bold nava" href="#" id="navbarDropdown"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+              Getaways
+            </a>
+            <ul class="dropdown-menu  pl-2 pr-2" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Places near Banglore</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Places near Chennai</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Places near Delhi</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Places near Goa</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Places near Hyderabad</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Places near Kolkata</a></li>
+              <li><a class="dropdown-item text-danger" href="#" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Collection</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ml-1 mr-1">
+            <a class="nav-link dropdown-toggle  font-weight-bold nava1" href="#" id="navbarDropdown"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+              Destinations
+            </a>
+            <ul class="dropdown-menu pl-2 pr-2" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Goa</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Manali</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Shimla</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Kashmir</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Himachal</a></li>
+
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Kerala</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Andaman</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Rajasthan</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Ladakh</a></li>
+              <li> <a class="dropdown-item text-danger" href="#" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Explore More</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ml-1 mr-1">
+            <a class="nav-link dropdown-toggle  font-weight-bold nava2" href="#" id="navbarDropdown"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+              Holiday Theme
+            </a>
+            <ul class="dropdown-menu pl-2 pr-2" aria-labelledby="navbarDropdown">
+
+              <li> <a class="dropdown-item" href="#" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Hill Stations</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Trekkings</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Honemoon</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Road Trips</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Himachal</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Deserts</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Beaches</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Adventure</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Wildlife</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Water Activies</a></li>
+              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Nature</a></li>
+              <li> <a class="dropdown-item" href="#" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Heritage</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ml-1 mr-1">
+            <a class="nav-link dropdown-toggle  font-weight-bold nava3" href="#" id="navbarDropdown"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+              Companion
+            </a>
+            <ul class="dropdown-menu  pl-2 pr-2" aria-labelledby="navbarDropdown">
+              <li> <a class="dropdown-item" href="#" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Spouse</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Family</a></li>
+              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Friends</a></li>
+              <li> <a class="dropdown-item" href="#" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Alone</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item  ml-1 mr-1">
+            <a class="nav-link  text-white font-weight-bold" href="#" id="navbarDropdown"><i class="fas fa-cubes"></i> Packages</a>
+          </li>
+          <li class="nav-item  ml-1 mr-1">
+            <a class="nav-link  text-white font-weight-bold" href="#">
+              <i class="fas fa-hotel"></i> Hotel
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white font-weight-bold" href="#">
+             <i class="fas fa-paper-plane"></i> Flight
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white font-weight-bold" href="#">
+             <i class="fas fa-wallet"></i> Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--//////////////////////////////////////////////////// Header ///////////////////////////////////////////////////////////////-->
+
+
+
+
+    <div class="content">
+      <h3 class="font-weight-bold text-white text-center">Planning Your <span class="text-danger" style="color: tomato!important;">Holidays</span>
+      </h3>
+      <h5 class="text-white text-center">Find travel packages from sellers across destination
+      </h5>
+      <div class="input-group mb-3 col-4 offset-4 mt-5">
+
+        <!-- //////////    Search Bar ///////////-->
+<!--        <div class="container">-->
+          <div id="search-form" class="search-form js-search-form">
+            <form class="form-search" role="search" action="/search.php" method="get">
+                <div class="input-group custom">
+                    <input type="text" class="form-control" placeholder="Search for Products, Brands and more..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">
+                            <span style="color: white!important;">Search</span>
+                        </button>
+                    </span>
+                </div>
+            </form>
+            <div class="instant-results">
+                <ul class="list-unstyled result-bucket">
+                    <li class="result-entry" data-suggestion="Target 1" data-position="1" data-type="type" data-analytics-type="merchant">
+                        <a href="#" class="result-link">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="{% static 'home\image\nophoto.jpg' %}" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Heading 1</h4>
+                                    <p>0 offers available</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="result-entry" data-suggestion="Target 2" data-position="1" data-type="type" data-analytics-type="merchant">
+                        <a href="#" class="result-link">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="{% static 'home\image\nophoto.jpg' %}" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Heading 2</h4>
+                                    <p>3 offers available</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="result-entry" data-suggestion="Target 3" data-position="2" data-type="type" data-analytics-type="merchant">
+                        <a href="#" class="result-link">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="{% static 'home\image\nophoto.jpg' %}" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Heading 3</h4>
+                                    <p>17 offers available</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<!--        </div>-->
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- ///////// top_destination //////////-->
+
+
+
+
+
+  <div class="card m-3" style="border: 0!important;height: 500px!important;">
+    <h3 class="subheading" style="margin-left: 27px!important;"  data-aos="fade-up" data-aos-duration="1500">Top Destinations</h3>
+    <div data-elementor-type="post" data-elementor-id="4" class="elementor elementor-4" data-elementor-settings="[]">
+
+      <section data-id="bf076e5"
+        class="elementor-element elementor-element-bf076e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+        data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+
+
+          <div data-id="4dea0a8"
+            class="elementor-element elementor-element-4dea0a8 elementor-column elementor-col-67 elementor-top-column"
+            data-element_type="column" data-aos="fade-up" data-aos-duration="1500">
+            <div class="elementor-column-wrap  elementor-element-populated">
+              <div class="elementor-widget-wrap">
+                <div data-id="5373587"
+                  class="elementor-element elementor-element-5373587 elementor-widget elementor-widget-dest-tax"
+                  data-element_type="dest-tax.default">
+                  <div class="elementor-widget-container">
+                    <div class="wd-dest">
+                      <div class="wd-dest-layout-carousel ht-grid ht-grid-3 ht-grid-tablet-2 ht-grid-mobile-1">
+                      
+                       <section class=" topDestination slider col-sm-12 col-xs-12">
+                          {% for city in cities %}
+                            <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                              <a href="{% url 'cities-city_detail' city.city_id city.slug %}">
+                                <div class="wdd-item">
+                                  <img class="wdd-img" src="{{ city.city_pic.url }}" alt="Tour list image">
+                                  <div class="wdd-cont">
+                                    <h3 class="wddc-name entry-title" itemprop="headline">{{ city.city_name }}</h3>
+                                    <span class="wddc-count">3 Tours </span>
+                                    <div class="wddc-desc" itemprop="text">
+                                      <p>{{ city.about }}</p>
+                                    </div>
+                                  </div>
+                                </div>
+                             </a> 
+                            </div>
+                          {% endfor %}
+                        </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+  <!--//////// top_activity ////////--->
+
+
+
+
+
+<div class="top_activity">
+  <div class="card m-3 pt-5 " style="border: none!important;">
+    <main id="main" class="page-content">
+      <div id="page-4" class="post-4 page type-page status-publish hentry">
+        <div data-elementor-type="post" data-elementor-id="4" class="elementor elementor-4"
+          data-elementor-settings="[]">
+          <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+
+              <section data-id="bf076e5"
+                class="elementor-element elementor-element-bf076e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+                data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-row">
+                    <div data-id="bde55e9"
+                      class="elementor-element elementor-element-bde55e9 elementor-column elementor-col-33 elementor-top-column"
+                      data-element_type="column" >
+                      <div class="elementor-column-wrap  elementor-element-populated">
+                        <div class="elementor-widget-wrap" data-aos="fade-up" data-aos-duration="1500">
+                          <div data-id="c1c091d"
+                            class="elementor-element elementor-element-c1c091d elementor-widget elementor-widget-heading"
+                            data-element_type="heading.default">
+                            <div class="elementor-widget-container">
+                              <h3 class="subheading" style="margin-top: 0px;">Top Activity</h3>
+                            </div>
+                          </div>
+
+                          <div data-id="dade041"
+                            class="elementor-element elementor-element-dade041 elementor-widget elementor-widget-dest-tax"
+                            data-element_type="dest-tax.default">
+                            <div class="elementor-widget-container">
+                              <div class="wd-dest">
+                                <div class="wd-dest-layout-list ht-grid ht-grid- ht-grid-tablet- ht-grid-mobile-">
+                                  <div class="wd-dest-content " id="wd-dest-id-5cf4150a21349">
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork" style="margin-bottom: 30px!important;">
+                                      <a href="#" itemprop="headline">Beaches<span class="wdt-count">(6)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Hill Station<span class="wdt-count">(6)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Adventure<span class="wdt-count">(5)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Heritage<span class="wdt-count">(6)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Religious<span class="wdt-count">(5)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Wildlife<span class="wdt-count">(6)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Honeymoon<span class="wdt-count">(5)</span></a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div data-id="4dea0a8"
+                      class="elementor-element elementor-element-4dea0a8 elementor-column elementor-col-66 elementor-top-column"
+                      data-element_type="column" data-aos="fade-up" data-aos-duration="1500">
+                      <div class="elementor-column-wrap  elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+
+                          <div data-id="5373587"
+                            class="elementor-element elementor-element-5373587 elementor-widget elementor-widget-dest-tax"
+                            data-element_type="dest-tax.default">
+                            <div class="elementor-widget-container">
+
+                              <div class="wd-dest">
+                                <div
+                                  class="wd-dest-layout-carousel ht-grid ht-grid-3 ht-grid-tablet-2 ht-grid-mobile-1">
+                                  
+                                 <section class=" topActivity slider col-sm-12 col-xs-12">
+                                    <div class="ht-grid-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <div class="wdd-item">
+
+                                        <img class="wdd-img"
+                                          src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+                                          alt="Tour list image">
+                                        <div class="wdd-cont">
+                                          <h3 class="wddc-name entry-title" itemprop="headline">Beaches</h3>
+                                          <div class="wddc-desc" itemprop="text">
+                                            <p>History Ancient history and settlement. Main Honeymoon: History of the
+                                              Maldives § Early Age. The first Maldivians did not leave any
+                                              archaeological artifacts. Their buildings were probably built of wood,
+                                              palm fronds and other perishable materials, which would have quickly
+                                              decayed in the salt and wind of the tropical climate. Moreover, chiefs or
+                                              headmen did not</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ht-grid-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <div class="wdd-item">
+
+                                        <img class="wdd-img"
+                                          src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+                                          alt="Tour list image">
+                                        <div class="wdd-cont">
+                                          <h3 class="wddc-name entry-title" itemprop="headline">Hill Station</h3>
+                                          <div class="wddc-desc" itemprop="text">
+                                            <p>History Ancient history and settlement. Main Honeymoon: History of the
+                                              Maldives § Early Age. The first Maldivians did not leave any
+                                              archaeological artifacts. Their buildings were probably built of wood,
+                                              palm fronds and other perishable materials, which would have quickly
+                                              decayed in the salt and wind of the tropical climate. Moreover, chiefs or
+                                              headmen did not</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ht-grid-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <div class="wdd-item">
+
+                                        <img class="wdd-img"
+                                          src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/france-768x512.jpeg"
+                                          alt="Tour list image">
+                                        <div class="wdd-cont">
+                                          <h3 class="wddc-name entry-title" itemprop="headline">Adventure
+                                          </h3>
+                                          <div class="wddc-desc" itemprop="text">
+                                            <p>History Ancient history and settlement. Main Honeymoon: History of the
+                                              Maldives § Early Age. The first Maldivians did not leave any
+                                              archaeological artifacts. Their buildings were probably built of wood,
+                                              palm fronds and other perishable materials, which would have quickly
+                                              decayed in the salt and wind of the tropical climate. Moreover, chiefs or
+                                              headmen did not</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ht-grid-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <div class="wdd-item">
+
+                                        <img class="wdd-img"
+                                          src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/england-768x512.jpeg"
+                                          alt="Tour list image">
+                                        <div class="wdd-cont">
+                                          <h3 class="wddc-name entry-title" itemprop="headline">Heritage</h3>
+                                          <div class="wddc-desc" itemprop="text">
+                                            <p>History Ancient history and settlement. Main Honeymoon: History of the
+                                              Maldives § Early Age. The first Maldivians did not leave any
+                                              archaeological artifacts. Their buildings were probably built of wood,
+                                              palm fronds and other perishable materials, which would have quickly
+                                              decayed in the salt and wind of the tropical climate. Moreover, chiefs or
+                                              headmen did not</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ht-grid-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <div class="wdd-item">
+
+                                        <img class="wdd-img"
+                                          src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg"
+                                          alt="Tour list image">
+                                        <div class="wdd-cont">
+                                          <h3 class="wddc-name entry-title" itemprop="headline">Religious</h3>
+                                          <span class="wddc-count">
+                                            3 Tours </span>
+                                          <div class="wddc-desc" itemprop="text">
+                                            <p>History Ancient history and settlement. Main Honeymoon: History of the
+                                              Maldives § Early Age. The first Maldivians did not leave any
+                                              archaeological artifacts. Their buildings were probably built of wood,
+                                              palm fronds and other perishable materials, which would have quickly
+                                              decayed in the salt and wind of the tropical climate. Moreover, chiefs or
+                                              headmen did not</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ht-grid-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <div class="wdd-item">
+
+                                        <img class="wdd-img"
+                                          src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/china-768x512.jpeg"
+                                          alt="Tour list image">
+                                        <div class="wdd-cont">
+                                          <h3 class="wddc-name entry-title" itemprop="headline">Wildlife</h3>
+                                          <span class="wddc-count">
+                                            3 Tours </span>
+                                          <div class="wddc-desc" itemprop="text">
+                                            <p>History Ancient history and settlement. Main Honeymoon: History of the
+                                              Maldives § Early Age. The first Maldivians did not leave any
+                                              archaeological artifacts. Their buildings were probably built of wood,
+                                              palm fronds and other perishable materials, which would have quickly
+                                              decayed in the salt and wind of the tropical climate. Moreover, chiefs or
+                                              headmen did not</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                   </section>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+
+  <!--////// weekend_gateway ///// -->
+
+
+
+
+
+  <div class="weekend">
+    <div class="card m-3 pb-5 pl-5 pr-5"
+        style="border: 0!important;margin-bottom: 0px!important;padding-bottom: 10px!important;" data-aos="fade-up" data-aos-duration="1500">
+        <h3 class="subheading" >Weekend Gateways</h3>
+        <section class=" center slider col-sm-12 col-xs-12">
+          {% for city in cities %}
+            <div class="card weekend_gateway ">
+              <a href="{% url 'cities-city_detail' city.city_id city.slug %}">
+                <div class="img-hover-zoom">
+                  <img src="{{ city.city_pic.url }}"
+                  alt="Tour list image">
+                  <h5 class=" text-center">{{ city.city_name }}</h5>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        </section>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- //////// place by state /////// --->
+
+
+
+<div class="state">
+  <div class="card m-3" style="border: 0!important;margin-bottom: 0!important;" data-aos="fade-up" data-aos-duration="1500">
+    <main id="main" class="page-content">
+      <div id="page-4" class="post-4 page type-page status-publish hentry">
+        <div data-elementor-type="post" data-elementor-id="4" class="elementor elementor-4"
+          data-elementor-settings="[]">
+          <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+
+              <section data-id="bf076e5"
+                class="elementor-element elementor-element-bf076e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+                data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-row">
+                    <div data-id="bde55e9"
+                      class="elementor-element elementor-element-bde55e9 elementor-column elementor-col-33 elementor-top-column"
+                      data-element_type="column" style="margin-top: 0%;">
+                      <div class="elementor-column-wrap  elementor-element-populated" style="padding-right: 18px!important;">
+                        <div class="elementor-widget-wrap">
+                          <div data-id="c1c091d"
+                            class="elementor-element elementor-element-c1c091d elementor-widget elementor-widget-heading"
+                            data-element_type="heading.default">
+                            <div class="elementor-widget-container">
+                              <h3 class="subheading" style="margin-top: 0px;">Top Places by State</h3>
+                            </div>
+                          </div>
+
+                          <div data-id="dade041"
+                            class="elementor-element elementor-element-dade041 elementor-widget elementor-widget-dest-tax"
+                            data-element_type="dest-tax.default">
+                            <div class="elementor-widget-container">
+                              <div class="wd-dest" style="margin-top: 25px!important;">
+                                <div class="wd-dest-layout-list ht-grid ht-grid- ht-grid-tablet- ht-grid-mobile-">
+                                  <div class="wd-dest-content " id="wd-dest-id-5cf4150a21349">
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline" style="text-align: center!important;">Himachal<span class="wdt-count">(7)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Rajasthan<span class="wdt-count">(7)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Karnataka<span class="wdt-count">(8)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Kerala<span class="wdt-count">(9)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Sikkim<span class="wdt-count">(7)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Tamil Nadu<span class="wdt-count">(7)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork" style="margin-right: 5px!important;">
+                                      <a href="#" itemprop="headline">Maharashtra<span class="wdt-count">(9)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork" style="margin-right: 5px!important;">
+                                      <a href="#" itemprop="headline">Uttarakhand<span class="wdt-count">(7)</span></a>
+                                    </h4>
+                                    <h4 class="wdd-item" itemscope="itemscope"
+                                      itemtype="https://schema.org/CreativeWork">
+                                      <a href="#" itemprop="headline">Jammu & Kashmir<span
+                                          class="wdt-count">(5)</span></a>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-id="4dea0a8"
+                      class="elementor-element elementor-element-4dea0a8 elementor-column elementor-col-66 elementor-top-column"
+                      data-element_type="column">
+                      <div class="elementor-column-wrap  elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                          <div data-id="5373587"
+                            class="elementor-element elementor-element-5373587 elementor-widget elementor-widget-dest-tax"
+                            data-element_type="dest-tax.default">
+                            <div class="elementor-widget-container">
+                              <div class="wd-dest">
+                                <div
+                                  class="wd-dest-layout-carousel ht-grid ht-grid-3 ht-grid-tablet-2 ht-grid-mobile-1">
+                                  
+                                  <section class=" topActivity slider col-sm-12 col-xs-12" style="padding-left: 0!important;">
+                                  
+                                    {% for city in cities %}
+                                      <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+                                        <a href="{% url 'cities-city_detail' city.city_id city.slug %}">
+                                    
+                                          <div class="wdd-item">
+                                    
+                                          <img class="wdd-img"
+                                            src="{{ city.city_pic.url }}"
+                                            alt="Tour list image">
+                                          <div class="wdd-cont">
+                                            <h3 class="wddc-name entry-title" itemprop="headline">{{ city.city_name }}</h3>
+                                            <span class="wddc-count">
+                                            3 Tours </span>
+                                            <div class="wddc-desc" itemprop="text">
+                                            <p>{{ city.about }}</p>
+                                            </div>
+                                          </div>
+                                          </div>
+                                        </a>
+                                      </div>
+                                    {% endfor %}
+                                    
+                                  </section>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <!--///////// package_demand///////-->
+
+
+
+<div class="package_demand" data-aos="fade-up" data-aos-duration="1500">
+  <h3 class="subheading">Package demand</h3>
+   <div class="cardcontainer col-lg-12 col-sm-12 col-xs-12">
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 0px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 0px!important;margin-bottom: 7px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 5px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 5px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 5px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+            </div>
+            
+            <div class="cardcontainer col-lg-12 col-sm-12 col-xs-12">
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 5px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 5px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 5px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+               <div class="card col-lg-3 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),url(./image/goa.jpg);">
+                   <div class="bottom-left">
+                       <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">2N Nathula Pass | 2N MG Road</p>
+                       <h4 style="margin-top: 5px!important;margin-bottom: 5px!important;font-family: 'Lato', sans-serif!important;">Enjoy Singapore</h4>
+                       <p style="margin-bottom: 0px!important;"><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                   </div>
+               </div>
+            </div>
+        </div>
+
+
+  <!--/////// holidays themes//////-->
+
+
+
+  <div class="card m-3 pb-5 pl-3 pr-3 "
+    style="border: 0!important;margin-top: 25px!important;padding-left:30px!important;margin-right: 30px!important;" data-aos="fade-up" data-aos-duration="1500">
+    <h3 class="subheading">Holiday themes</h3>
+    <div class="row">
+
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+        <div class="hover04 column" style="border-radius: 7px!important;">
+          <div class="mt-3 holiday_img mr-1 ml-1"
+            style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg');border-radius: 7px!important;">
+            <div class="holiday_content" style="border-radius: 7px!important;">
+              <h4 class="text-center">Adventure</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 holiday_img mr-1 ml-1"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/turkey-768x540.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">Beach</h4>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 holiday_img mr-1 ml-1"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/norway-768x512.jpg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class="font-weight-bold text-center">Budget Trip</h4>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 holiday_img mr-1 ml-1"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/netherland-768x506.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">Family</h4>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+        <div class="mt-3 mr-1 holiday_img ml-1"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">Hill Stations</h4>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 mr-1 holiday_img ml-1"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/france-768x512.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;padding-top: 35px!important;">
+            <h4 class=" text-center">History & Architecture</h4>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 mr-1 holiday_img ml-1"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/england-768x512.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">Honeymoon</h4>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 mr-1 holiday_img ml-1"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class="text-center">Luxury</h4>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+        <div class="mt-3 mr-1 ml-1 holiday_img"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/chile-768x512.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">Offbeat</h4>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 mr-1 ml-1 holiday_img"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/china-768x512.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">Pilgrimage</h4>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 mr-1 ml-1 holiday_img"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">SightSeeing</h4>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;padding-left: 10px!important;">
+        <div class="mt-3 mr-1 ml-1 holiday_img"
+          style="background-image: url('http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg');border-radius: 7px!important;">
+          <div class="holiday_content" style="border-radius: 7px!important;">
+            <h4 class=" text-center">Weekend Gateway</h4>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- ////// holiday_idea /////--->
+
+
+<div class="holiday_idea">
+  <div class="card m-3 pb-5 pl-3 pr-3"
+    style="border: 0!important;margin-right: 20px!important;padding-left: 30px!important;" data-aos="fade-up" data-aos-duration="1500">
+    <h3 class="subheading">Holidays Idea</h3>
+    <div class="row">
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+     <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+      <div class="col-lg-3" style="padding-right: 0px!important;">
+       <div class="">
+        <div class="mt-3 mr-1 ml-1 img-hover-zoom">
+         <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg" alt="" style="height: 100%;">
+         <div class="write">
+             <div class="bottom-left" style="bottom: 26px;">
+                  <p class="font-weight-bold text-white" style="font-family: 'Montserrat', sans-serif!important;font-size: 17px;font-weight: 400!important;font-size: 18px;">17 Exotic Way in Which Kerala Will Charm You</p>
+             </div>
+             <div class="top-left">
+                  <span class="font-weight-bold text-white pl-3" style="font-family: 'Lato',sans-serif;letter-spacing: 1px!important;">Trekking</span>
+             </div>
+         </div>
+        </div>
+       </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- ///// internation destination ////-->
+
+
+<div class="int_destination">
+  <div class="card res m-3 pl-5 pr-5 pb-5" style="border: 0!important;padding-bottom: 0%!important;" data-aos="fade-up" data-aos-duration="1500">
+    <h3 class="subheading">internation destination</h3>
+    <div class="mb-3" style="margin-left:5%;padding-left: 20%;">
+      <span class="ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Thailand</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Singapore</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Sri Lanka</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Europe</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Mauritious</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Dubai</button></span>
+    </div>
+    
+     <div class="mb-3" style="margin-left:5%;padding-left: 30%;">
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Hong Kong</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Bali</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Italy</button></span>
+      <span class="res1 ml-1 mr-1"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px;
+                          padding-left: 2%;padding-right: 2%;">Australia</button></span>
+    </div>
+
+    <section class="filtering slider col-sm-12 col-xs-12">
+      <div class="card weekend_gateway" style="border-radius: 5px!important;">
+        <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+          alt="Tour list image">
+           <div class="bottom-left" style="letter-spacing: 0!important;background: rgba(0,0,0,0.7)!important;width: 100%;left: 0;bottom: 0px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <p class=" ml-2 pt-3" style="color:white!important;font-family: 'Lato', sans-serif!important;font-weight: 500!important;">Idyllic Honeymoon Tours</p>
+            <p class="text-dark ml-2 pt-3" style="font-family: 'Lato', sans-serif!important;font-size: 13px!important;color: tomato!important;margin-top: 0!important;padding-top: 0!important;letter-spacing: 1px!important;font-weight: 600!important;">3 Days/5 Nights</p>
+          </div>
+      </div>
+      
+      <div class="card weekend_gateway" style="border-radius: 5px!important;">
+        <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/france-768x512.jpeg"
+          alt="Tour list image">
+            <div class="bottom-left" style="letter-spacing: 0!important;background: rgba(0,0,0,0.7)!important;width: 100%;left: 0;bottom: 0px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+                <p class=" ml-2 pt-3" style="color:white!important;font-family: 'Lato', sans-serif!important;font-weight: 500!important;">Idyllic Honeymoon Tours</p>
+                <p class="text-dark ml-2 pt-3" style="font-family: 'Lato', sans-serif!important;font-size: 13px!important;color: tomato!important;margin-top: 0!important;padding-top: 0!important;letter-spacing: 1px!important;font-weight: 600!important;">3 Days/5 Nights</p>
+              </div>
+      </div>
+      
+      <div class="card weekend_gateway" style="border-radius: 5px!important;">
+        <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/england-768x512.jpeg"
+          alt="Tour list image">
+        <div class="bottom-left" style="letter-spacing: 0!important;background: rgba(0,0,0,0.7)!important;width: 100%;left: 0;bottom: 0px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <p class=" ml-2 pt-3" style="color:white!important;font-family: 'Lato', sans-serif!important;font-weight: 500!important;">Idyllic Honeymoon Tours</p>
+            <p class="text-dark ml-2 pt-3" style="font-family: 'Lato', sans-serif!important;font-size: 13px!important;color: tomato!important;margin-top: 0!important;padding-top: 0!important;letter-spacing: 1px!important;font-weight: 600!important;">3 Days/5 Nights</p>
+          </div>
+      </div>
+      
+      <div class="card weekend_gateway" style="border-radius: 5px!important;">
+        <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg"
+          alt="Tour list image">
+        <div class="bottom-left" style="letter-spacing: 0!important;background: rgba(0,0,0,0.7)!important;width: 100%;left: 0;bottom: 0px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <p class=" ml-2 pt-3" style="color:white!important;font-family: 'Lato', sans-serif!important;font-weight: 500!important;">Idyllic Honeymoon Tours</p>
+            <p class="text-dark ml-2 pt-3" style="font-family: 'Lato', sans-serif!important;font-size: 13px!important;color: tomato!important;margin-top: 0!important;padding-top: 0!important;letter-spacing: 1px!important;font-weight: 600!important;">3 Days/5 Nights</p>
+          </div>
+
+      </div>
+      
+      <div class="card weekend_gateway" style="border-radius: 5px!important;">
+        <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/china-768x512.jpeg"
+          alt="Tour list image">
+        <div class="bottom-left" style="letter-spacing: 0!important;background: rgba(0,0,0,0.7)!important;width: 100%;left: 0;bottom: 0px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <p class=" ml-2 pt-3" style="color:white!important;font-family: 'Lato', sans-serif!important;font-weight: 500!important;">Idyllic Honeymoon Tours</p>
+            <p class="text-dark ml-2 pt-3" style="font-family: 'Lato', sans-serif!important;font-size: 13px!important;color: tomato!important;margin-top: 0!important;padding-top: 0!important;letter-spacing: 1px!important;font-weight: 600!important;">3 Days/5 Nights</p>
+          </div>
+
+      </div>
+      
+      <div class="card weekend_gateway" style="border-radius: 5px!important;">
+        <img src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+          alt="Tour list image">
+        <div class="bottom-left" style="letter-spacing: 0!important;background: rgba(0,0,0,0.7)!important;width: 100%;left: 0;bottom: 0px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <p class=" ml-2 pt-3" style="color:white!important;font-family: 'Lato', sans-serif!important;font-weight: 500!important;">Idyllic Honeymoon Tours</p>
+            <p class="text-dark ml-2 pt-3" style="font-family: 'Lato', sans-serif!important;font-size: 13px!important;color: tomato!important;margin-top: 0!important;padding-top: 0!important;letter-spacing: 1px!important;font-weight: 600!important;">3 Days/5 Nights</p>
+          </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+  <!--//////// holiday_story //////// -->
+
+  
+      
+
+ <div class="card m-3 pl-5 pr-5 pb-5" style="border: 0!important;padding-bottom: 0%!important;" >
+ <div class="holiday_story">
+  <h3 class="subheading">Holiday stories</h3>
+            <div class="cardcontainer col-sm-12 col-xs-12">
+                <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" >
+                 <div class="details">
+                      <div class="bottom-left" style=" width: 100%!important;">
+                        <p><span class="place"><i class="fas fa-map-marker-alt"></i> Udaipur</span></p>
+                        <h5 style="color: rgba(250,250,250)!important;">The Leela Palace</h5>
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" >
+                 <div class="details">
+                  <div class="bottom-left" style=" width: 100%!important;">
+                    <p><span class="place"><i class="fas fa-map-marker-alt"></i> Udaipur</span></p>
+                    <h5 style="color: rgba(250,250,250)!important;">The Leela Palace</h5>
+                  </div>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" >
+                 <div class="details">
+                  <div class="bottom-left" style=" width: 100%!important;">
+                    <p><span class="place"><i class="fas fa-map-marker-alt"></i> Udaipur</span></p>
+                    <h5 style="color: rgba(250,250,250)!important;">The Leela Palace</h5>
+                  </div>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" >
+                 <div class="details">
+                  <div class="bottom-left" style=" width: 100%!important;">
+                    <p><span class="place"><i class="fas fa-map-marker-alt"></i> Udaipur</span></p>
+                    <h5 style="color: rgba(250,250,250)!important;">The Leela Palace</h5>
+                  </div>
+                  </div>
+                </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!--////////// adventure_trip ////////-->
+
+
+<div class="adventure">
+  <div class="card m-3" style="border: 0!important;height: 500px!important;margin-left: 27px!important;">
+    <h3 class="subheading" style="margin-left: 0px!important;"  data-aos="fade-up" data-aos-duration="1500">adventure trip</h3>
+    <div data-elementor-type="post" data-elementor-id="4" class="elementor elementor-4" data-elementor-settings="[]">
+
+      <section data-id="bf076e5"
+        class="elementor-element elementor-element-bf076e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+        data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+
+
+          <div data-id="4dea0a8"
+            class="elementor-element elementor-element-4dea0a8 elementor-column elementor-col-67 elementor-top-column"
+            data-element_type="column" data-aos="fade-up" data-aos-duration="1500">
+            <div class="elementor-column-wrap  elementor-element-populated">
+              <div class="elementor-widget-wrap">
+                <div data-id="5373587"
+                  class="elementor-element elementor-element-5373587 elementor-widget elementor-widget-dest-tax"
+                  data-element_type="dest-tax.default">
+                  <div class="elementor-widget-container">
+                    <div class="wd-dest">
+                      <div class="wd-dest-layout-carousel ht-grid ht-grid-3 ht-grid-tablet-2 ht-grid-mobile-1">
+                      
+                       <section class=" topDestination slider col-sm-12 col-xs-12">
+
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Kashmir</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Chennai</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/france-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Ladakh</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/england-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Mumbai</h3>
+                                <span class="wddc-count">
+                                  6 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Pune</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/china-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Andaman</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Kashmir</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Mumbai</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+  </div>
+    </div>
+        </div> 
+
+
+
+
+  <!--////////  romatic_holiday /////// -->
+
+
+
+
+
+<div class="adventure">
+  <div class="card m-3" style="border: 0!important;height: 500px!important;margin-left: 27px!important;">
+    <h3 class="subheading" style="margin-left: 0px!important;"  data-aos="fade-up" data-aos-duration="1500">romatic holiday</h3>
+    <div data-elementor-type="post" data-elementor-id="4" class="elementor elementor-4" data-elementor-settings="[]">
+
+      <section data-id="bf076e5"
+        class="elementor-element elementor-element-bf076e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+        data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+
+
+          <div data-id="4dea0a8"
+            class="elementor-element elementor-element-4dea0a8 elementor-column elementor-col-67 elementor-top-column"
+            data-element_type="column" data-aos="fade-up" data-aos-duration="1500">
+            <div class="elementor-column-wrap  elementor-element-populated">
+              <div class="elementor-widget-wrap">
+                <div data-id="5373587"
+                  class="elementor-element elementor-element-5373587 elementor-widget elementor-widget-dest-tax"
+                  data-element_type="dest-tax.default">
+                  <div class="elementor-widget-container">
+                    <div class="wd-dest">
+                      <div class="wd-dest-layout-carousel ht-grid ht-grid-3 ht-grid-tablet-2 ht-grid-mobile-1">
+                      
+                       <section class=" topDestination slider col-sm-12 col-xs-12">
+
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Kashmir</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Chennai</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/france-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Ladakh</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/england-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Mumbai</h3>
+                                <span class="wddc-count">
+                                  6 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Pune</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/china-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Andaman</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Kashmir</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Mumbai</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+  </div>
+    </div>
+        </div> 
+
+
+
+  <!--///////// family_holiday /////////-->
+
+
+
+<div class="adventure">
+  <div class="card m-3" style="border: 0!important;height: 500px!important;margin-left: 27px!important;">
+    <h3 class="subheading" style="margin-left: 0px!important;"  data-aos="fade-up" data-aos-duration="1500">family holiday</h3>
+    <div data-elementor-type="post" data-elementor-id="4" class="elementor elementor-4" data-elementor-settings="[]">
+
+      <section data-id="bf076e5"
+        class="elementor-element elementor-element-bf076e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+        data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+
+
+          <div data-id="4dea0a8"
+            class="elementor-element elementor-element-4dea0a8 elementor-column elementor-col-67 elementor-top-column"
+            data-element_type="column" data-aos="fade-up" data-aos-duration="1500">
+            <div class="elementor-column-wrap  elementor-element-populated">
+              <div class="elementor-widget-wrap">
+                <div data-id="5373587"
+                  class="elementor-element elementor-element-5373587 elementor-widget elementor-widget-dest-tax"
+                  data-element_type="dest-tax.default">
+                  <div class="elementor-widget-container">
+                    <div class="wd-dest">
+                      <div class="wd-dest-layout-carousel ht-grid ht-grid-3 ht-grid-tablet-2 ht-grid-mobile-1">
+                      
+                       <section class=" topDestination slider col-sm-12 col-xs-12">
+
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Kashmir</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Chennai</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/france-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Ladakh</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/england-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Mumbai</h3>
+                                <span class="wddc-count">
+                                  6 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/dubai-768x432.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Pune</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/china-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Andaman</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/vietnam-768x512.jpeg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Kashmir</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
+                            <div class="wdd-item">
+
+                              <img class="wdd-img"
+                                src="http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/04/maldives-768x425.jpg"
+                                alt="Tour list image">
+                              <div class="wdd-cont">
+                                <h3 class="wddc-name entry-title" itemprop="headline">Mumbai</h3>
+                                <span class="wddc-count">
+                                  3 Tours </span>
+                                <div class="wddc-desc" itemprop="text">
+                                  <p>History Ancient history and settlement. Main Honeymoon: History of the Maldives §
+                                    Early Age. The first Maldivians did not leave any archaeological artifacts. Their
+                                    buildings were probably built of wood, palm fronds and other perishable materials,
+                                    which would have quickly decayed in the salt and wind of the tropical climate.
+                                    Moreover, chiefs or headmen did not</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+  </div>
+    </div>
+        </div> 
+
+
+
+
+
+  <!--- ////////////////// foot//////// -->
+
+
+
+
+  <footer id="colophon" class="site-footer dark mt-1 mb-1" role="contentinfo">
+
+    <div class="footer-container">
+      <div class="footer-head">
+        <div class="footer-content-wrap">
+          <div class="social">
+            <h4 class="hidden-xs">follow us on</h4>
+
+            <ul class="social-icons">
+              <li><a href="#" class="fa fa-facebook" style="
+    padding:5px;
+font-size: 20px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+
+border-radius: 50%;
+background: #3B5998;
+color: white;
+"></a></li>&nbsp;
+              <li><a href="#" class="fa fa-twitter" style="
+    padding:5px;
+font-size: 20px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+border-radius: 50%;
+background: #55ACEE;
+color: white;"></a></li>&nbsp;
+              <li> <a href="#" class="fa fa-google" style="
+    padding:5px;
+font-size: 20px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+border-radius: 50%;
+background: #dd4b39;
+color: white;"></a>
+                </span></li>&nbsp;
+            </ul>
+          </div>
+          <div class="newsletter hidden-xs">
+            <!-- MailChimp for WordPress v2.3.8 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+            <div id="mc4wp-form-1" class="form mc4wp-form">
+              <form method="post">
+                <p>
+                  <label>Newsletter</label>
+                  <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Email address" required="">
+                </p>
+
+                <p>
+                  <input type="submit" value="">
+                </p>
+                <div style="position: absolute; left:-5000px;">
+                  <input type="text" name="" value="" tabindex="-1">
+                </div>
+                <input type="hidden" name="" value="">
+                <input type="hidden" name="" value="">
+                <input type="hidden" name="" value="">
+                <input type="hidden" name="" value="">
+                <input type="hidden" name="" value="">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-body">
+        <div class="footer-content-wrap">
+          <div class="row">
+            <div class="col-md-4 col-sm-4 wah-logo-wrap hidden-xs">
+              <div class="wah-logo-white"></div><br>
+              <a href="#" class="btn btn-outline-danger">Contact Us</a>
+              <div class="clearfix"></div>
+            </div>
+            <div class="col-md-2 col-sm-2">
+            </div>
+            <div class="col-md-2 col-sm-2">
+              <h4 class="hidden-xs text-white">Company</h4>
+              <ul class="footer-links">
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/about-us/">About Us</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/team/">Team</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/investors/">Investors</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/careers">Careers</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+
+              </ul>
+            </div>
+
+            <div class="col-md-2 col-sm-2 hidden-xs">
+              <h4 class="text-white">Explore</h4>
+              <ul class="footer-links">
+
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/itineraries/">Itineraries</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/travelogues/">Travelogues</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/Honeymoons/">Honeymoons</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/collections/">Collections</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 hidden-xs">
+              <h4 class="text-white">Packages</h4>
+              <ul class="footer-links">
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/itineraries/theme/luxury/">Luxury
+                    Holidays</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a
+                    href="/web/20160322190507/http://www.weareholidays.com/itineraries/theme/sightseeing/">Sightseeing</a>
+                </li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/itineraries/theme/weekend/">Weekend
+                    Getaways</a></li>
+                <li class="visible-xs-inline-block"><span class="dot">.</span></li>
+                <li><a href="/web/20160322190507/http://www.weareholidays.com/itineraries/theme/budget/">Budget
+                    Trips</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom hidden-xs">
+        <div class="footer-content-wrap">
+          <div class="footer-bottom-left">
+            <div class="footer-seal">
+
+              <div>
+                <p class="footer-seal-text">Safe &amp; Secure</p>
+                <p class="footer-seal-subtext"> secure Payment Gateway</p>
+              </div>
+            </div>
+            <div class="footer-seal">
+
+              <div>
+                <p class="footer-seal-text"><a
+                    href="/web/20160322190507/http://www.weareholidays.com/money-back-guarantee/">Money Back
+                    Guarantee</a></p>
+                <p class="footer-seal-subtext">Book with confidence</p>
+              </div>
+            </div>
+            <div class="footer-seal">
+              <div>
+                <p class="footer-seal-text">+91 1234567890</p>
+                <p class="footer-seal-subtext">10 AM - 7 PM (Monday - Friday)</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom-right">
+            <a href="/web/20160322190507/http://www.weareholidays.com/terms-of-use/" id="test-link">Terms of
+              Use</a>&nbsp;&nbsp;&nbsp;
+            <span class="dot">.</span>&nbsp;&nbsp;
+            <a href="/web/20160322190507/http://www.weareholidays.com/privacy-policy/">Privacy Policy</a>
+            <span class="dot">.</span>&nbsp;&nbsp;
+            <a href="/web/20160322190507/http://www.weareholidays.com/cancellation/">Cancellation Policy</a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+  <!--///////// footer ////////////// -->
+
+
+
+
+
+
+
+
+ <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- JQuery -->
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+  </script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <!--top_destination script start-->
+
+
+  <script type='text/javascript' src='http://haintheme.com/demo/wp/goto/wp-content/themes/goto/js/tiny-slider.js'>
+  </script>
+  <script type='text/javascript' src=" {% static 'home/js/top_activity.js' %} "></script>
+  <script type='text/javascript' src=" {% static 'home/js/top_destination.js' %} "></script>
+  <script type='text/javascript' src=" {% static 'home/js/place_by_state.js' %} "></script>
+  <script type='text/javascript' src=" {% static 'home/js/adventure_trip.js' %} "></script>
+  <script type='text/javascript' src=" {% static 'home/js/romantic_holiday.js' %} "></script>
+  <script type='text/javascript' src=" {% static 'home/js/family_holiday.js' %} "></script>
+  <!--top_destination end-->
+  
+  <!--   Animate on Scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+  </script>
+
+  <script type="text/javascript">
+    function destination() {
+      var y = document.getElementById("hide");
+      y.style.display = "none";
+      var x = document.getElementById("show");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+
+<script>
+    $(document).ready(function () {
+    //Hover Menu in Header
+    $('ul.nav li.dropdown').hover(function () {
+        $(this).find('.mega-dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+    }, function () {
+        $(this).find('.mega-dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+    });
+    
+    //Open Search    
+    $('.form-search').click(function (event) {
+        $(".instant-results").fadeIn('700').css('height', 'auto');
+        event.stopPropagation();
+    });
+
+    $('body').click(function () {
+        $(".instant-results").fadeOut('700');
+    });
+});
+</script>
+
+
+  <!--top activity--->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="{% static 'home/js/slick.min.js' %} " type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+
+      $(".regular").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+    });
+  </script>
+
+<!--top destination-->
+  
+  <script type="text/javascript">
+    $('.topDestination').slick({
+      centerMode: false,
+      centerPadding: '50px',
+      slidesToShow: 5,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '30px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  </script>
+  
+  <!--top activity-->
+  
+  <script type="text/javascript">
+    $('.topActivity').slick({
+      centerMode: false,
+      centerPadding: '50px',
+      slidesToShow: 3,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '30px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  </script>
+
+  <!--weekend gateway hide and show-->
+  <script type="text/javascript">
+    $('.center').slick({
+      centerMode: false,
+      centerPadding: '50px',
+      slidesToShow: 5,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '30px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  </script>
+  <!--interation destiation-->
+  <script type="text/javascript">
+    $('.filtering').slick({
+      slidesToShow: 5,
+      slidesToScroll: 4
+    });
+
+    var filtered = false;
+
+    $('.js-filter').on('click', function () {
+      if (filtered === false) {
+        $('.filtering').slick('slickFilter', ':even');
+        $(this).text('Unfilter Slides');
+        filtered = true;
+      } else {
+        $('.filtering').slick('slickUnfilter');
+        $(this).text('Filter Slides');
+        filtered = false;
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".nava").hover(function () {
+        $(".nava").css("color", "#ff3300");
+      }, function () {
+        $(".nava").css("color", "white");
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".nava1").hover(function () {
+        $(".nava1").css("color", "#ff3300");
+      }, function () {
+        $(".nava1").css("color", "white");
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".nava2").hover(function () {
+        $(".nava2").css("color", "#ff3300");
+      }, function () {
+        $(".nava2").css("color", "white");
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".nava3").hover(function () {
+        $(".nava3").css("color", "#ff3300");
+      }, function () {
+        $(".nava3").css("color", "white");
+      });
+    });
+  </script>
+  
+
+
+</body>
+
+</html>

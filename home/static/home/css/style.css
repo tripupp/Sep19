@@ -1,0 +1,1047 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:200,300,400,500,600,700,800,900,1000|Montserrat:400,500,600,700,800|Poppins:|Raleway|Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:200,300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
+
+.imu {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)), url(http://haintheme.com/demo/wp/goto/wp-content/uploads/2018/05/netherland-768x506.jpeg)!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    height: 490px!important;
+}
+
+.navbar {
+    border: 0!important;
+}
+
+.navbar a {
+    font-family: 'Lato', sans-serif!important;
+    font-weight: 500!important;
+    letter-spacing: 1px!important;
+}
+
+.navbar .nav-item a:hover {
+    color: tomato!important;
+}
+
+.dropdown-menu {
+    width: 230px!important;
+    border-radius: 5px!important;
+}
+
+.dropdown-menu a {
+    background-color: transparent!important;
+    font-size: 14px!important;
+}
+
+.dropdown-menu a:hover {
+    transform: translateX(5%)!important;
+    font-weight: 600!important;
+}
+
+.navbar-nav a:hover {
+    color: tomato!important;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    border:none;
+	display: block;
+    transform: scale(1)!important;
+	height: 0px;
+	overflow: hidden;
+	padding: 0;
+	top: 80px;
+	transition: all .9s;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+	top: 100%;
+	height: inherit;
+}
+
+.elementor {
+    padding: 0px 0px 0px 0px!important;
+    margin: 0!important;
+}
+
+.elementor-container {
+    margin-right: 0px!important;
+    margin-left: 30px!important;
+}
+
+.adventure .elementor-container {
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+}
+
+.content {
+    padding-top: 50px!important;
+}
+
+.content h3 {
+    font-size: 50px!important;
+    font-family: 'Montserrat', sans-serif!important;
+    letter-spacing: 1px!important;
+}
+
+.content h5 {
+/*    font-size: 48px!important;*/
+    font-family: 'Montserrat', sans-serif!important;
+    font-weight: 400!important;
+    letter-spacing: 1px!important;
+}
+
+.input-group {
+    margin-left: 18%!important;
+}
+
+.container {
+    margin: 0 auto!important;
+}
+
+.form-control {
+    float: left!important;
+    margin: 0 auto!important;
+    width: 400px!important;
+    height: 50px!important;
+}
+
+.input-group-btn {
+     padding-left: 0px!important;
+     width: 15%!important;
+}
+
+.input-group-btn .btn-info {
+    color: white!important;
+    float: right!important;
+    width: 100%!important;
+    height: 50px!important;
+    border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+    font-family: 'Montserrat', sans-serif!important;
+    font-weight: 500!important;
+    font-size: 17px!important;
+    letter-spacing: 1px!important;
+    background-color: tomato!important;
+}
+
+.input-group-btn .btn-info:hover {
+    opacity: 0.9!important;
+}
+
+::placeholder {
+    font-family: 'Montserrat', sans-serif!important;
+    font-size: 20px!important;
+    font-weight: 600!important;
+    color: rgb(230,230,230)!important;
+}
+
+.subheading {
+    padding-left: 7px;
+    border-left: 5px solid tomato!important;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif!important;
+    font-size: 30px!important;
+    font-weight: 1000!important;
+    line-height: 1.25;
+    color: #333333!important;
+    margin-top: 27px;
+    margin-bottom: 23px;
+    letter-spacing: 1px;
+    text-align: left!important;
+}
+
+.wdd-item {
+    border-radius: 5px!important;
+}
+
+.wdd-img {
+    border-radius: 5px!important;
+}
+
+.wddc-name {
+    font-family: 'Montserrat', sans-serif!important;
+    font-weight: 400!important;
+}
+
+.weekend_gateway {
+    border-radius: 5px!important;
+    border: none!important;
+}
+
+.weekend_gateway .img-hover-zoom{
+    border-radius: 5px!important;
+}
+
+.weekend_gateway img{
+    border-radius: 5px!important;
+}
+
+.weekend_gateway h5 {
+    font-family: 'Montserrat', sans-serif!important;
+    font-weight: 400!important;
+}
+
+.weekend_gateway p {
+    font-size: 15px!important;
+    font-family: 'Lato', sans-serif!important;
+    font-weight: 800!important;
+    padding-top: 2px!important;
+    margin-bottom: 0!important;
+}
+
+.package_demand {
+    width: 100%!important;
+    height: 620px!important;
+    padding: 10px 20px 10px 45px!important;
+}
+
+.package_demand .cardcontainer {
+    display: inline-flex;
+    width: 95%!important;
+    padding: 0px!important;
+}
+
+.package_demand .card {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  float: right!important;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  padding: 0!important;
+  margin-right: 15px!important;
+  margin-bottom: 27px!important;
+  display: inline-flex!important;
+    cursor: pointer;
+}
+
+.package_demand .card:hover {
+    transform: translateY(-1%);
+  box-shadow: 2px 8px 16px 0px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.package_demand h4 {
+    color: white!important;
+    font-weight: 500!important;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 5px 5px!important;
+  border: 0!important;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: #ffffff;
+  font-family: 'Cinzel', sans-serif!important;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.bottom-left h4 {
+    font-family: 'Cinzel', sans-serif!important;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif!important;
+  letter-spacing: 1px;
+}
+
+.elementor-section.elementor-section-boxed>.elementor-container {
+    max-width: 1270px!important;
+}
+
+.wd-dest-layout-carousel .tns-controls [data-controls="next"] {
+    right: -30px!important;
+}
+
+.wd-dest-layout-carousel .tns-controls [data-controls="prev"] {
+    left: -30px!important;
+}
+
+.elementor-4 .elementor-element.elementor-element-dade041 > .elementor-widget-container {
+    padding: 20px 0px 150px 0px!important;
+    background-image: url(../image/map.jpg)!important;
+    background-size: cover!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+    margin-top: 0!important;
+}
+
+.elementor-4 .elementor-element.elementor-element-dade041 .wdd-item {
+    display: inline!important;
+    margin-right: 30px!important;
+    margin-bottom: 30px!important;
+}
+
+.holiday_img:hover {
+    cursor: pointer!important;
+/*    transform: translateY(-3%)!important;*/
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    transition: 0.3s!important;
+}
+
+.holiday_content:hover {
+    cursor: pointer!important;
+    color: rgba(255, 99, 71, 0.5)!important;
+    background: rgba(0,0,0,0.3)!important;
+    transition: 0.3s!important;
+}
+
+.holiday_content h4 {
+    font-family: 'Lobster Two', cursive!important;
+    font-size: 35px!important;
+    font-style: italic!important;
+    font-weight: 200!important;
+    letter-spacing: 2px;
+    margin: 0px!important;
+    color: rgb(230,230,230)!important;
+    
+}
+
+.holiday_content h4:hover {
+    cursor: pointer!important;
+    color: rgba(255,255,255,1)!important;
+    transition: 0.3s!important;
+}
+
+.holiday_idea_img {
+    border-radius: 5px!important;
+}
+
+.holiday_idea {
+    border-radius: 5px!important;
+}
+
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 8px;
+}
+
+.write {
+    width: 100%!important;
+    height: 100%!important;
+    background-color: rgba(0,0,0,0.5)!important;
+    transform: translateY(-100%);
+}
+
+.holiday_idea .img-hover-zoom {
+    height: 250px!important;
+    overflow: hidden!important;
+    border-radius: 5px!important;
+}
+
+.holiday_idea .img-hover-zoom:hover {
+    box-shadow:0 0 10px rgba(0,0,0,0.8)!important;
+    transition: 0.4s!important;
+    cursor: pointer;
+}
+
+.holiday_idea_img:hover {
+    cursor: pointer!important;
+/*    transform: translateY(-1%)!important;*/
+    box-shadow:0 0 10px rgba(0,0,0,0.8)!important;
+    transition: 0.3s!important;
+}
+
+.holiday_idea_content:hover {
+    background: rgba(0,0,0,0.2)!important;
+    transition: 0.7s!important;
+}
+
+.holiday_idea_content:hover p{
+    font-weight: 500!important;
+    transition: 0.7s!important;
+}
+
+.holiday_idea_content {
+    border-radius: 5px!important;
+}
+
+.holiday_idea_content .pt-2 {
+    letter-spacing: 
+}
+
+.holiday_idea_content p {
+    font-family: 'Montserrat', sans-serif!important;
+    font-weight: 400!important;
+    letter-spacing: 1px!important;
+}
+
+.slider {
+    margin-top: 10px!important;
+}
+
+.input-group .btn-info {
+    color: tomato!important;
+    border-color: tomato!important;
+}
+
+.input-group .btn-info:hover {
+    color: white!important;
+    background-color: tomato!important;
+    transition: 0.3s!important;
+}
+
+.holiday_story .cardcontainer {
+    display: inline-flex;
+    width: 100%!important;
+    padding-left: 0px!important;
+}
+
+.holiday_story .card {
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(../image/goa.jpg);
+    background-size: cover;
+    background-position: center;
+    float: right!important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    padding: 0!important;
+    margin-right: 15px!important;
+    margin-bottom: 27px!important;
+    display: inline-flex!important;
+    cursor: pointer!important;
+}
+
+.holiday_story .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+    transform: translateY(-1%);
+    transition: 0.3s;
+}
+
+.holiday_story .card-body {
+    padding: 2px 1px 1px 5px!important;
+}
+.holiday_story .place {
+    text-transform: uppercase!important;
+    color: tomato!important;
+    font-family: 'Poppins', sans-serif!important;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.holiday_story h5 {
+    font-size: 18px!important;
+    height: 25px!important;
+    padding-top: 0!important;
+    padding-left: 0!important;
+    background: none!important;
+    font-family: 'Poppins', sans-serif;
+    color: #333333!important;  
+    letter-spacing: 1px;
+    margin-top: 0px!important;
+    transform: translateY(-60%)!important;
+}
+
+.holiday_story p {
+    margin-bottom: 15px!important;
+}
+
+.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
+     padding: 0px!important; 
+}
+
+.wd-dest-content {
+    transform: translateY(30%)!important;
+}
+
+.int_destination .slider {
+    margin-bottom: 50px!important;
+}
+
+.int_destination .btn-outline-primary {
+    border-color: tomato!important;
+    color: tomato!important;
+}
+
+.int_destination .btn-outline-primary:hover {
+    background-color: tomato!important;
+    color: white!important;
+    transition: 0.3s!important;
+}
+
+/*---------- Search ----------*/
+
+.input-group-btn {
+    float: right!important;
+}
+
+.result-bucket li {
+    padding: 7px 15px;
+}
+.instant-results {
+    background: #fff;
+    width: 595px;
+    color: gray;
+    position: absolute;
+    top: 100%;
+    left: 82px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .175);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .175);
+    display: none;
+    z-index: 9;
+}
+.form-search {
+    transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+}
+.search-form {
+    position: relative;
+    max-width: 100%;
+}
+.result-link {
+    color: #4f7593;
+}
+
+.result-entry:hover {
+    background-color: rgb(230,230,230);
+    transition: 0.3s;
+}
+
+.result-link .media-body {
+    font-size: 13px;
+    color: gray;
+}
+.result-link .media-heading {
+    font-size: 15px;
+    font-weight: 400;
+    color: #4f7593;
+}
+.result-link:hover,
+.result-link:hover .media-heading,
+.result-link:hover .media-body {
+    text-decoration: none;
+    color: #4f7593
+}
+.result-link .media-object {
+    width: 50px;
+    padding: 3px;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+}
+.result-entry + .result-entry {
+    border-top:1px solid #ddd;
+}
+.top-keyword {
+    margin: 3px 0 0;
+    font-size: 12px;
+    font-family: Arial;
+}
+.top-keyword a {
+    font-size: 12px;
+    font-family: Arial;
+}
+.top-keyword a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.custom {
+    position: relative!important;
+    display: -ms-inline-flex!important;
+    display: inline-flex!important;
+    -ms-flex-wrap: wrap!important;
+    flex-wrap: wrap!important;
+    -ms-flex-align: stretch!important;
+    align-items: stretch!important;
+    width: 700px!important;
+}
+
+.topDestination .ht-grid-item {
+    padding: 0!important;
+}
+
+.topActivity .ht-grid-item {
+    padding: 0!important;
+}
+
+.adventure {
+    padding-right: 20px!important;
+    padding-left: 30px!important;
+}
+
+.top_activity .card {
+        height: 480px!important;
+    }
+
+.state .card {
+    height: 480px!important;
+}
+
+.holiday_story .details {
+    background-color: rgba(0,0,0,0.5)!important;
+    width: 100%!important;
+    height: 50px!important;
+    margin-top: 61%!important;
+    border-bottom-left-radius: 5px!important;
+    border-bottom-right-radius: 5px!important;
+}
+
+
+
+
+
+@media only screen and (min-width: 350px) and (max-width: 376px) {
+    .input-group {
+        margin-left: 5%!important;
+    }
+
+    .custom {
+        width: 320px!important;
+    }
+    
+    .input-group-btn {
+         padding-left: 0px!important;
+         width: 25%!important;
+    }
+    
+    .instant-results {
+        width: 318px;
+        position: absolute;
+        top: 100%;
+        left: 7px;
+        display: none;
+        z-index: 9;
+    }
+    
+    .container {
+        margin: 0 auto!important;
+    }
+
+    .form-control {
+        margin: 0 auto!important;
+        width: 230px!important;
+        height: 50px!important;
+    }
+    
+    ::placeholder {
+    
+    font-size: 15px!important;
+    }
+    
+    .top_activity .card {
+        height: 800px!important;
+    }
+    
+    .weekend .slider {
+        width: 300px!important;
+    }
+    
+    .weekend_gateway {
+        width: 170px!important;
+        height: 100px!important;
+    }
+    
+    .state .card {
+        height: 800px!important;
+    }
+    
+    .package_demand .cardcontainer {
+        display: block;
+        padding-left: 15px!important;
+    }
+    
+    .mb-3 {
+        padding-left: 0px!important;
+        margin-bottom: 2px!important;
+    }
+    
+    .res {
+        display: none!important;
+    }
+    
+    .holiday_story .cardcontainer {
+        display: block;
+        padding-right: 0!important;
+        padding-left: 20px!important;
+    }
+    
+    .holiday_story .card {
+        height: 210px!important;
+    }
+    
+    .holiday_story .details {
+        margin-top: 66%!important;
+    }
+    
+    .adventure .wdd-cont {
+        padding: 0!important;
+        margin-bottom: 12px!important;
+    }
+    
+
+}
+
+@media only screen and (min-width: 410px) and (max-width:430px) {
+     .input-group {
+        margin-left: 7%!important;
+    }
+
+    .custom {
+        width: 320px!important;
+    }
+    
+    .input-group-btn {
+         padding-left: 0px!important;
+         width: 25%!important;
+    }
+    
+    .instant-results {
+        width: 318px;
+        position: absolute;
+        top: 100%;
+        left: 10px;
+        display: none;
+        z-index: 9;
+    }
+    
+    .container {
+        margin: 0 auto!important;
+    }
+
+    .form-control {
+        margin: 0 auto!important;
+        width: 230px!important;
+        height: 50px!important;
+    }
+    
+    ::placeholder {
+    
+    font-size: 15px!important;
+    }
+    
+    .top_activity .card {
+        height: 800px!important;
+    }
+    
+    .weekend .slider {
+        width: 300px!important;
+    }
+    
+    .weekend_gateway {
+        width: 170px!important;
+        height: 100px!important;
+    }
+    
+    .state .card {
+        height: 800px!important;
+    }
+    
+    .package_demand .cardcontainer {
+        display: block;
+        padding-left: 15px!important;
+    }
+    
+    .mb-3 {
+        padding-left: 0px!important;
+        margin-bottom: 2px!important;
+    }
+    
+    .res {
+        display: none!important;
+    }
+    
+    .holiday_story .cardcontainer {
+        display: block;
+        padding-right: 0!important;
+        padding-left: 20px!important;
+    }
+    
+    .holiday_story .card {
+        height: 210px!important;
+    }
+    
+    .holiday_story .details {
+        margin-top: 55%!important;
+    }
+    
+    .adventure .wdd-cont {
+        padding: 0!important;
+        margin-bottom: 12px!important;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+    
+    .imu {
+        height: 300px!important;
+    }
+    
+    .navbar {
+        display: none!important;
+    }
+    
+     .input-group {
+        margin-left: 7%!important;
+    }
+
+    .custom {
+        width: 630px!important;
+    }
+    
+    .input-group-btn {
+         padding-left: 0px!important;
+         width: 25%!important;
+    }
+    
+    .instant-results {
+        width: 472px;
+        position: absolute;
+        top: 100%;
+        left: 18px;
+        display: none;
+        z-index: 9;
+    }
+    
+    .container {
+        margin: 0 auto!important;
+    }
+
+    .form-control {
+        margin: 0 auto!important;
+        width: 230px!important;
+        height: 50px!important;
+    }
+    
+    ::placeholder {
+    
+    font-size: 15px!important;
+    }
+    
+    .top_activity .card {
+        height: 800px!important;
+    }
+    
+    .weekend .slider {
+        width: 300px!important;
+    }
+    
+    .weekend_gateway {
+        width: 170px!important;
+        height: 100px!important;
+    }
+    
+    .state .card {
+        height: 800px!important;
+    }
+    
+    .package_demand .cardcontainer {
+        display: block;
+        padding-left: 15px!important;
+    }
+    
+    .mb-3 {
+        padding-left: 0px!important;
+        margin-bottom: 2px!important;
+    }
+    
+    .res {
+        display: none!important;
+    }
+    
+    .holiday_story .cardcontainer {
+        display: block;
+        padding-right: 0!important;
+        padding-left: 20px!important;
+    }
+    
+    .holiday_story .card {
+        height: 210px!important;
+    }
+    
+    .holiday_story .details {
+        margin-top: 55%!important;
+    }
+    
+    .adventure .wdd-cont {
+        padding: 0!important;
+        margin-bottom: 12px!important;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .input-group {
+        margin-left: 16%!important;
+    }
+    
+    .instant-results {
+        width: 595px;
+        position: absolute;
+        top: 100%;
+        left: 65px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .instant-results {
+        width: 595px;
+        position: absolute;
+        top: 100%;
+        left: 67px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .instant-results {
+        width: 595px;
+        position: absolute;
+        top: 100%;
+        left: 69px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    
+    .input-group {
+        margin-left: 17%!important;
+    }
+    
+    .instant-results {
+        width: 595px;
+        position: absolute;
+        top: 100%;
+        left: 74px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+@media only screen and (min-width: 1340px) {
+    
+    .input-group {
+        margin-left: 17%!important;
+    }
+    
+    .instant-results {
+        width: 595px;
+        position: absolute;
+        top: 100%;
+        left: 76px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+@media only screen and (min-width: 1380px) {
+    
+    .input-group {
+        margin-left: 17%!important;
+    }
+    
+    .instant-results {
+        width: 595px;
+        position: absolute;
+        top: 100%;
+        left: 78px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1360px!important;
+    }
+    
+    .navbar {
+        display: contents!important;
+    }
+
+    .custom {
+        width: 830px!important;
+    }
+    
+    .input-group-btn {
+         padding-left: 0px!important;
+         width: 25%!important;
+    }
+    
+    .instant-results {
+        width: 622px;
+        position: absolute;
+        top: 100%;
+        left: 80px!important;
+        display: none;
+        z-index: 9;
+    }
+    
+}
+
+@media only screen and (min-width: 1450px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1400px!important;
+    }
+    
+    
+    .instant-results {
+        width: 622px;
+        position: absolute;
+        top: 100%;
+        left: 82px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+@media only screen and (min-width: 1480px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1410px!important;
+    }
+    
+    .instant-results {
+        width: 622px;
+        position: absolute;
+        top: 100%;
+        left: 84px!important;
+        display: none;
+        z-index: 9;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

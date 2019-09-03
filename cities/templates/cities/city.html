@@ -1,0 +1,489 @@
+{% extends 'cities/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Redfab
+{% endblock title %}
+
+
+{% block head_extra %}
+    <link rel="stylesheet" href="{% static 'cities/css/style.css' %}">
+{% endblock %}
+
+
+{% block bodycontent %}
+        
+    <!----Image container---->
+    <div class="jumbotron jumbotron-fluid" style="">
+        <div class="container">
+            <h1 class="display-2"><b>Gangtok</b></h1>
+        </div>
+                
+        <!---------- Menu Bar --------->
+                        
+        <div class="container">
+            <div class="contentarea">
+                <button class="tablink" onclick="openPage('Info', this, 'lavender')" id="defaultOpen" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                    <div><i class="fas fa-info-circle fa-2x" style="color: #D63031;" id="icon"></i></div>
+                    <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Info</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Places', this, 'lavender')" >
+                    <div><i class="fas fa-place-of-worship fa-2x" style="color: #6AB04A;" id="icon"></i></div>
+                    <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Places</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('How to Reach', this, 'lavender')">
+                    <div style="transform: translateY(40%)!important;"><i class="fas fa-map-marker-alt fa-2x" style="color: #2475B0;" id="icon3"></i></div>
+                    <p style="transform: translateY(35%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>How To Reach</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Holiday Packages', this, 'lavender')" style="padding: 0px!important;">
+                    <div style="transform: translateY(40%)!important;"><i class="fas fa-gifts fa-2x" style="color: #E1DA00;" id="icon4"></i></div>
+                    <p style="transform: translateY(35%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Holiday Packages</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Hotels', this, 'lavender')">
+                    <div><i class="fas fa-hotel fa-2x" style="color: #E5B143;" id="icon"></i></div>
+                    <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Hotels</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Flight', this, 'lavender')">
+                    <div><i class="fas fa-plane-departure fa-2x" style="color: #0A3D62;" id="icon"></i></div>
+                    <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Flight</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Car Rentals', this, 'lavender')" style="padding: 0px!important;">
+                    <div style="transform: translateY(40%)!important;"><i class="fas fa-car fa-2x" style="color: #4C4B4B;" id="icon7"></i></div>
+                    <p style="transform: translateY(40%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Car Rentals</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Food', this, 'lavender')">
+                    <div><i class="fas fa-utensils fa-2x" style="color: #EA7773;" id="icon"></i></div>
+                    <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Food</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Photos', this, 'lavender')">
+                    <div><i class="fas fa-images fa-2x" style="color: #99AAAB;" id="icon"></i></div>
+                    <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Photos</b></span></p>
+                </button>
+                
+                <button class="tablink" onclick="openPage('Map', this, 'lavender')" style="border-top-right-radius: 5px;border-top-right-radius: 5px;">
+                    <div><i class="fas fa-map-marked-alt fa-2x" style="color: #FAC42F;" id="icon"></i></div>
+                    <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Map</b></span></p>
+                </button>
+            </div>
+        </div>
+    </div>
+                        
+    <!--------------main contents----------->
+             
+    <div class="maincontent">
+        <div class="container" id="leftsidebar">
+            <div id="Info" class="tabcontent">
+                <h3 class="tagline"><i><b>"The Gateway to Sikkim"</b></i></h3>
+                <h3 class="subheading">Gangtok Tourism</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.<span id="dots">...</span><span id="more"> Neque voluptatem tenetur magnam velit dolores fugiat commodi aliquid vitae magni ex molestias, placeat ipsam non similique odit nostrum! Aliquid natus et, ipsa quam numquam at perferendis reprehenderit ullam maiores illum, nam eos iste placeat voluptate, laudantium, voluptatibus nesciunt! Facere iste vitae voluptatum, eum modi nisi illum.</span></p>
+            
+                <button onclick="myFunction()" id="myBtn">Read more </button>
+                
+                <h3 class="subheading">Places To Visit In Gangtok</h3>
+                
+                <!---------------Places to visit--------->
+                
+                <div class="cardcontainer col-sm-12 col-xs-12">
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="cardcontainer col-sm-12 col-xs-12">
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
+                    <div class="bottom-left">
+                            Norway
+                    </div>
+                    <div class="bottom-right">
+                            3 Days
+                    </div>
+                    </div>
+                </div>
+            
+                    <button id="viewall">View All Places to Visit in Gangtok</button>
+                
+                
+                <!---------------Best Gangtok Packages--------->
+                
+                <h3 class="subheading">Best Gangtok Packages</h3>
+                <div class="cardcontainer col-lg-12 col-sm-12 col-xs-12">
+                    <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);">
+                            <div class="bottom-left">
+                                    <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                                    <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                                    <hr>
+                                    <p style="color:white!important;">John Doe</p>
+                                    <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                            </div>
+                            <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                                    INR 115000
+                            </div>
+                    </div>
+                    <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);">
+                            <div class="bottom-left">
+                                    <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                                    <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                                    <hr>
+                                    <p style="color:white!important;">John Doe</p>
+                                    <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                            </div>
+                            <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                                    INR 115000
+                            </div>
+                    </div>
+                    <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);">
+                            <div class="bottom-left">
+                                    <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                                    <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                                    <hr>
+                                    <p style="color:white!important;">John Doe</p>
+                                    <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                            </div>
+                            <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                                    INR 115000
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="cardcontainer col-lg-12 col-sm-12 col-xs-12">
+                    <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);">
+                            <div class="bottom-left">
+                                    <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                                    <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                                    <hr>
+                                    <p style="color:white!important;">John Doe</p>
+                                    <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                            </div>
+                            <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                                    INR 115000
+                            </div>
+                    </div>
+                    <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);">
+                            <div class="bottom-left">
+                                    <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                                    <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                                    <hr>
+                                    <p style="color:white!important;">John Doe</p>
+                                    <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                            </div>
+                            <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                                    INR 115000
+                            </div>
+                    </div>
+                    <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);">
+                            <div class="bottom-left">
+                                    <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                                    <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                                    <hr>
+                                    <p style="color:white!important;">John Doe</p>
+                                    <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                            </div>
+                            <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                                    INR 115000
+                            </div>
+                    </div>
+                </div>
+                <button id="explore">View All Itineraries </button>
+                
+                <!---------------------Top Hotels------------->
+            
+                <h3 class="subheading">top hotels - gangtok</h3>
+                <div class="cardcontainer col-sm-12 col-xs-12">
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 235px;">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 235px;">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 235px;">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 235px;">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="explore">View All Hotels </button>
+                <!-------------------------FAQ-------------------->
+                
+                <h3 class="subheading">faq - clear all queries</h3>
+                <div class="cardcontainer col-sm-12 col-xs-12" style="display: block!important;">
+                    <button class="collapsible"><b>More on MG Road</b> <span style="color: tomato!important; float: right;"><i class="fas fa-sort-down fa-lg"></i></span></button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem temporibus aperiam labore omnis sint obcaecati, illum ad sunt alias amet saepe nostrum, consectetur nulla a magnam dolores quod. Aliquam illum repudiandae explicabo pariatur cum esse asperiores, expedita accusamus totam quidem ex. Fugit eligendi dignissimos similique optio sequi perspiciatis non veniam voluptatum ad, tempore, aspernatur quia quos, fugiat voluptatem quasi rerum. Illo, architecto, inventore. Inventore explicabo qui sint esse atque ipsam laudantium, veritatis quos doloremque error, nisi, vitae dolores ipsa dolore.</p>
+                    </div> 
+                    <button class="collapsible"><b>MG Road Shopping</b><span style="color: tomato!important; float: right;"><i class="fas fa-sort-down fa-lg"></i></span></button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem temporibus aperiam labore omnis sint obcaecati, illum ad sunt alias amet saepe nostrum, consectetur nulla a magnam dolores quod. Aliquam illum repudiandae explicabo pariatur cum esse asperiores, expedita accusamus totam quidem ex. Fugit eligendi
+                        </p>
+                    </div>
+                    <button class="collapsible"><b>Restaurants and Bars at MG Road</b><span style="color: tomato!important; float: right;"><i class="fas fa-sort-down fa-lg"></i></span></button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem temporibus aperiam labore omnis sint obcaecati, illum ad sunt alias amet saepe nostrum, consectetur nulla a magnam dolores quod. Aliquam illum repudiandae explicabo pariatur cum esse asperiores, expedita accusamus totam quidem ex. Fugit eligendi
+                        </p>
+                    </div> 
+                    <button class="collapsible"><b>Gangtok Food and Cultural Festival</b> <span style="color: tomato!important; float: right;"><i class="fas fa-sort-down fa-lg"></i></span></button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem temporibus aperiam labore omnis sint obcaecati, illum ad sunt alias amet saepe nostrum, consectetur nulla a magnam dolores quod. Aliquam illum repudiandae explicabo pariatur cum esse asperiores, expedita accusamus totam quidem ex. Fugit eligendi
+                        </p>
+                    </div> 
+                    <button class="collapsible"><b>Tips For Visiting MG Road</b> <span style="color: tomato!important; float: right;"><i class="fas fa-sort-down fa-lg"></i></span></button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem temporibus aperiam labore omnis sint obcaecati, illum ad sunt alias amet saepe nostrum, consectetur nulla a magnam dolores quod. Aliquam illum repudiandae explicabo pariatur cum esse asperiores, expedita accusamus totam quidem ex. Fugit eligendi
+                        </p>
+                    </div>    
+                </div>
+                
+                <!---------------------Featured Content & Guide------------->
+            
+                <h3 class="subheading" style="margin-top: 55px!important;">Featured Content & Guide</h3>
+                <div class="cardcontainer col-sm-12 col-xs-12">
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: 235px;" id="featured">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>Views of the Grand Canyon</b></h5>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: 235px;" id="featured">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>A Lifetime of Hope and regret</b></h5>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: 235px;" id="featured">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>The Best Lesbian Travel Blogs</b></h5>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: 235px;" id="featured">
+                        <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                        <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>Adelaid to Alice Springs Overland</b></h5>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="Places" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more </button> 
+            </div>
+            
+            <div id="How to Reach" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+
+            <div id="Holiday Packages" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+
+            <div id="Hotels" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+            
+            <div id="Flight" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+            
+            <div id="Car Rentals" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+            
+            <div id="Food" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+            
+            <div id="Photos" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+            
+            <div id="Map" class="tabcontent">
+                <h3>Info</h3>
+                <p> </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+            
+        </div>
+            
+        <div class="rightsidebar">
+            <h3 class="subheading">Top Packages</h3>
+            <div class="sidebarcontent">
+                <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);width: 90%!important;height: 200px!important;">
+                    <div class="bottom-left">
+                        <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                        <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                        <hr>
+                        <p style="color:white!important;">John Doe</p>
+                        <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                    </div>
+                    <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                            INR 115000
+                    </div>
+                </div>
+            </div> 
+            <div class="sidebarcontent">
+                <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);width: 90%!important;height: 200px!important;">
+                    <div class="bottom-left">
+                            <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                            <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                            <hr>
+                            <p style="color:white!important;">John Doe</p>
+                            <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                    </div>
+                    <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                            INR 115000
+                    </div>
+                </div>
+            </div> 
+            <h3 class="subheading">Similar Places</h3>
+            <div class="sidebarcontent">
+                <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);width: 90%!important;height: 200px!important;">
+                    <div class="bottom-left">
+                            <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                            <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                            <hr>
+                            <p style="color:white!important;">John Doe</p>
+                            <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                    </div>
+                    <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                            INR 115000
+                    </div>
+                </div>
+            </div> 
+            <div class="sidebarcontent">
+                <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);width: 90%!important;height: 200px!important;">
+                    <div class="bottom-left">
+                            <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                            <h4 style="margin-bottom: 0px!important;">Enjoy Singapore</h4>
+                            <hr>
+                            <p style="color:white!important;">John Doe</p>
+                            <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                    </div>
+                    <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                            INR 115000
+                    </div>
+                </div>
+            </div> 
+        </div>
+            
+    </div>
+{% endblock bodycontent %}
+
+
+{% block scriptcontent %} 
+    <script src="{% static 'cities/js/menu.js' %}"></script>
+    <script src="{% static 'cities/js/read.js' %}"></script>
+    <script src="{% static 'cities/js/collapsible.js' %}"></script>
+{% endblock %}
