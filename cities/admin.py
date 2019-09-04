@@ -29,4 +29,17 @@ class CityAdmin(admin.ModelAdmin):
         model = City
 
 
-admin.site.register(Place)
+@admin.register(Place)
+class PlaceAdmin(admin.ModelAdmin):
+
+    list_display = ['place_id', 'places', 'city', 'slug', 'state',
+                    'country']
+    list_display_links = ['places']
+    list_editable = []
+    list_per_page = 10
+    list_filter = []
+    search_fields = ['place_id', 'places', 'themes', 'city',
+                     'state', 'country']
+
+    class Meta:
+        model = Place

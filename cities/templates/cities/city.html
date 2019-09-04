@@ -17,7 +17,7 @@
     <!----Image container---->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-2"><b>Gangtok</b></h1>
+            <h1 class="display-2"><b>{{ city.city_name }}</b></h1>
         </div>
                 
         <!---------- Menu Bar --------->
@@ -84,23 +84,34 @@
             <div id="Info" class="tabcontent">
                 <h3 class="tagline"><i><b>"The Gateway to Sikkim"</b></i></h3>
                 <h3 class="subheading">Gangtok Tourism</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.<span id="dots">...</span><span id="more"> Neque voluptatem tenetur magnam velit dolores fugiat commodi aliquid vitae magni ex molestias, placeat ipsam non similique odit nostrum! Aliquid natus et, ipsa quam numquam at perferendis reprehenderit ullam maiores illum, nam eos iste placeat voluptate, laudantium, voluptatibus nesciunt! Facere iste vitae voluptatum, eum modi nisi illum.</span></p>
-            
-                <button onclick="myFunction()" id="myBtn">Read more </button>
+                <p>
+                    <span id="lesschars"> {{ city.about|truncatechars:500 }} </span>
+                    {% if city.about|length > 500 %}
+                        <span id="dots">...</span>
+                        <span id="more"> {{ city.about }}</span>
+                    {% endif %}
+                </p>
+
+                {% if city.about|length > 500 %}
+                    <button onclick="myFunction()" id="myBtn">Read more </button>
+                {% endif %}
+                
                 
                 <h3 class="subheading">Places To Visit In Gangtok</h3>
                 
                 <!---------------Places to visit--------->
                 
                 <div class="cardcontainer col-sm-12 col-xs-12">
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
+                    {% for place in places %} 
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url( {{ place.place_pic.url }} );">
+                            <div class="bottom-left">
+                                    {{ place.places }}
+                            </div>
+                            <div class="bottom-right">
+                                    3 Days
+                            </div>
+                        </div>
+                    {% endfor %}
                     <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
                     <div class="bottom-left">
                             Norway

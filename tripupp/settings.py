@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'home.apps.HomeConfig',
     'cities.apps.CitiesConfig',
+    'categories.apps.CategoriesConfig'
 ]
 
 MIDDLEWARE = [

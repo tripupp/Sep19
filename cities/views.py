@@ -1,15 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import (
-    ListView,
-    DetailView,
-)
+from django.views import View
 from .models import City, Place
 
 
-class CityDetailView(DetailView):
+class CityDetailView(View):
 
-    model = City
     template_name = 'cities/city.html'
-    context_object_name = 'cities'
     query_pk_and_slug = True
+
+    def get(self, request, *args, **kwargs):
+        places = Place.objects.all()
+        city = get_object_or_404(City, pk=self.kwargs.get('pk'))
+        context = {
+            'places': places,
+            'city': city
+        }
+        return render(request, self.template_name, context)

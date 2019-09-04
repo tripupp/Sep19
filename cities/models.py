@@ -6,6 +6,13 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 
+class Theme(models.Model):
+
+    theme_name = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.theme_name
+
 class City(models.Model):
 
     def city_pic_path(self, filename):
@@ -64,6 +71,7 @@ class City(models.Model):
         return self.city_name
 
 
+
 class Place(models.Model):
 
     def place_pic_path(self, filename):
@@ -82,7 +90,8 @@ class Place(models.Model):
     state = models.CharField(max_length=500)
     country = models.CharField(max_length=500)
     description = models.TextField()
-    themes = models.TextField()
+    # themes = models.TextField()
+    themes = models.ManyToManyField(Theme)
     # faqs
     weather = models.CharField(max_length=500)
     time_required = models.CharField(max_length=500)
@@ -124,3 +133,5 @@ class Place(models.Model):
 
     def __str__(self):
         return self.places
+
+
