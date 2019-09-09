@@ -1,0 +1,82 @@
+{% load static %}
+<div class="card-deck">
+{% for city in cities %}
+    {% if forloop.counter0|divisibleby:"3" and forloop.counter0 != 0 %}
+        </div>
+        <div class="card-deck">
+    {%endif%}
+    <div class="card" style=" max-height: 400px!important;border-radius: 5px!important;">
+        <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url({{ city.city_pic.url }});border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+            <div class="top-left">
+                <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                <div style="float: right;margin-left: 2px;">
+                    <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>{{ city.city_name }}</b></p>
+                    <p style="font-size: 11px;">{{ city.state }}</p>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="gallery">
+                    <i class="far fa-image fa-lg"></i> 20 
+                </div>
+                <div class="video" style="float: right;">
+                    <i class="fab fa-youtube fa-lg"></i> 5
+                </div>
+            </div>
+            <div class="bottom-left" style="position: absolute;bottom: 245px;left: 3px;padding-left: 2px;padding-right: 2px;">
+                <p style="font-size: 12px;margin-bottom: 0!important;letter-spacing: 0px;">Reviews</p>
+                <i class="fas fa-star"></i> <b>4.5/5</b>
+            </div>
+        </div>
+        <div class="card-body">
+            <h6 class="card-title">Places : <span style="font-size: 14px;"><a href="#">Taj Mahal</a> </span><span class="text-muted">|</span><span style="font-size: 14px;"><a href="#"> Fatehpur Sikri</a> </span><span class="text-muted">|</span><span style="font-size: 14px;"><a href="#"> Agra Fort</a> </span><span class="text-muted">|</span>
+            <span id="space"></span>
+            
+            <span id="obtain">
+                <span style="font-size: 14px;"><a href="#"> Demo</a> </span><span class="text-muted">|</span><span style="font-size: 14px;"><a href="#"> Demo</a> </span><span class="text-muted">|</span><span style="font-size: 14px;"><a href="#"> Demo</a> </span><span class="text-muted">|</span>
+            </span>
+            
+            <button onclick="myFunction2()" id="read" style="padding-left: 0px!important;color: cornflowerblue!important;"><b>+5 more</b></button></h6>
+            
+            
+            <div class="packages">
+            <div class="pack">
+                <i class="fas fa-archive fa-sm" style="margin-left: 35%;color:tomato!important;"></i>
+                <div style="transform: translateY(-30%);text-align: center">
+                    <span style="font-size: 12px;"> Package</span>
+                </div>
+            </div>
+            <div class="pack">
+                <i class="fas fa-hotel fa-sm" style="margin-left: 35%;color:tomato!important;"></i>
+                <div style="transform: translateY(-30%);text-align: center">
+                    <span style="font-size: 12px;"> Hotels</span>
+                </div>
+            </div>
+            <div class="pack">
+                <i class="fab fa-telegram-plane " style="margin-left: 38%;color:tomato!important;"></i>
+                <div style="transform: translateY(-30%);text-align: center">
+                    <span style="font-size: 12px;"> Flight</span>
+                </div>
+            </div>
+                <div class="pack" style="border-right: 0!important;">
+                    <i class="fas fa-utensils" style="margin-left: 40%;color:tomato!important;"></i>
+                    <div style="transform: translateY(-30%);text-align: center">
+                        <span style="font-size: 12px;"> Food</span>
+                    </div>
+                </div> 
+            </div>
+            
+            <h6 class="card-title" style="color: tomato!important; margin-top: 25px;font-size: 13px;font-family:'Open sans', sans-serif">ACTIVITIES : <span style="font-size: 12px;color: dimgray">Water sports, Trekking, Snow Sport </span></h6>
+            
+            <p class="card-text" style="font-size: 12px;margin-bottom: 5px!important;margin-top: 7px;">This is a longer card with supporting text below as a natural lead-in to additional content. This content... <span class="readmore" style="font-family: 'Poppins', sans-serif!important;font-size: 13px;"><a href="" style="text-decoration: none;color: tomato!important;">Read More</a></span></p>
+            
+            <div class="buttonparallel" >
+                <div class="btn-1">
+                    <a href="#" class="btn btn-primary">25 Packages</a>
+                </div>
+                <div class="btn-2">
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

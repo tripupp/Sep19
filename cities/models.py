@@ -9,9 +9,47 @@ from django.utils.text import slugify
 class Theme(models.Model):
 
     theme_name = models.CharField(max_length=500)
+    slug = models.SlugField(
+        default='',
+        editable=False,
+        max_length=500,
+    )
+
+    def get_absolute_url(self):
+        kwargs = {
+            'pk': self.pk,
+            'slug': self.slug
+        }
+        return reverse('city-pk-slug-detail', kwargs=kwargs)
+
+    def save(self, *args, **kwargs):
+        value = self.theme_name
+        self.slug = slugify(value, allow_unicode=True)
+        super().save(*args, **kwargs)
+
+    class Meta:
+
+        verbose_name = _('Theme')
+        verbose_name_plural = _('Themes')
 
     def __str__(self):
         return self.theme_name
+
+
+class IdealMonth(models.Model):
+
+    month_name = models.CharField(max_length=20)
+    month_number = models.IntegerField()
+
+    def __str__(self):
+        return self.month_name
+
+class Activities(models.Model):
+
+    activity_name = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.activity_name
 
 class City(models.Model):
 
@@ -24,6 +62,16 @@ class City(models.Model):
                 city_id=self.city_id, basename=basefilename, randomstring=randomstr,
                 ext=file_extension)
 
+    region_choices = [
+        ('North India', 'North India'),
+        ('South India', 'South India'),
+        ('East India', 'East India'),
+        ('West India', 'West India'),
+        ('Central India', 'Central India'),
+        ('North-East', 'North-East'),
+        ('International', 'International')
+    ]
+
     id = None
     city_id = models.BigAutoField(primary_key=True)
     city_name = models.CharField(max_length=500)
@@ -31,8 +79,8 @@ class City(models.Model):
     state = models.CharField(max_length=500)
     country = models.CharField(max_length=500)
     weather = models.CharField(max_length=500)
-    ideal_month = models.CharField(max_length=100)
-    ideal_duration = models.CharField(max_length=500)
+    ideal_month = models.ManyToManyField(IdealMonth)
+    ideal_duration = models.IntegerField()
     nearest_airport = models.CharField(max_length=500)
     # upcoming_events
     about = models.TextField()
@@ -49,6 +97,8 @@ class City(models.Model):
         editable=False,
         max_length=500,
     )
+    themes = models.ManyToManyField(Theme)
+    region = models.CharField(max_length=500, choices=region_choices)
 
     def get_absolute_url(self):
         kwargs = {
@@ -114,6 +164,8 @@ class Place(models.Model):
         max_length=500,
     )
 
+    activities = models.ManyToManyField(Activities)
+    
     def get_absolute_url(self):
         kwargs = {
             'pk': self.id,
@@ -133,5 +185,3 @@ class Place(models.Model):
 
     def __str__(self):
         return self.places
-
-

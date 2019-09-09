@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="{% static 'categories/css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>Redfab</title>
+</head>
+
+<body class="color">
+<!--    Navbar  -->
+  {% include "cities/navbar.html" %}
+    
+<!--    <div class="container">-->
+    
+<!-------------Filter---------------->
+      
+       <div class="arrange col-lg-12">
+        <div class="accordion" id="accordionExample">
+          
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>THEMES</b>
+                </button>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 20px!important;padding-right: 0px!important">
+                  {% csrf_token %}
+                  {% for theme in themes %}
+                    {% if theme in current_theme %}
+                      <label class="contain"><span class="filter-font">{{ theme.theme_name }}</span> 
+                        <input type="checkbox" class="common-selector theme" value="{{ theme.pk }}" checked>
+                        <span class="checkmark"></span>
+                      </label>
+                    {% else %}
+                      <label class="contain"><span class="filter-font">{{ theme.theme_name }}</span> 
+                        <input type="checkbox" class="common-selector theme" value="{{ theme.pk }}">
+                        <span class="checkmark"></span>
+                      </label>
+                    {% endif %}
+                  {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>REGION</b>
+                </button>
+            </div>
+
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 20px!important;padding-right: 0px!important">
+                
+                <label class="contain"><span class="filter-font">North India</span>
+                  <input type="checkbox" class="common-selector region" value="North India">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">South India</span>
+                  <input type="checkbox" class="common-selector region" value="South India">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">East India</span>
+                  <input type="checkbox" class="common-selector region" value="East India">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font">West India</span>
+                  <input type="checkbox" class="common-selector region" value="West India">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font">Central India</span>
+                  <input type="checkbox" class="common-selector region" value="Central India">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="contain"><span class="filter-font">North-East </span>
+                  <input type="checkbox" class="common-selector region" value="North-East">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="contain"><span class="filter-font">International</span>
+                  <input type="checkbox" class="common-selector region" value="International">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>ACTIVITIES</b>
+                </button>
+            </div>
+            
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 20px!important;padding-right: 0px!important">
+                
+                {% for activity in activities %}
+                  <label class="contain"><span class="filter-font">{{ activity.activity_name }}</span>
+                    <input type="checkbox" class="common-selector activity" value="{{ activity.pk }}">
+                    <span class="checkmark"></span>
+                  </label>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>BEST TIME</b>
+                </button>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 20px!important;padding-right: 0px!important">
+              
+               <div class="months">
+                    <label class="contain"><span class="filter-font">Jan - Feb</span>
+                      <input type="checkbox" class="common-selector month" value="1,2">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+
+              <div class="months">
+                   <label class="contain"><span class="filter-font">Mar- Apr</span>
+                      <input type="checkbox" class="common-selector month" value="3,4">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+               
+               <div class="months">
+                    <label class="contain"><span class="filter-font">May - June</span>
+                      <input type="checkbox" class="common-selector month" value="5,6">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+              
+               <div class="months">
+                    <label class="contain"><span class="filter-font">Jul - Aug</span>
+                      <input type="checkbox" class="common-selector month" value="7,8">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+                
+               <div class="months">
+                   <label class="contain"><span class="filter-font">Sep - Oct</span>
+                      <input type="checkbox" class="common-selector month" value="9,10">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+               <div class="months">
+                    <label class="contain"><span class="filter-font">Nov - Dec</span>
+                      <input type="checkbox" class="common-selector month" value="11,12">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>PLACES</b>
+                </button>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 20px!important;padding-right: 0px!important">
+                
+                {% for city in all_cities|slice:":4" %}
+                  <label class="contain"><span class="filter-font">{{ city.city_name|title }}</span>
+                    <input type="checkbox" class="common-selector city" value="{{ city.pk }}">
+                    <span class="checkmark"></span>
+                  </label>
+                {% endfor %}
+                
+                {% if all_cities|length > 4 %}
+                  <span id="dots"></span>
+                  <span id="more"> 
+                    {% for city in all_cities|slice:"4:" %}
+                      <label class="contain"><span class="filter-font">{{ city.city_name|title }}</span>
+                        <input type="checkbox" class="common-selector city" value="{{ city.pk }}">
+                        <span class="checkmark"></span>
+                      </label>
+                    {% endfor %}
+                  </span>
+                {% endif %}
+               
+                {% if all_cities|length > 4 %}
+                  <button onclick="myFunction()" id="myBtn" style="margin-left: 40px!important; padding-left: 0px!important;color: cornflowerblue!important;font-size: 13px;">View More</button>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>DAYS</b>
+                </button>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 20px!important;padding-right: 0px!important">
+                <label class="contain"><span class="filter-font">2 Days</span>
+                  <input type="checkbox" class="common-selector day" value="2">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">5 Days</span>
+                  <input type="checkbox"class="common-selector day" value="5">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">9 Days</span>
+                  <input type="checkbox"class="common-selector day" value="9">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font">More than 12</span>
+                  <input type="checkbox"class="common-selector day" value="12">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<!----------------Card------------->
+      
+        <div class="holidaycard fetch-data">
+            {% include 'categories/filtercity.html' %}
+        </div>
+    
+
+
+    <script src="{% static 'categories/js/filter.js' %} "></script>
+    <script src="{% static 'categories/js/read.js' %}   "></script>
+    <script src="{% static 'categories/js/5more.js' %}  "></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+        //filter_data();
+        function filter_data(){
+
+          var themes = get_filter('theme');
+          var city = get_filter('city');
+          var month = get_filter('month');
+          var activity = get_filter('activity');
+          var region = get_filter('region');
+          var day = get_filter('day')
+          $.post({
+            url:"{% url 'categories-filter' %}",
+            data:{'themes':themes, 'city':city, 'month':month,
+                  'activity':activity, 'day':day, 'region':region,
+                  'csrfmiddlewaretoken': '{{ csrf_token }}'},
+            success:function(data){
+              $('.fetch-data').html(data);
+            }
+          });
+        }
+
+        function get_filter(class_name){
+          var filter = [];
+          $('.' + class_name + ':checked').each(function(){
+              filter.push($(this).val());
+          });
+          return filter;
+        }
+
+        $('.common-selector').click(function(){
+          filter_data();
+        });
+
+      });
+    </script>
+
+</body>

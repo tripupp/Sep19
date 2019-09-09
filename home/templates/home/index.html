@@ -527,18 +527,17 @@
             </a>
             <ul class="dropdown-menu pl-2 pr-2" aria-labelledby="navbarDropdown">
 
-              <li> <a class="dropdown-item" href="#" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Hill Stations</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Trekkings</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Honemoon</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Road Trips</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Himachal</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Deserts</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Beaches</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Adventure</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Wildlife</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Water Activies</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Nature</a></li>
-              <li> <a class="dropdown-item" href="#" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Heritage</a></li>
+              {% for theme in themes %}
+                {% if foorloop.first %}
+                  <li> <a class="dropdown-item" href="{% url 'categories-category' theme.pk theme.slug %}" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i>{{ theme.theme_name }}</a></li>
+                {% elif foorloop.last %}
+                  <li> <a class="dropdown-item" href="{% url 'categories-category' theme.pk theme.slug %}" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i>{{ theme.theme_name }}</a></li>
+                {% else %}
+                  <li> <a class="dropdown-item" href="{% url 'categories-category' theme.pk theme.slug %}" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i>{{ theme.theme_name }}</a></li>
+                {% endif %}
+              
+              {% endfor %}
+              <li> <a class="dropdown-item text-danger" href="{% url 'categories-category' 0 'ALL' %}" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Explore More</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown ml-1 mr-1">

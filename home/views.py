@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 
-from cities.models import City
+from cities.models import City, Theme
 # Create your views here.
 
 # def home(request):
@@ -14,7 +14,9 @@ class HomeView(View):
 
     def get(self, request, *args, **kwargs):
         cities = City.objects.all()
+        themes = Theme.objects.all()
         context = {
-            'cities': cities
+            'cities': cities,
+            'themes': themes
         }
         return render(request, self.template_name, context)

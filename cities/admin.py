@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import City, Place
+from .models import City, Place, Theme, IdealMonth, Activities
 
 
 @admin.register(City)
@@ -43,3 +43,20 @@ class PlaceAdmin(admin.ModelAdmin):
 
     class Meta:
         model = Place
+
+
+@admin.register(Theme)
+class ThemeAdmin(admin.ModelAdmin):
+
+    list_display = ['pk', 'theme_name', 'slug']
+    list_display_links = ['theme_name']
+    list_editable = []
+    list_per_page = 10
+    list_filter = []
+    search_fields = ['pk', 'theme_name']
+
+    class Meta:
+        model = Theme
+
+admin.site.register(IdealMonth)
+admin.site.register(Activities)
