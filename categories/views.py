@@ -39,7 +39,12 @@ class FilterView(View):
         month = request.POST.getlist('month[]')
         activity = request.POST.getlist('activity[]')
         region = request.POST.getlist('region[]')
-        if (not themes) and (not city) and (not month) and (not activity) and (not region):
+        if request.POST.getlist('day[]'):
+            day = max([int(i) for i in request.POST.getlist('day[]')])
+        else:
+            day = None
+        print(day,request.POST)
+        if (not themes) and (not city) and (not month) and (not activity) and (not region) and (not day):
             cities = City.objects.all()
         else:
 
@@ -56,10 +61,7 @@ class FilterView(View):
                 activity = Activities.objects.filter(pk__in=activity)
                 city_based_on_activities = set(Place.objects.filter(activities__in=activity).values_list('city', flat=True))
                 city = set(city)
-                print(city_based_on_activities)
-                print(city)
                 city = list(city & city_based_on_activities)
-                print(city)
 
             if not city and not activity:
                 city = City.objects.all().values_list('pk', flat=True)
@@ -77,10 +79,15 @@ class FilterView(View):
 
             if not region:
                 region = ['North India', 'South India', 'East India', 'West India', 'Central India', 'North-East', 'International']
+
+            if not day:
+                day = 1000000000        #any maximum value
+            print(day)
             cities = City.objects.filter(themes__in=current_theme,
                                          pk__in=city,
                                          ideal_month__in=month,
                                          region__in=region,
+                                         ideal_duration__lte=day,
                                          ).distinct()
         context = {
             'cities': cities,
