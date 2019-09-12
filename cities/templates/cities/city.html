@@ -97,7 +97,7 @@
                 {% endif %}
                 
                 
-                <h3 class="subheading">Places To Visit In Gangtok</h3>
+                <h3 class="subheading">Places To Visit In {{ city.city_name }}</h3>
                 
                 <!---------------Places to visit--------->
                 
@@ -112,65 +112,7 @@
                             </div>
                         </div>
                     {% endfor %}
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
-                </div>
-                
-                <div class="cardcontainer col-sm-12 col-xs-12">
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
-                    <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(./assets/img/goa.jpg);">
-                    <div class="bottom-left">
-                            Norway
-                    </div>
-                    <div class="bottom-right">
-                            3 Days
-                    </div>
-                    </div>
+                    
                 </div>
             
                     <button id="viewall">View All Places to Visit in Gangtok</button>
@@ -178,7 +120,7 @@
                 
                 <!---------------Best Gangtok Packages--------->
                 
-                <h3 class="subheading">Best Gangtok Packages</h3>
+                <h3 class="subheading">Best {{ city.city_name }} Packages</h3>
                 <div class="cardcontainer col-lg-12 col-sm-12 col-xs-12">
                     <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url(./assets/img/goa.jpg);">
                             <div class="bottom-left">
@@ -260,7 +202,7 @@
                 
                 <!---------------------Top Hotels------------->
             
-                <h3 class="subheading">top hotels - gangtok</h3>
+                <h3 class="subheading">top hotels - {{ city.city_name }}</h3>
                 <div class="cardcontainer col-sm-12 col-xs-12">
                     <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 235px;">
                         <img src="./assets/img/goa.jpg" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">

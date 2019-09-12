@@ -99,6 +99,7 @@ class City(models.Model):
     )
     themes = models.ManyToManyField(Theme)
     region = models.CharField(max_length=500, choices=region_choices)
+    is_top_destination = models.BooleanField()
 
     def get_absolute_url(self):
         kwargs = {
@@ -119,7 +120,6 @@ class City(models.Model):
 
     def __str__(self):
         return self.city_name
-
 
 
 class Place(models.Model):

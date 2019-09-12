@@ -10,7 +10,7 @@ class CityDetailView(View):
     query_pk_and_slug = True
 
     def get(self, request, *args, **kwargs):
-        places = Place.objects.all()
+        places = Place.objects.filter(city=self.kwargs.get('pk'))
         city = get_object_or_404(City, pk=self.kwargs.get('pk'))
         context = {
             'places': places,

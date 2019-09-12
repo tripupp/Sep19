@@ -13,9 +13,11 @@ class HomeView(View):
     template_name = 'home/index.html'
 
     def get(self, request, *args, **kwargs):
+        top_destinations = City.objects.filter(is_top_destination=1)
         cities = City.objects.all()
         themes = Theme.objects.all()
         context = {
+            'top_destinations': top_destinations,
             'cities': cities,
             'themes': themes
         }

@@ -507,17 +507,16 @@
               Destinations
             </a>
             <ul class="dropdown-menu pl-2 pr-2" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Goa</a></li>
-              <li><a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Manali</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Shimla</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Kashmir</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Himachal</a></li>
-
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Kerala</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Andaman</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Rajasthan</a></li>
-              <li> <a class="dropdown-item" href="#" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Ladakh</a></li>
-              <li> <a class="dropdown-item text-danger" href="#" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Explore More</a></li>
+              {% for city in cities %}
+                {% if foorloop.first %}
+                  <li> <a class="dropdown-item" href="{% url 'categories-category' theme.pk theme.slug %}" id="h" style="margin-top: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i>{{ city.city_name }}</a></li>
+                {% elif foorloop.last %}
+                  <li> <a class="dropdown-item" href="{% url 'categories-category' theme.pk theme.slug %}" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i>{{ city.city_name }}</a></li>
+                {% else %}
+                  <li> <a class="dropdown-item" href="{% url 'cities-city_detail' city.city_id city.slug %}" id="h"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i>{{ city.city_name }}</a></li>
+                {% endif %}
+              {% endfor %}
+              <li> <a class="dropdown-item text-danger" href="{% url 'categories-category' 0 'ALL' %}" id="h" style="margin-bottom: 5px!important;"><i class="fas fa-caret-right" style="color: rgba(220,220,220)!important;"></i> Explore More</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown ml-1 mr-1">
@@ -697,7 +696,7 @@
                       <div class="wd-dest-layout-carousel ht-grid ht-grid-3 ht-grid-tablet-2 ht-grid-mobile-1">
                       
                        <section class=" topDestination slider col-sm-12 col-xs-12">
-                          {% for city in cities %}
+                          {% for city in top_destinations %}
                             <div class="ht-grid-item" itemscope="itemscope" itemtype="https://schema.org/CreativeWork" style="320px!important;">
                               <a href="{% url 'cities-city_detail' city.city_id city.slug %}">
                                 <div class="wdd-item">
