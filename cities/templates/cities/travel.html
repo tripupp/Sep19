@@ -9,14 +9,648 @@
 
 {% block head_extra %}
     <link rel="stylesheet" href="{% static 'cities/css/style.css' %}">
+    <!--adding css files-->
+    <link rel="stylesheet" type="text/css" href="{% static 'cities/css/reset.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'cities/css/travel_style.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <!--adding js files-->
+    <script src="{% static 'cities/js/jquery.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="{% static 'cities/js/jquery.twidget.js' %}"></script>
+
+    <!--adding google font-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
 {% endblock %}
 
 
 {% block bodycontent %}
 {% include "cities/menubar.html" %}
-<h1> This is travel page </h1>
+<div style="margin: 0;">
+
+        <div class="search-form-holder">
+            <div class="twidget-container" id="twidget"></div>
+        </div>
+        
+        <!--Card Info-->
+        
+        <div class="info-card-holder">
+            <div class="row">
+                <div class="info-card col-sm-3" style="transform: translateX(-1%);">
+                    <h5 class="place">Nagpur &nbsp;<i class="fas fa-arrow-right fa-sm"></i>&nbsp; Kolkata</h5>
+                    <p class="date"><span>Thu, 01 Aug</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Thu, 01 Aug</span></p>
+                    <p class="flight-name"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""> <span class="person">&nbsp;<b>1 Adult</b></span></p>
+                    
+                    <div class="top-right">
+                        <h5 class="price"><b>INR 2,600</b></h5>
+                    </div>
+                </div>
+                
+                <div class="info-card col-sm-3">
+                   <h5 class="place">Nagpur &nbsp;<i class="fas fa-arrow-right fa-sm"></i>&nbsp; Kolkata</h5>
+                    <p class="date"><span>Thu, 01 Aug</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Thu, 01 Aug</span></p>
+                    <p class="flight-name"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""> <span class="person">&nbsp;<b>1 Adult</b></span></p>
+                    
+                    <div class="top-right">
+                        <h5 class="price"><b>INR 2,600</b></h5>
+                    </div> 
+                </div>
+                
+                <div class="info-card col-sm-3" style="transform: translateX(1%);">
+                    <h5 class="place">Nagpur &nbsp;<i class="fas fa-arrow-right fa-sm"></i>&nbsp; Kolkata</h5>
+                    <p class="date"><span>Thu, 01 Aug</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Thu, 01 Aug</span></p>
+                    <p class="flight-name"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""> <span class="person">&nbsp;<b>1 Adult</b></span></p>
+                    
+                    <div class="top-right">
+                        <h5 class="price"><b>INR 2,600</b></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Listing Section-->
+        
+        <div class="listing-holder">
+           <div class="container">
+            <div class="row">
+              <div class="listing-container col-sm-12" style="padding-right: 0!important;">
+                <div class="w3-bar list-bar">
+                  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');" style="float: right!important;position: absolute;top: 0;right: 25%;">Today</button>
+                  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotel');" style="float: right!important;position: absolute;top: 0;right: 17%;">Tomorrow</button>
+                  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Car');" style="float: right!important;position: absolute;top: 0;right: 9%;">Next Week</button>
+                  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Car');" style="float: right!important;position: absolute;top: 0;right: 0;">Next Month</button>
+                  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Car');" style="color: rgb(240,240,240);"> |</button>
+                </div>
+              </div>
+               <div class="listing-container col-sm-6">
+                <!-- Tabs -->
+                <div id="Flight" class="w3-container w3-white w3-padding-16 ">
+                  <div class="flight-listing">
+                     <div class="flight-detail">
+                      <h5 class="place">Goa To Mumbai</h5>
+                      <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                      <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                     </div>
+                     <div class="flight-price" id="flight-price">
+                      <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                     </div>
+                     <div class="flight-button" id="flight-price">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                     </div>
+                  </div>
+                  
+                  <div class="flight-listing">
+                     <div class="flight-detail">
+                      <h5 class="place">Goa To Mumbai</h5>
+                      <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                      <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                     </div>
+                     <div class="flight-price" id="flight-price">
+                      <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                     </div>
+                     <div class="flight-button" id="flight-price">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                     </div>
+                  </div>
+                  
+                  <div class="flight-listing">
+                     <div class="flight-detail">
+                      <h5 class="place">Goa To Mumbai</h5>
+                      <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                      <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                     </div>
+                     <div class="flight-price" id="flight-price">
+                      <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                     </div>
+                     <div class="flight-button" id="flight-price">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                     </div>
+                  </div>
+                  
+                  <div class="flight-listing">
+                     <div class="flight-detail">
+                      <h5 class="place">Goa To Mumbai</h5>
+                      <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                      <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                     </div>
+                     <div class="flight-price" id="flight-price">
+                      <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                     </div>
+                     <div class="flight-button" id="flight-price">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                     </div>
+                  </div>
+                  
+                </div>
+               </div>
+                
+               <div class="listing-container col-sm-6">
+                    <!-- Tabs -->
+                    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+                      <div class="flight-listing" style="margin-top: 20px;">
+                         <div class="flight-detail">
+                          <h5 class="place">Goa To Mumbai</h5>
+                          <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                          <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                         </div>
+                         <div class="flight-price" id="flight-price">
+                          <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                         </div>
+                         <div class="flight-button" id="flight-price">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing">
+                         <div class="flight-detail">
+                          <h5 class="place">Goa To Mumbai</h5>
+                          <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                          <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                         </div>
+                         <div class="flight-price" id="flight-price">
+                          <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                         </div>
+                         <div class="flight-button" id="flight-price">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing">
+                         <div class="flight-detail">
+                          <h5 class="place">Goa To Mumbai</h5>
+                          <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                          <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                         </div>
+                         <div class="flight-price" id="flight-price">
+                          <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                         </div>
+                         <div class="flight-button" id="flight-price">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing">
+                         <div class="flight-detail">
+                          <h5 class="place">Goa To Mumbai</h5>
+                          <p class="date" style="margin-bottom: 5px;">Tuesday 10 Sep 2019</p>
+                          <p style="margin-bottom: 15px;"><img class="flight-icon" src="{% static 'cities/img/indigo-1.jpg' %}" alt=""></p>
+                         </div>
+                         <div class="flight-price" id="flight-price">
+                          <h5 class="price"><i class="fas fa-rupee-sign"></i> 2,600</h5>
+                         </div>
+                         <div class="flight-button" id="flight-price">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">BOOK NOW</a>
+                         </div>
+                      </div>
+        
+                    </div>
+                    
+               </div>
+            </div>
+            </div>
+        </div>
+        
+        <!--Listing Section : Train-->
+        
+        <div class="listing-holder" style="margin-top: 30px;">
+           <div class="container">
+            <div class="row">
+              <div class="w3-bar list-bar col-sm-12">
+               <div class="title-holder">
+                   <h5 class="title-style"><i class="fas fa-train"></i> Travel via Train</h5>
+               </div>
+              </div>
+               <div class="listing-container col-sm-6">
+                <!-- Tabs -->
+                <div id="Flight" class="w3-container w3-white w3-padding-16 ">
+                  <div class="flight-listing" style="margin-top: 10px">
+                     <div class="flight-detail">
+                      <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                      <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                     </div>
+                     <div class="flight-price">
+                      <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                     </div>
+                     <div class="train-details-button">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                     </div>
+                  </div>
+                  
+                  <div class="flight-listing" style="margin-top: 10px">
+                     <div class="flight-detail">
+                      <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                      <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                     </div>
+                     <div class="flight-price">
+                      <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                     </div>
+                     <div class="train-details-button">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                     </div>
+                  </div>
+                  
+                  <div class="flight-listing" style="margin-top: 10px">
+                     <div class="flight-detail">
+                      <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                      <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                     </div>
+                     <div class="flight-price">
+                      <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                     </div>
+                     <div class="train-details-button">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                     </div>
+                  </div>
+                  
+                  <div class="flight-listing" style="margin-top: 10px">
+                     <div class="flight-detail">
+                      <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                      <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                     </div>
+                     <div class="flight-price">
+                      <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                     </div>
+                     <div class="train-details-button">
+                      <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                     </div>
+                  </div>
+                  
+                </div>
+               </div>
+                
+               <div class="listing-container col-sm-6">
+                    <!-- Tabs -->
+                    <div id="Flight1" class="w3-container w3-white w3-padding-16 myLink">
+                      <div class="flight-listing" style="margin-top: 25px;">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> 1 Day 14 hours</h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">View Details</a>
+                         </div>
+                      </div>
+        
+                    </div>
+                    
+               </div>
+            </div>
+            </div>
+        </div>
+        
+        <!--Listing Section : Bus-->
+        
+        <div class="listing-holder" style="margin-top: 30px;">
+           
+           <div class="container">
+            <div class="row">
+              <div class="w3-bar list-bar col-sm-12">
+               <div class="title-holder">
+                   <h5 class="title-style"><i class="fas fa-bus"></i> Travel via Bus</h5>
+               </div>
+              </div>
+               <div class="listing-container col-sm-6">
+                <!-- Tabs -->
+                <div id="Flight1" class="w3-container w3-white w3-padding-16 myLink">
+                      <div class="flight-listing" style="margin-top: 30px;">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                    </div>
+               </div>
+                
+               <div class="listing-container col-sm-6">
+                    <!-- Tabs -->
+                    <div id="Flight1" class="w3-container w3-white w3-padding-16 myLink">
+                      <div class="flight-listing" style="margin-top: 30px;">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                      <div class="flight-listing" style="margin-top: 10px">
+                         <div class="flight-detail">
+                          <h5 class="place">Kolkata <i class="fas fa-arrow-right fa-sm"></i> Gangtok</h5>
+                          <p class="date" style="margin-bottom: 2px;">671 Km</p>
+                         </div>
+                         <div class="flight-price">
+                          <h5 class="price" style="font-size: 1rem;color: #444;"> <b>Volvo Multi Axle Semi</b> <br><span style="margin-left: 10px;">Sleeper, AC, Video</span> </h5>
+                         </div>
+                         <div class="train-details-button">
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true"><span style="font-size: 0.9rem;">Rs. 265</span><br><b>Book Now</b></a>
+                         </div>
+                      </div>
+        
+                    </div>
+                    
+               </div>
+            </div>
+            </div>
+        </div>
+        
+        
+        <!---------------------Top Hotels------------->
+                  <div class="maincontent">
+                   <div class="container" id="leftsidebar"> 
+                     
+                     <!---------------Best Gangtok Packages--------->
+                      
+                      <h3 class="subheading">Best Gangtok Packages</h3>
+                      <div class="cardcontainer col-lg-12 col-sm-12 col-xs-12">
+                       <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities/img/goa.jpg' %});">
+                           <div class="bottom-left">
+                               <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                               <h4 style="margin-bottom: 0px!important;font-family: 'Cinzel', sans-serif!important;">Enjoy Singapore</h4>
+                               <hr>
+                               <p style="color:white!important;">John Doe</p>
+                               <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                           </div>
+                           <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                               INR 115000
+                           </div>
+                       </div>
+                       <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities/img/goa.jpg' %});">
+                           <div class="bottom-left">
+                               <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                               <h4 style="margin-bottom: 0px!important;font-family: 'Cinzel', sans-serif!important;">Enjoy Singapore</h4>
+                               <hr>
+                               <p style="color:white!important;">John Doe</p>
+                               <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                           </div>
+                           <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                               INR 115000
+                           </div>
+                       </div>
+                       <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities/img/goa.jpg' %});">
+                           <div class="bottom-left">
+                               <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                               <h4 style="margin-bottom: 0px!important;font-family: 'Cinzel', sans-serif!important;">Enjoy Singapore</h4>
+                               <hr>
+                               <p style="color:white!important;">John Doe</p>
+                               <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                           </div>
+                           <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                               INR 115000
+                           </div>
+                       </div>
+                      </div>
+                      
+                      <div class="cardcontainer col-lg-12 col-sm-12 col-xs-12">
+                       <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities/img/goa.jpg' %});">
+                           <div class="bottom-left">
+                               <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                               <h4 style="margin-bottom: 0px!important;font-family: 'Cinzel', sans-serif!important;">Enjoy Singapore</h4>
+                               <hr>
+                               <p style="color:white!important;">John Doe</p>
+                               <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                           </div>
+                           <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                               INR 115000
+                           </div>
+                       </div>
+                       <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities/img/goa.jpg' %});">
+                           <div class="bottom-left">
+                               <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                               <h4 style="margin-bottom: 0px!important;font-family: 'Cinzel', sans-serif!important;">Enjoy Singapore</h4>
+                               <hr>
+                               <p style="color:white!important;">John Doe</p>
+                               <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                           </div>
+                           <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                               INR 115000
+                           </div>
+                       </div>
+                       <div class="card col-lg-4 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities/img/goa.jpg' %});">
+                           <div class="bottom-left">
+                               <p style="color:white!important;font-size: 12px!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                               <h4 style="margin-bottom: 0px!important;font-family: 'Cinzel', sans-serif!important;">Enjoy Singapore</h4>
+                               <hr>
+                               <p style="color:white!important;">John Doe</p>
+                               <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+                           </div>
+                           <div class="bottom-right" style="font-size: 19px;color: white!important;">
+                               INR 115000
+                           </div>
+                       </div>
+                      </div>
+        
+                     
+                      <h3 class="subheading">top hotels - gangtok</h3>
+                      <div class="cardcontainer col-sm-12 col-xs-12">
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: auto;">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                          </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: auto;">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                          </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: auto;">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                          </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: auto;">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p><span class="place">Udaipur</span></p>
+                            <h5><b>The Leela Palace</b></h5>
+                            <p><span class="place"><i class="fas fa-rupee-sign"></i> 42,551 per night for two</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      
+        <!---------------------Featured Content & Guide------------->
+                   
+                      <h3 class="subheading" style="margin-top: 55px!important;">Featured Content & Guide</h3>
+                      <div class="cardcontainer col-sm-12 col-xs-12">
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: auto;" id="featured">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>Views of the Grand Canyon</b></h5>
+                          </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: auto;" id="featured">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>A Lifetime of Hope and regret</b></h5>
+                          </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: auto;" id="featured">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>The Best Lesbian Travel Blogs</b></h5>
+                          </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="width: 18rem;height: auto;" id="featured">
+                          <img src="{% static 'cities/img/goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+                          <div class="card-body">
+                            <p style="margin-left: 10px!important;"><span style="color: tomato!important;"><i class="fas fa-images fa-lg"></i> </span><span style="color: gray!important;font-family: 'Poppins', sans-serif; ">Adventure, Photos</span></p>
+                            <h5 style="margin-left: 10px!important;"><b>Adelaid to Alice Springs Overland</b></h5>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                   </div>
+        
+        </div>
 {% endblock bodycontent %}
 
 
 {% block scriptcontent %} 
+
+
+<script>
+        $('#twidget').twidget({
+            locale: 'en',
+            marker: 78606,
+            default_origin: 'SVO',
+            default_destination: 'ekat',
+            default_hotel_location: 'rio'
+        });
+</script>
+
 {% endblock %}

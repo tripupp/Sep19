@@ -42,19 +42,21 @@
                 <!---------------Places to visit--------->
                 
                 <div class="cardcontainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    {% for place in places %} 
-                        <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url( {{ place.place_pic.url }} );">
+                    {% for place in places %}
+                        {% if forloop.counter0|divisibleby:"3" and forloop.counter0 != 0 %}
+                            </div>
+                            <div class="cardcontainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        {%endif%}
+                        <div class="card col-sm-4" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url({{ place.place_pic.url }});">
                             <div class="bottom-left">
-                                    {{ place.places }}
+                            {{ place.places }}
                             </div>
                             <div class="bottom-right">
-                                    3 Days
+                                3 Days
                             </div>
                         </div>
                     {% endfor %}
-                    
                 </div>
-            
                     <button  id="viewall">View All Places to Visit in {{ city.city_name }}</button>
                 
                 

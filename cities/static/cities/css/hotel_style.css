@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:700&display=swap');
+
+.color{
+    background-color: rgb(248,248,248);
+    padding-bottom: 100px;
+}
+
+.container {
+    width: 100%!important;
+    margin-right: 0px!important;
+    margin-left: 10px!important;
+    padding: 0 !important;
+}
+
+.navbar {
+    background-color: #fff!important;
+    margin-bottom: 20px;
+}
+
+.navbar-nav {
+    margin: 0 auto!important;
+    text-align: center!important;
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 30px!important;
+    letter-spacing: 3px!important;
+    color: tomato!important;
+}
+
+.form-inline {
+    margin-left: 50px!important;
+}
+
+.btn {
+    background-color: tomato!important;
+    border-color: tomato!important;
+    color: rgba(255,255,255)!important;
+}
+
+/* Filter */
+.arrange {
+    display: inline-flex;
+    width: 100%;
+    padding: 0 5px 0 70px!important;
+    margin-top: 20px;
+}
+
+.accordion {
+    margin-right: 30px;
+    width: 17%!important;
+}
+
+.holidaycard {
+    margin-right: 25px!important;
+}
+
+ .holidaycard .card {
+    width: 240px!important;
+    margin-bottom: 20px!important;
+}
+
+.holidaycard .card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+    transform: translateY(-1%);
+    transition: 0.3s;
+}
+
+.card-header {
+    padding: 0 0 0 0!important;
+}
+
+.btn-design {
+    width: 240px!important;
+}
+
+.filter-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: dimgray;
+    margin-left: 5px!important;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Customize the label (the container) */
+.contain {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#more {
+    display: none;
+}
+
+#myBtn {
+    font-size: 12px;
+    font-family: 'Lato', sans-serif!important;
+    width: 70px!important;
+    background-color: transparent!important;
+    border:0!important;
+    font-family: 'Poppins', sans-serif!important;
+    letter-spacing: 0px;
+    padding: 1px 1px 1px 1px!important;
+    text-align: left!important;
+}
+
+#myBtn:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#obtain {
+    display: none;
+}
+
+#read {
+    font-size: 12px;
+    font-family: 'Lato', sans-serif!important;
+    width: 70px!important;
+    background-color: transparent!important;
+    border:0!important;
+    font-family: 'Poppins', sans-serif!important;
+    letter-spacing: 0px;
+    padding-left: 0px!important;
+    text-align: left!important;
+}
+
+#read:hover {
+    cursor: pointer;
+}
+
+.months {
+    display: inline-flex!important;
+    width: 100%!important;
+}
+
+/* Hide the browser's default checkbox */
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.contain {
+    padding-left: 25px!important;
+    border-radius: 2px;
+    height: 30px;
+    padding-top: 4px!important;
+    width: 100%!important;
+}
+
+.contain:hover {
+    background-color: rgb(237,237,237)!important;
+    
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid lightgray;
+  margin: 6px!important;
+  
+}
+
+/* On mouse-over, add a grey background color */
+.contain:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+/* When the checkbox is checked, add a tomato background */
+.contain input:checked ~ .checkmark {
+  background-color: tomato;
+  border: 0 ;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contain input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contain .checkmark:after {
+  left: 5px;
+  top: 0px;
+  width: 8px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.holidaycard {
+    float: right;
+}
+
+.card-deck {
+    border-left: 1px solid rgb(217,217,217);
+    padding-left: 0px!important;
+}
+
+.card-deck .card{
+    width: 350px!important;
+    margin-right: 0px!important;
+}
+
+.card-body {
+    padding: 2px 15px 13px 15px!important;
+    font-family: 'Lato', sans-serif;
+    color:#100!important;
+}
+
+.card-text {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0px!important;
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 5px;
+    margin-bottom: 3px!important;
+}
+
+.title {
+    font-size:18px!important;
+    font-family: 'Lato', sans-serif;
+    padding: 2px 0 0 0!important;
+    color: #333333!important;
+    font-weight: 600!important;
+    margin-bottom: 0!important;
+}
+
+.finalprice {
+    font-size:18px!important;
+    font-family: 'Lato', sans-serif;
+    padding: 2px 0 0 0!important;
+    color: #333333!important;
+    font-weight: 600!important;
+    margin-bottom: 0!important;
+}
+
+.price {
+    margin-top: 10px!important;
+}
+
+.buttonparallel{
+    display: inline-flex!important;
+}
+
+.btn-1 .btn {
+    width: 100%!important;
+    margin-right: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background: #FF416C; 
+    background: -webkit-linear-gradient(left, #FF4B2B, #FF416C);
+    background: -o-linear-gradient(left, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);  
+    transition: 0.3s;
+
+}
+
+.btn-1 .btn:hover{
+    background: #FF416C; 
+    background: -webkit-linear-gradient(right, #FF4B2B, #FF416C);
+    background: -o-linear-gradient(right, #FF4B2B, #FF416C);
+    background: linear-gradient(to left, #FF4B2B, #FF416C);
+    transition: 0.3s;
+}
+
+.btn-2 .btn {
+    
+    width: 132px!important;
+    margin-right: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background-color: transparent!important;
+    color: cornflowerblue!important;
+    border-color: cornflowerblue!important;
+    padding: 6px!important;
+}
+
+.btn-2 .btn:hover{
+    background: #2193b0;  
+    background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);  
+    background: linear-gradient(to left, #6dd5ed, #2193b0); 
+    color: rgb(255,255,255)!important;
+}
+
+.title{
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ratings {
+    position: absolute;
+    width: 53px;
+    height: 33px;
+    background-color: rgb(36,124,42);
+    border-radius: 3px;
+    text-align: center;
+    top: 37px;
+    right: 3px;
+    padding: 4px;
+    color: white;
+}
+
+.photo {
+    position: absolute;
+    width: 53px;
+    height: 33px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid white;
+    border-radius: 1px;
+    text-align: center;
+    bottom: 256px;
+    right: 3px;
+    padding: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.photo:hover{
+     background-color: rgba(0,0,0,0.7);
+}
+
+.image {
+    width: 100%!important;
+    height: 155px!important;
+    background-size: cover;
+    background-position: center;
+    padding:0px !important;
+    margin-right: 0px!important;
+}
+
+.top-left {
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1px;
+    display: inline-flex;
+}
+
+.top-right {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: inline-flex;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0px;
+  left: 16px;
+  color: white;
+  font-family: 'Poppins', sans-serif!important;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif!important;
+  letter-spacing: 1px;
+}
+
+.gallery {
+    float: right;
+    color: white;
+    font-family: 'Poppins', sans-serif!important;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.video {
+    margin-left: 5px;
+    float: right;
+    color: white;
+    font-family: 'Poppins', sans-serif!important; 
+    font-size: 14px;
+    cursor: pointer;
+}
+
+hr {
+    border:0.5px solid white!important;
+    margin-top: 7px!important;
+    margin-bottom: 5px!important;
+}
+
+.packages {
+    display: inline-flex;
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.pack {
+    width: 25%;
+/*    border: 1px solid red;*/
+    color: dimgray;
+    float: right;
+    font-family: 'Open sans', sans-serif!important;
+    height: 43px;
+    border-top: 1px solid rgb(215,215,215);
+    border-right: 1px solid rgb(215,215,215);
+    border-bottom: 1px solid rgb(215,215,215);
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    
+}
+
+.pack:hover {
+    background-color: rgb(237,237,237);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.readmore:hover {
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 376px) {
+    .accordion {
+        display: none!important;
+    }
+    
+    .col-lg-12 {
+        padding-left: 0!important;
+    }
+    
+    .photo {
+        bottom: 237px;
+        right: 3px;
+    }
+}
+
+@media only screen and (min-width: 410px) and (max-width:430px) {
+    .accordion {
+        display: none!important;
+    }
+    
+    .col-lg-12 {
+        padding-left: 0!important;
+    }
+    
+    .photo {
+        bottom: 237px;
+        right: 3px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .accordion {
+        display: none!important;
+    }
+    
+    .col-lg-12 {
+        padding-left: 0!important;
+    }
+    
+    .photo {
+        bottom: 237px;
+        right: 3px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .accordion {
+        display: none!important;
+    }
+    
+    .col-lg-12 {
+        padding-left: 0!important;
+    }
+    
+    .photo {
+        bottom: 237px;
+        right: 3px;
+    }
+}
+
+@media (min-width: 1200px)
+.container {
+    max-width: 1200px!important;
+}

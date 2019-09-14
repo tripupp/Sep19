@@ -8,15 +8,2178 @@
 
 
 {% block head_extra %}
-    <link rel="stylesheet" href="{% static 'cities/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'cities/css/hotel_style.css' %}">
+    <link href="{% static 'cities/css/new-head-style.css' %}" rel="stylesheet" />
+    <link href="{% static 'cities/css/login-register-popup.css' %}" rel="stylesheet" />
+    <script src="{% static 'cities/js/jquery.min.js' %}"></script>
+
+    <link href="{% static 'cities/css/new-footer.css' %}" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="{% static 'cities/css/new-f-search-v1.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'cities/css/cheap-fare.css' %}">
+    <link href="{% static 'cities/css/jquery-ui-malti.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'cities/css/slippry1.css' %}">
+    <link href="{% static 'cities/css/stylesheet-h-rec.css' %}" rel="stylesheet" />
+    <link href="{% static 'cities/css/auto-suggest.css' %}" rel="stylesheet" />
+    <link href="{% static 'cities/css/onpage-style-new.css' %}" rel="stylesheet" />
+    
+    <style>
+            .spnair {
+        font-size: 10.5px;
+        padding: 0 0 0 20px;
+        position: absolute;
+        left: 0;
+        bottom: 13px;
+        color: #616161;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 229px;
+        font-weight: 600;display:none;
+    }
+            .inner_home {
+                width: 1122px;
+            }
+    
+            .r_srch {
+                position: absolute;
+                bottom: 10px;
+                font-size: 12px;
+                color: #fff;
+                text-decoration: none;
+                left: 61px;
+            }
+    
+            .darw {
+                margin: 4px 0 0 5px;
+                vertical-align: text-top;
+            }
+    
+            .bx-r {
+                margin: 65px auto;
+            }
+    
+            .box, .box1 {
+                top: 65px;
+            }
+    
+            .main1 {
+                right: -115px;
+            }
+    
+            .s_col_2, .s_col_r {
+                position: relative;
+            }
+    
+            .op {
+                opacity: .4;
+                position: relative;
+                z-index: 9;
+            }
+    
+            .old-dt {
+                color: #c9c7c7 !important;
+                pointer-events: none;
+            }
+    
+            .inpt-pnl p {
+                font-size: 14px;
+            }
+    
+            .bx-r {
+                margin: 65px auto;
+            }
+    
+            .slider-wrap {
+                width: 735px;
+            }
+    
+            #monthajx, #month {
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #468be8;
+                font-weight: bold;
+                margin: 7px 0;
+            }
+    
+            .cld-arrow {
+                position: absolute;
+                top: 287px;
+                width: 15px;
+                height: 24px;
+                background: url({% static 'cities/img/left-right-arrow.png' %}) no-repeat;
+                text-decoration: none;
+            }
+    
+            .mor-optin {
+                left: 50px;
+            }
+    
+            .arw-left {
+                left: 24px;
+                background-position: 0px 0px;
+                cursor: pointer;
+                top: 410px;
+            }
+    
+            .arw-right {
+                right: 24px;
+                background-position: -15px 0px;
+                cursor: pointer;
+                top: 410px;
+            }
+    
+            .redcircle {
+                background: #00897b;
+                border-radius: 100%;
+                width: 40px;
+                height: 40px;
+                color: #fff;
+                font-size: 24px;
+                line-height: 40px;
+                text-align: center;
+                margin-right: 15px;
+            }
+    
+            .old-dt {
+                color: #c9c7c7 !important;
+                pointer-events: none;
+            }
+    
+            .active-date {
+                background: #035986 !important;
+                color: #ffffff !important;
+            }
+    
+            .Cheapestfare {
+                background-color: #dcffca;
+            }
+    
+            .slider-wrap {
+                width: 100% !important;
+            }
+    
+            @media only screen and (max-width: 500px) and (min-width: 150px) {
+                .mid_inr4 {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                .left-block {
+                    order: 2;
+                }
+    
+                .right-block {
+                    order: 1;
+                }
+            }
+    
+            .loader {
+                border: 6px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 6px solid #3498db;
+                width: 40px;
+                height: 40px;
+                -webkit-animation: spin 1s linear infinite; /* Safari */
+                animation: spin 1s linear infinite;
+            }
+    
+            /* Safari */
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+    
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+    
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+    
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+    
+            .loadermnt {
+                border: 6px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 6px solid #3498db;
+                width: 40px !important;
+                height: 40px;
+                -webkit-animation: spin 1s linear infinite !important; /* Safari */
+                animation: spin 1s linear infinite;
+            }
+    
+            /* Safari */
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+    
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+    
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+    
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .qr{width:100%; float:left; margin-bottom:50px; margin-top:20px;}
+            .qrs{width:100%; float:left; margin-top:20px;}
+            .qrs h3{ width:100%; float:left;font-size:17px; color:#393939; font-weight:600;}
+            .qrs p{width:100%; float:left; font-size:13px; margin-top:5px;}
+        </style>
+        <style>
+            * {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+            }
+    
+    /*
+            body {
+                background-color: #fff;
+                margin: 0;
+                padding: 0;
+                font-family: 'Open Sans', sans-serif, Tahoma, Arial;
+            }
+    */
+    
+            .fl_bottom {
+                width: 1078px;
+                margin: 0 auto;
+                padding: 0;
+                border-radius: 5px;
+            }
+    
+                .fl_bottom h4 {
+                    color: #000;
+                    font-size: 29px;
+                    text-align: center;
+                    margin: 20px 0;
+                    font-weight: 400;
+                    position: relative;
+                }
+    
+                    .fl_bottom h4:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        margin: 10px auto;
+                        width: 10%;
+                        height: 3px;
+                        background: #505050;
+                    }
+    
+            .greybg {
+                background: #eeeeee;
+                padding: 10px 0;
+                width: 100%;
+            }
+    
+                .greybg:after {
+                    content: '';
+                    clear: both;
+                    display: table;
+                }
+    
+            .fl_col_6 {
+                float: left;
+                position: relative;
+            }
+    
+            .fl_col_7 {
+                float: right;
+            }
+    
+            .inputLabel {
+                font-size: 14px;
+                line-height: 1.2;
+                color: #888;
+            }
+            /*the container must be positioned relative:*/
+            .custom-select {
+                position: relative;
+                font-family: Arial;
+            }
+    
+            /*.custom-select select {
+                    display: none; /*hide original SELECT element:*/
+            }
+    
+            */ .select-selected {
+            }
+    
+            /*style the arrow inside the select element:*/
+            .select-selected:after {
+                position: absolute;
+                content: "";
+                top: 21px;
+                right: 10px;
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-color: #9b9b9b transparent transparent transparent;
+            }
+    
+            /*point the arrow upwards when the select box is open (active):*/
+            .select-selected.select-arrow-active:after {
+                border-color: transparent transparent #9b9b9b transparent;
+                top: 13px;
+            }
+    
+            /*style the items (options), including the selected item:*/
+            .select-items div, .select-selected {
+                color: #000000;
+                padding: 8px 0;
+                border: 1px solid transparent;
+                cursor: pointer;
+                user-select: none;
+            }
+    
+            .select-items div {
+                font-size: 14px;
+                padding-left: 10px;
+                border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+            }
+    
+            .select-selected {
+                font-size: 18px;
+                border-color: transparent transparent rgba(0, 0, 0, 0.3) transparent;
+            }
+    
+            .select-items {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 99;
+                max-height: 280px;
+                overflow-y: scroll;
+                background: #fff;
+                -webkit-box-shadow: 0px 3px 10px #ccc;
+                box-shadow: 0px 3px 10px #ccc;
+            }
+    
+            /*hide the items when the select box is closed:*/
+            .select-hide {
+                display: none;
+            }
+    
+            .select-items div:hover, .same-as-selected {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+    
+            .radio-toolbar input[type="radio"] {
+                display: none;
+            }
+    
+            .radio-toolbar label {
+                cursor: pointer;
+                width: 33.334%;
+                float: left;
+                text-align: center;
+                font-size: 12px;
+                color: #000;
+                cursor: pointer;
+                padding: 4px 0;
+                margin: 0;
+                font-weight: 500;
+                border-right: 1px solid #000;
+            }
+    
+            .radio-toolbar input[type="radio"]:checked + label {
+                background: #000;
+                color: #fff;
+            }
+    
+            .radio-toolbar label:last-child {
+                border-right: 0;
+            }
+    
+            .radio-toolbar {
+                width: 200px;
+                border: 1px solid #000;
+                border-radius: 3px;
+                display: inline-block;
+                margin-top: 9px;
+            }
+    
+            ul.flt-list {
+                margin: 0;
+                list-style: none;
+                width: 100%;
+                float: left;
+                padding: 0;
+            }
+    
+                ul.flt-list li {
+                    margin: 0;
+                    display: list-item;
+                    width: 100%;
+                    float: left;
+                    padding: 18px 0;
+                    border-bottom: 1px solid #cfd8dc;
+                    position: relative;
+                }
+    
+            .fl_col_1 {
+                float: left;
+                width: 32%;
+            }
+    
+            .fl_col_2 {
+                float: left;
+                width: 40%;
+            }
+    
+            .fl_col_3 {
+                float: right;
+                width: 27%;
+            }
+    
+            .deal-destination {
+                color: #000;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.5;
+                margin: 0;
+            }
+    
+            .deal-date {
+                padding: 0;
+                margin: 0;
+                font-size: 12px;
+                color: #707070;
+            }
+    
+            .deals-price {
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+                -webkit-justify-content: center;
+                -moz-justify-content: center;
+                -ms-justify-content: center;
+                -o-justify-content: center;
+                justify-content: center;
+                -ms-flex-pack: center;
+                color: #000;
+                font-weight: normal;
+                font-size: 13px;
+                margin: 0;
+                padding-right: 80px;
+                text-align: right;
+                line-height: 1.25rem;
+                padding-top: 14px;
+            }
+    
+            .dlprice {
+                font-size: 1.7rem;
+                margin-left: 10px;
+                position: relative;
+                float: right;
+                margin-right: -80px;
+                color: #ef6614;
+            }
+    
+            .button_nw {
+                float: right;
+                margin: 0;
+                position: relative;
+                padding: 10px 20px;
+                line-height: 20px;
+                order: 0;
+                color: #fff;
+                padding: 9px 20px;
+                font-size: .875rem;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                border-radius: 3px;
+                background-color: #4263c1;
+                cursor: pointer;
+                white-space: nowrap;
+                -webkit-appearance: none;
+                padding-right: 64px;
+                text-decoration: none;
+            }
+    
+                .button_nw:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 40px;
+                    border-radius: 0 3px 3px 0;
+                    background-color: #ccc;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-color: #ef6614;
+                }
+    
+                .button_nw:after {
+                    background-image: url(https://www.easemytrip.com/img/flight-fare-icon.png);
+                    background-repeat: no-repeat;
+                }
+    
+            .rs_icn_org {
+                width: 16px;
+                height: 16px;
+                background: url(https://www.easemytrip.com/img/rupees-icn-org.svg) 0 0;
+                background-size: 16px 16px;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 1px;
+            }
+    
+            .drpdwnn {
+                color: #000000;
+                background: transparent;
+                padding: 8px 0;
+                border: 1px solid transparent;
+                cursor: pointer;
+                user-select: none;
+                font-size: 18px;
+                border-color: transparent transparent rgba(0, 0, 0, 0.3) transparent;
+            }
+            .slct-city {background: transparent;
+        border: 0;
+        font-size: 16px;
+        border-bottom: 1px solid #b3b3b3;
+        padding-bottom: 9px;
+        margin-top: 11px;outline:0}
+        </style>
+
+        <script>
+                $(document).ready(function () {
+                    $('#radio11').click(function () {
+                        $('input:radio[name="radios"]').filter('[value="0"]').attr('checked', true);
+                        $('#ulradio11').show();
+                        $('#ulradio22').hide();
+                        $('#ulradio33').hide();
+                        $('#ulradio44').hide();
+        
+                    });
+        
+                    $('#radio22').click(function () {
+                        $('input:radio[name="radios"]').filter('[value="1"]').attr('checked', true);
+                        $('#ulradio11').hide();
+                        $('#ulradio22').show();
+                        $('#ulradio33').hide();
+                        $('#ulradio44').hide();
+        
+                    });
+        
+                    $('#radio33').click(function () {
+                        $('input:radio[name="radios"]').filter('[value="2"]').attr('checked', true);
+                        $('#ulradio11').hide();
+                        $('#ulradio33').show();
+                        $('#ulradio22').hide();
+                        $('#ulradio44').hide();
+        
+                    });
+        
+                    $('#radio44').click(function () {
+                        $('#ulradio11').hide();
+                        $('#ulradio44').show();
+                        $('#ulradio22').hide();
+                        $('#ulradio33').hide();
+                    });
+                });
+        
+            </script>
+            <script>
+                $(document).ready(function () {
+                    $('#radio11A').click(function () {
+                        $('input:radio[name="radioes"]').filter('[value="0"]').attr('checked', true);
+                        $('#ulradio11A').show();
+                        $('#ulradio22A').hide();
+                        $('#ulradio33A').hide();
+                        $('#ulradio44A').hide();
+                    });
+        
+                    $('#radio22A').click(function () {
+                        $('input:radio[name="radioes"]').filter('[value="1"]').attr('checked', true);
+                        $('#ulradio11A').hide();
+                        $('#ulradio22A').show();
+                        $('#ulradio33A').hide();
+                        $('#ulradio44A').hide();
+                    });
+        
+                    $('#radio33A').click(function () {
+                        $('input:radio[name="radioes"]').filter('[value="2"]').attr('checked', true);
+                        $('#ulradio11A').hide();
+                        $('#ulradio33A').show();
+                        $('#ulradio22A').hide();
+                        $('#ulradio44A').hide();
+                    });
+        
+                    $('#radio44A').click(function () {
+                        $('#ulradio11A').hide();
+                        $('#ulradio44A').show();
+                        $('#ulradio22A').hide();
+                        $('#ulradio33A').hide();
+                    });
+                });
+        
+            </script>
 {% endblock %}
 
 
 {% block bodycontent %}
-{% include "cities/menubar.html" %}
-<h1> This is hotel page </h1>
+{% include "cities/menubar.html" %}<br>
+<div class="clr"></div>
+    <div class="top_bg_ofr_sb">
+        <div class="middle_sec_sb">
+<!--
+            <div class="one-rou">
+                <input name="Trip" id="Trip" class="hide-round one_rou_click" value="One" checked="checked" type="radio" style="display: none;">
+                <input name="Trip" id="radio1" class="hide-round2 rund" value="Two" type="radio" style="display: none;">
+                <input name="Trip" id="rdoMul" class="hide-round2 rund" value="Mul" type="radio" style="display: none;">
+                <ul>
+                    <li class="border-lft flig-show click-one bg-color" onclick="setType('O');">One Way </li>
+                    <li class="click-round flig-show" onclick="setType('R');">Round Trip</li>
+                   
+                </ul>
+
+
+            </div>
+-->
+
+            <div class="clr"></div>
+            <div class="search_bg">
+                <div class="mobile-wi1 flig-show1">
+                    <div class="s_col_1 mgr20">
+
+                        <input  type="text" class="hide-txtbox input_city ac_input" placeholder="From" autocomplete="off">
+                        <input  tabindex="1"  type="text"  class="autoFlll input_city ac_input" placeholder="Search a city" autocomplete="off" >
+                        <span  class="spnair" ></span>
+                        <div class="drop-new">
+                            <!--drop down start-->
+                            <div id="ulfrom">
+                                <div class="aut-bx-m_not_use bx1" id="fromautoFill" style="display: none;"> </div>
+                            </div>
+                            <div class="clr"></div>
+                            <!--drop down end-->
+                        </div>
+<!--                        <div id="swap" onclick="swapValues('FromSector', 'Editbox13');swapValues('FromSector_show', 'Editbox13_show'); AnimateCss('FromSector_show', 'slide-right-in', 0, 500); AnimateCss('Editbox13_show', 'slide-left-in', 0, 500);return false;" class="swipe"></div>-->
+                    </div>
+<!--
+                    <div class="s_col_1 mgr20">
+                        <input  type="text" class="hide-txtbox input_city ac_input"  placeholder="To" autocomplete="off">
+                        <input  type="text" class="autoFlll input_city ac_input"  placeholder="To" autocomplete="off"  >
+                        <span  class="spnair" >Bengaluru International Airport</span>
+                        <div class="drop-new">
+                            <div id="ulfrom">
+                                <div class="aut-bx-m_not_use bx1" id="toautoFill" style="display: none;"> </div>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+
+
+                    </div>
+-->
+                    <div class="s_col_2 mgr10">
+
+                        <div id="dvfarecal" runat="server" onClick="getTextboxName('ddate')">
+                            <input name="" autocomplete="off" type="text" class="input_cld" id="ddate" placeholder="Check In"
+                                   readonly /><span class="dt_icn"></span>
+                        </div>
+                        <div id="dvcalendar" style="display: none"></div>
+                    </div>
+
+                    <div class="s_col_2 mgr10 retu-date-n op" id="rdatelbl">
+
+                        <div id="divRtnCal" onclick="getTextboxName('rdate')">
+                            <input autocomplete="off" name="" type="text" class="input_cld hide-ddate round-but1" id="rdate" placeholder="Check Out"
+                                   style="" readonly /><span id="cld_icon" class="dt_icn"></span>
+                        </div>
+                        <i class="rt_cross" style="display:none">&times;</i>
+                        <input type="hidden" name="hdn1" id="hdn1" />
+                        <input id="hdn" type="hidden" />
+                    </div>
+                    <div class="s_col_v3 mgr10">
+                        <div class="dropdown_n">
+                            <a onclick="myFunction4()" class="dropbtn_n"><span class="drpNoTrv">1 Guest</span> </a>
+                            <div id="myDropdown_n" class="dropdown-content-n">
+                                <div class="innr_pnl">
+                                    <div class="main_dv">
+                                        <div class="ttl_col"><p>Guest</p></div>
+                                        <div class="count_col">
+                                            <div class="plu-mis-s">
+                                                <div class="m1">
+                                                    <input type="button" value="-" class="minus_boxADt" field="quantity">
+                                                </div>
+                                                <div class="tx">
+                                                    <input type="text" name="quantity" value="1" class="numbe_box2" id="optAdult" readonly>
+                                                </div>
+                                                <div class="pl">
+                                                    <input type="button" value="+" class="plus_box1" field="quantity">
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main_dv" style="display: none!important;">
+                                        <div class="ttl_col"><p>Children</p><span>(2+ 12 yrs)</span></div>
+                                        <div class="count_col">
+                                            <div class="plu-mis-s">
+                                                <div class="m1">
+                                                    <input type="button" value="-" class="minus_box1" field="quantity1">
+                                                </div>
+                                                <div class="tx">
+                                                    <input type="text" name="quantity1" value="0" class="numbe_box2" id="optChild" readonly>
+                                                </div>
+                                                <div class="pl">
+                                                    <input type="button" value="+" class="plus_boxChd" field="quantity1">
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main_dv" style="display: none!important;">
+                                        <div class="ttl_col"><p>Infant(s)</p><span>(below 2 yrs)</span></div>
+                                        <div class="count_col">
+                                            <div class="plu-mis-s">
+                                                <div class="m1">
+                                                    <input type="button" value="-" class="minus_box1" field="quantity2">
+                                                </div>
+                                                <div class="tx">
+                                                    <input type="text" name="quantity2" value="0" class="numbe_box2" id="optInfant" readonly>
+                                                </div>
+                                                <div class="pl">
+                                                    <input type="button" value="+" class="plus_box1Inf" field="quantity2">
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+<!--                                    <div class="divider_n"></div>-->
+<!--
+                                    <label class="cont_flt">
+                                        Economy
+                                        <input type="radio" value="0" name="optClass" checked="" onclick="fillOptClassName('Economy')">
+                                        <span class="chk_flt"></span>
+                                    </label>
+                                    <label class="cont_flt">
+                                        Prem.Economy
+                                        <input type="radio" value="4" name="optClass" onclick="fillOptClassName('Prem.Economy')">
+                                        <span class="chk_flt"></span>
+                                    </label>
+                                    <label class="cont_flt">
+                                        Business
+                                        <input type="radio" value="2" name="optClass" onclick="fillOptClassName('Business')">
+                                        <span class="chk_flt"></span>
+                                    </label>
+                                    <label class="cont_flt optFrst" style="display: none;">
+                                        First
+                                        <input type="radio" value="1" name="optClass" onclick="fillOptClassName('First')">
+                                        <span class="chk_flt"></span>
+                                    </label>
+-->
+                                    <div class="clr"></div>
+
+                                    <a onclick="myFunction4()" class="dn_btn">Done</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="s_col_v4" id="search"><input name="" value="Search" style="-webkit-appearance: none;" type="button" class="src_btn" onclick="VisitValidatorIndex();"></div>
+                    <div class="searh-sect" id="searchMultiCity"></div>
+                    <div class="clr"></div>
+                    <div id="wrapper"></div>
+                </div>
+
+                <!--Multicity-->
+                <div class="mobile-wi1-multi mul-sho" style="display: none;">
+                    <div id="sector-sec1">
+                        <div class="s_col_1m mgr20">
+                            <input id="FromSector-mul1" type="text" onchange="ChangeCabin();" class="input_city hide-txtbox mul-ti ac_input" value="Mumbai (BOM)" onclick="MulticityClearText('FromMulti1', this.id);" autocomplete="off">
+                            <input id="FromSector-mul1_show" type="text" onchange="ChangeCabin();" class="input_city autoFlll mul-ti ac_input" value="Mumbai (BOM)" onclick="MulticityClearText('FromMulti1', this.id, 'F');" autocomplete="off">
+                            <span id="FromSector-mul1Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="FromMulti1" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                                <!--drop down end-->
+                            </div>
+                        </div>
+                        <div class="s_col_1m mgr20">
+                            <input id="ToSector-mul1" type="text" class="input_city hide-txtbox mul-ti ac_input" value="Delhi (DEL)" autocomplete="off" onclick="MulticityClearText('ToMulti1',this.id);" onkeydown="TocontrolTabClickTo(event)">
+                            <input id="ToSector-mul1_show" type="text" class="input_city autoFlll mul-ti ac_input" onchange="ChangeCabin();" value="Delhi (DEL)" autocomplete="off" onclick="    MulticityClearText('ToMulti1', this.id);" onkeydown="TocontrolTabClickTo(event)" onblur="fillMultiCityTotxtBox();">
+                            <span id="ToSector-mul1Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="ToMulti1" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+
+                        </div>
+                        <div class="s_col_2 mgr10">
+                            <div id="dvfarecal" onclick="getTextboxName('ddate')">
+                                <input name="" autocomplete="off" type="text" class="input_cld" id="ddateMul1" placeholder="Choose Date"
+                                       readonly /><span class="dt_icn"></span>
+                            </div>
+                            <div id="dvcalendar" style="display: none"></div>
+                        </div>
+                        <div class="s_col_v3 mgr10">
+                            <div class="dropdown_n">
+                                <a onclick="myFunction5()" class="dropbtn_n"><span class="drpNoTrv">1 Guest</span> <span class="optclass-nameMul">, Economy</span></a>
+                                <div id="myDropdown_n2" class="dropdown-content-n">
+                                    <div class="innr_pnl">
+                                        <div class="main_dv">
+                                            <div class="ttl_col"><p>Guest</p></div>
+                                            <div class="count_col">
+                                                <div class="plu-mis-s">
+                                                    <div class="m1">
+                                                        <input type="button" value="-" class="minus_boxADt" field="quantity">
+                                                    </div>
+                                                    <div class="tx">
+                                                        <input type="text" name="quantity" value="1" class="numbe_box2" id="optAdultMul">
+                                                    </div>
+                                                    <div class="pl">
+                                                        <input type="button" value="+" class="plus_box1" field="quantity">
+                                                    </div>
+                                                    <div class="clr"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main_dv" style="display: none!important;">
+                                            <div class="ttl_col"><p>Children</p><span>(2+ 12 yrs)</span></div>
+                                            <div class="count_col">
+                                                <div class="plu-mis-s">
+                                                    <div class="m1">
+                                                        <input type="button" value="-" class="minus_box1" field="quantity1">
+                                                    </div>
+                                                    <div class="tx">
+                                                        <input type="text" name="quantity1" value="0" class="numbe_box2" id="optChildMul">
+                                                    </div>
+                                                    <div class="pl">
+                                                        <input type="button" value="+" class="plus_boxChd" field="quantity1">
+                                                    </div>
+                                                    <div class="clr"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main_dv" style="display: none!important;">
+                                            <div class="ttl_col"><p>Infant(s)</p><span>(below 2 yrs)</span></div>
+                                            <div class="count_col">
+                                                <div class="plu-mis-s">
+                                                    <div class="m1">
+                                                        <input type="button" value="-" class="minus_box1" field="quantity2">
+                                                    </div>
+                                                    <div class="tx">
+                                                        <input type="text" name="quantity2" value="1" class="numbe_box2" id="optInfantMul">
+                                                    </div>
+                                                    <div class="pl">
+                                                        <input type="button" value="+" class="plus_box1Inf" field="quantity2">
+                                                    </div>
+                                                    <div class="clr"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="divider_n"></div>
+                                        <label class="cont_flt">
+                                            Economy
+                                            <input type="radio" value="0" name="optClassMul" checked="" onclick="fillOptClassNameMul('Economy')">
+                                            <span class="chk_flt"></span>
+                                        </label>
+                                        <label class="cont_flt">
+                                            Prem.Economy
+                                            <input type="radio" value="4" name="optClassMul" onclick="fillOptClassNameMul('Prem.Economy')">
+                                            <span class="chk_flt"></span>
+                                        </label>
+                                        <label class="cont_flt">
+                                            Business
+                                            <input type="radio" value="2" name="optClassMul" onclick="fillOptClassNameMul('Business')">
+                                            <span class="chk_flt"></span>
+                                        </label>
+                                        <label class="cont_flt optFrst" style="display: none;">
+                                            First
+                                            <input type="radio" value="1" name="optClassMul" onclick="fillOptClassNameMul('First')">
+                                            <span class="chk_flt"></span>
+                                        </label>
+                                        <div class="clr"></div>
+                                        <a onclick="myFunction5()" class="dn_btn">Done</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="s_col_v4" id="search"><input name="" value="Search" style="-webkit-appearance: none;" type="button" class="src_btn" onclick="ValidateMuticity();"></div>
+                        <div class="clr"></div>
+                    </div>
+                    <!--Multicity end-->
+                    <div id="sector-sec2">
+                        <div class="s_col_1m mgr20">
+                            <input id="FromSector-mul2" type="text" class="input_city hide-txtbox  mul-ti ac_input" placeholder="Type Departure City" autocomplete="off" onclick="MulticityClearText('FromMulti2', this.id);">
+                            <input id="FromSector-mul2_show" onkeydown="TocontrolTabClickFrom(event)" type="text" onchange="ChangeCabin();" class="input_city autoFlll mul-ti ac_input" placeholder="Type Departure City" autocomplete="off" onclick="MulticityClearText('FromMulti2', this.id,'');">
+                            <span id="FromSector-mul2Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="FromMulti2" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                                <!--drop down end-->
+                            </div>
+                        </div>
+                        <div class="s_col_1m mgr20">
+                            <input id="ToSector-mul2" type="text" class="hide-txtbox input_city mul-ti ac_input" onclick="MulticityClearText('ToMulti2', this.id);" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <input id="ToSector-mul2_show" type="text" class="autoFlll input_city mul-ti ac_input" onclick="MulticityClearText('ToMulti2', this.id);" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <span id="ToSector-mul2Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="ToMulti2" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                                <!--drop down end-->
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="s_col_2 mgr10">
+                            <div id="dvfarecal" onclick="getTextboxName('ddate')">
+                                <input name="" autocomplete="off" type="text" class="input_cld" id="ddateMul2" placeholder="Choose Date"
+                                       readonly /><span class="dt_icn"></span>
+                            </div>
+                            <div id="dvcalendar" style="display: none"></div>
+                            <div class="clr"></div>
+                        </div>
+                        <a class="close" id="crs2" style="display:none;" onclick="CloseSectore('sector-sec2','')">&times;</a>
+                    </div>
+                    <div id="sector-sec3" style="display: none">
+                        <div class="s_col_1m mgr20">
+                            <input id="FromSector-mul3" onkeydown="TocontrolTabClickFrom(event)" onclick="MulticityClearText('FromMulti3', this.id);" type="text" onchange="ChangeCabin();" class="hide-txtbox input_city mul-ti ac_input" placeholder="Type Departure City" autocomplete="off">
+                            <input id="FromSector-mul3_show" onkeydown="TocontrolTabClickFrom(event)" onclick="MulticityClearText('FromMulti3', this.id,'');" type="text" onchange="ChangeCabin();" class="autoFlll input_city mul-ti ac_input" placeholder="Type Departure City" autocomplete="off">
+                            <span id="FromSector-mul3Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="FromMulti3" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                                <!--drop down end-->
+                            </div>
+                            <!--NEW DIV AUTOFILL FROM start-->
+                            <div class="bx-r fromAnc" id="FromAutoFillM3" style="display: none;">
+                                <div class="bx1">
+                                    <div class="clr"></div>
+                                    <div class="rcnt" id="FromDivFillM3"></div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                            <!--END -->
+                        </div>
+                        <div class="s_col_1m mgr20">
+                            <input id="ToSector-mul3" type="text" onclick="MulticityClearText('ToMulti3', this.id);" class="hide-txtbox input_city mul-ti ac_input" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <input id="ToSector-mul3_show" type="text" onclick="MulticityClearText('ToMulti3', this.id,'');" class="autoFlll input_city mul-ti ac_input" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <span id="ToSector-mul3Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="ToMulti3" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                                <!--drop down end-->
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="s_col_2 mgr10">
+                            <div id="dvfarecal" onclick="getTextboxName('ddate')">
+                                <input name="" autocomplete="off" type="text" class="input_cld" id="ddateMul3" placeholder="Choose Date"
+                                       readonly /><span class="dt_icn"></span>
+                            </div>
+                            <div id="dvcalendar" style="display: none"></div>
+                        </div>
+                        <a class="close" id="crs3" style="display:none;" onclick="CloseSectore('sector-sec3','2')">&times;</a>
+                        <div class="clr"></div>
+                    </div>
+                    <div id="sector-sec4" style="display: none">
+                        <div class="s_col_1m mgr20">
+                            <input id="FromSector-mul4" onkeydown="TocontrolTabClickFrom(event)" type="text" onclick="MulticityClearText('FromMulti4', this.id);" onchange="ChangeCabin();" class="hide-txtbox input_city mul-ti ac_input" placeholder="Type Departure City" autocomplete="off">
+                            <input id="FromSector-mul4_show" onkeydown="TocontrolTabClickFrom(event)" type="text" onclick="MulticityClearText('FromMulti4', this.id,'');" onchange="ChangeCabin();" class="autoFlll input_city mul-ti ac_input" placeholder="Type Departure City" autocomplete="off">
+                            <span id="FromSector-mul4Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="FromMulti4" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                                <!--drop down end-->
+                            </div>
+
+                        </div>
+                        <div class="s_col_1m mgr20">
+                            <input id="ToSector-mul4" type="text" class="hide-txtbox input_city mul-ti ac_input" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)" onclick="MulticityClearText('ToMulti4', this.id);">
+                            <input id="ToSector-mul4_show" type="text" class="autoFlll input_city mul-ti ac_input" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)" onclick="MulticityClearText('ToMulti4', this.id,'');">
+                            <span id="ToSector-mul4Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="ToMulti4" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                                <!--drop down end-->
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="s_col_2 mgr10">
+                            <div id="dvfarecal" onclick="getTextboxName('ddate')">
+                                <input name="" autocomplete="off" type="text" class="input_cld" id="ddateMul4" placeholder="Choose Date"
+                                       readonly /><span class="dt_icn"></span>
+                            </div>
+                            <div id="dvcalendar" style="display: none"></div>
+                        </div>
+                        <a class="close" id="crs4" onclick="CloseSectore('sector-sec4',3)">&times;</a>
+                        <div class="clr"></div>
+                    </div>
+                    <div id="sector-sec5" style="display: none">
+                        <div class="s_col_1m mgr20">
+                            <input id="FromSector-mul5" onkeydown="TocontrolTabClickFrom(event)" type="text" onchange="ChangeCabin();" class="hide-txtbox input_city mul-ti ac_input" placeholder="Type Departure City" onclick="MulticityClearText('FromMulti5', this.id);" autocomplete="off">
+                            <input id="FromSector-mul5_show" onkeydown="TocontrolTabClickFrom(event)" type="text" onchange="ChangeCabin();" class="autoFlll input_city mul-ti ac_input" placeholder="Type Departure City" onclick="MulticityClearText('FromMulti5', this.id,'');" autocomplete="off">
+                            <span id="FromSector-mul5Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="FromMulti5" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                        <div class="s_col_1m mgr20">
+                            <input id="ToSector-mul5" type="text" class="hide-txtbox input_city mul-ti ac_input" onchange="ChangeCabin();" onclick="    MulticityClearText('ToMulti5', this.id);" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <input id="ToSector-mul5_show" type="text" class="autoFlll input_city mul-ti ac_input" onchange="    ChangeCabin();" onclick="    MulticityClearText('ToMulti5', this.id,'');" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <span id="ToSector-mul5Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="ToMulti5" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="s_col_2 mgr10">
+                            <div id="dvfarecal" onclick="getTextboxName('ddate')">
+                                <input name="" autocomplete="off" type="text" class="input_cld" id="ddateMul5" placeholder="Choose Date"
+                                       readonly /><span class="dt_icn"></span>
+                            </div>
+                            <div id="dvcalendar" style="display: none"></div>
+                        </div>
+                        <a class="close" id="crs5" onclick="CloseSectore('sector-sec5',4)">&times;</a>
+                    </div>
+                    <div id="sector-sec6" style="display: none">
+                        <div class="s_col_1m mgr20">
+                            <input id="FromSector-mul6" onkeydown="TocontrolTabClickFrom(event)" type="text" onchange="ChangeCabin();" class="hide-txtbox input_city mul-ti ac_input" placeholder="Type Departure City" autocomplete="off" onclick="MulticityClearText('FromMulti6', this.id);">
+                            <input id="FromSector-mul6_show" onkeydown="TocontrolTabClickFrom(event)" type="text" onchange="ChangeCabin();" class="autoFlll input_city mul-ti ac_input" placeholder="Type Departure City" autocomplete="off" onclick="MulticityClearText('FromMulti6', this.id,'');">
+                            <span id="FromSector-mul6Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="FromMulti6" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                        <div class="s_col_1m mgr20">
+                            <input id="ToSector-mul6" type="text" class="hide-txtbox input_city mul-ti ac_input" onclick="MulticityClearText('ToMulti6', this.id);" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <input id="ToSector-mul6_show" type="text" class="autoFlll input_city mul-ti ac_input" onclick="MulticityClearText('ToMulti6', this.id,'');" onchange="ChangeCabin();" placeholder="Type Destination City" autocomplete="off" onkeydown="TocontrolTabClickTo(event)">
+                            <span id="ToSector-mul6Span"></span>
+                            <div class="drop-new">
+                                <div id="ulfrom">
+                                    <div class="aut-bx-m_not_use bx1" id="ToMulti6" style="display: none;"> </div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                        <div class="s_col_2 mgr10">
+                            <div id="dvfarecal" onclick="getTextboxName('ddate')">
+                                <input name="" autocomplete="off" type="text" class="input_cld" id="ddateMul6" placeholder="Choose Date"
+                                       readonly /><span class="dt_icn"></span>
+                            </div>
+                            <div id="dvcalendar" style="display: none"></div>
+                        </div>
+                        <a class="close" id="crs6" onclick="CloseSectore('sector-sec6',5)">&times;</a>
+                    </div>
+                    <div class="add" id="addAnFlt"><a class="add_city ad">Add City</a></div>
+                    <div class="clr"></div>
+
+                </div>
+            </div>
+            <nav class="recent_sr recent_sr5" style="display:none">
+                <ul>
+                    <li>
+                        <label class="container">
+                            Multicity route
+                            <input onclick="chekMulBox(this)" type="checkbox" id="mulChkFlag">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </li>
+                    <li id="showmenu">
+                        <label class="container">
+                            Recent Search
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+            <a class="r_srch" id="recentSearchtxt">Recent Search<img src="https://www.easemytrip.com/dm-img/down_arw.png" class="darw" alt="Arrow"></a>
+        </div>
+        <input type="hidden" id="hdnautosuggest" value="0">
+    </div>
+    </form>
+    <!--middle section-->
+    <!--recent search-->
+    <div class="menu">
+        <div class="inner_home">
+            <div id="RecentSearch"></div>
+            <div id="divRctSearch"></div>
+        </div>
+    </div>
+    <!--recent search ends-->
+    
+ <div class="arrange col-lg-12">
+        <div class="accordion" id="accordionExample">
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>Budget</b>
+                </button>
+<!--              </h2>-->
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
+                <label class="contain"><span class="filter-font"> Rs.0 - Rs.999</span> 
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font"> Rs.1000 - Rs.2000</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">Rs.2000 - Rs.4000</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font"> Rs.4000 - Rs.6000</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font"> Rs.6000 - Rs.8000</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font"> Rs.8000 -Rs.10000</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font"> Rs.10000 +</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>Facilities</b>
+                </button>
+<!--              </h2>-->
+            </div>
+
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
+                <label class="contain"><span class="filter-font">Breakfast Included</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">Family Rooms</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">Spa and Wellness</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">Airport Shuttle</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font">Air conditioning</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font">Free Wifi</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="contain"><span class="filter-font">Parking </span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>STAR RATING</b>
+                </button>
+<!--              </h2>-->
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
+                <label class="contain"><span class="filter-font">Budget Hotels</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">2 Star Hotels</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">3 Star Hotels</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">4 Star Hotels</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font">5 Star Hotels</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>LOCALITY</b>
+                </button>
+<!--              </h2>-->
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
+              
+               <div class="months">
+                    <label class="contain"><span class="filter-font">Karol Bagh</span>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+
+              <div class="months">
+                   <label class="contain"><span class="filter-font">Rajiv Chowk</span>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+               
+               <div class="months">
+                    <label class="contain"><span class="filter-font">Janpath</span>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+              
+               <div class="months">
+                    <label class="contain"><span class="filter-font">Dwarka</span>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+                
+               <div class="months">
+                   <label class="contain"><span class="filter-font">Mayur Vihar</span>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+               <div class="months">
+                    <label class="contain"><span class="filter-font">Patel Nagar</span>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+               </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="border: 0!important;background-color: transparent!important;">
+            <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+                <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
+                  <b>HOTEL TYPE</b>
+                </button>
+<!--              </h2>-->
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
+                <label class="contain"><span class="filter-font">Apartments</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">Residences</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="contain"><span class="filter-font">Farm Stays</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                
+                <label class="contain"><span class="filter-font">Resorts</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="contain"><span class="filter-font">Hostels</span>
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+               
+              </div>
+            </div>
+          </div>
+        </div>   
+<!----------------Card------------->
+      
+        <div class="holidaycard">     
+<!---------card-1st row------>
+           <div class="card-deck">
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6>   
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-2------------>
+                    
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-3------------>
+            
+             <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+            </div>
+            
+<!--            card-4th row-->
+           <div class="card-deck">
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-2------------>
+                    
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-3------------>
+            <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-deck">
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-2------------>
+                    
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-3------------>
+            
+             <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-deck">
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-2------------>
+                    
+              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+              
+<!------------Card-3------------>
+            
+             <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+                   <div class="top-left">
+                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+                       <div style="float: right;margin-left: 2px;">
+                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
+                        <p style="font-size: 11px;">Uttar Pradesh</p>
+                       </div>
+                   </div>
+                   <div class="top-right">
+                       <div class="gallery">
+                         <i class="far fa-image fa-lg"></i> 20 
+                       </div>
+                       
+                   </div>
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The New Marrion Paradise</h5>
+                  
+                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+                    
+                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+                    
+                    
+                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
+                    </h6> 
+                    
+                    
+                  
+                 
+                      <div class="btn-1">
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                      </div>
+                 
+                </div>
+              </div>
+            </div>
+        </div>
+     </div>
 {% endblock bodycontent %}
 
 
 {% block scriptcontent %} 
+    <script src="{% static 'cities/js/CheapFare.js' %}"></script>
+
+    <script src="{% static 'cities/js/Calender.js' %}"></script>
+    <script src="{% static 'cities/js/Emt-DoubleCalendar2.js' %}" type="text/javascript"></script>
+    
+    <script src="{% static 'cities/js/filter.js' %}"></script>
+    <script src="{% static 'cities/js/read.js' %}"></script>
+    <script src="{% static 'cities/js/5more.js' %}"></script>
+    <script src="{% static 'cities/js/jquery-ui-min.js' %}"></script>
+    <script src="{% static 'cities/js/home-js-h.js' %}"></script>
+    <script src="{% static 'cities/js/Login-h_newheader.js' %}"></script>
+    <script src="{% static 'cities/js/HomePageCommonJs.js' %}"></script>
+    <script>
+            $(function () {
+                $("#bars li .bar").each(function (key, bar) {
+                    var total = document.getElementById("hdnPerTotal").value;
+    
+                    var percentage = ($(this).data('percentage') / total) * 100;
+    
+                    $(this).animate({
+                        'height': percentage - 30 + '%'
+                    }, 1000);
+                });
+            });
+    
+    
+            if ($(window).width() > 739) {
+                jQuery('.slider').lbSlider({
+                    leftBtn: '.sa-left5',
+                    rightBtn: '.sa-right5',
+                    visible: 3,
+                    autoPlay: true,
+                    autoPlayDelay: 5
+                });
+    
+            }
+            else {
+                jQuery('.slider').lbSlider({
+                    leftBtn: '.sa-left5',
+                    rightBtn: '.sa-right5',
+                    visible: 1,
+                    autoPlay: true,
+                    autoPlayDelay: 5
+                });
+            }
+    
+            if ($(window).width() > 739) {
+                jQuery('.slider3').lbSlider({
+                    leftBtn: '.sa-left',
+                    rightBtn: '.sa-right',
+                    visible: 3,
+                    autoPlay: false,
+                    autoPlayDelay: 5
+                });
+            }
+            else {
+                jQuery('.slider3').lbSlider({
+                    leftBtn: '.sa-left',
+                    rightBtn: '.sa-right',
+                    visible: 1,
+                    autoPlay: false,
+                    autoPlayDelay: 5
+                });
+    
+            }
+    
+        </script>
+        <script>
+    
+            $(document).ready(function () {
+                $('#divRtnCal').click(function () {
+    
+                    document.getElementById('radio1').checked = true;
+                    $(".rt_cross").show();
+                    $("#cld_icon").hide();
+                    //if ($(".retu-date-n").css('opacity') == 0.4)
+                    $(".retu-date-n").css('opacity', '1');
+                    //$('.retu-date-n').css('background', 'none');
+                    //else
+                    //    $(".retu-date-n").css('opacity', '0.4');
+                });
+                $(".rt_cross").click(function () {
+                    document.getElementById('Trip').checked = true;
+                    // debugger;
+                    $('#rdate').val("");
+                    $(".rt_cross").hide();
+                    $("#cld_icon").show();
+    
+                    $('.retu-date-n').css('opacity', '0.4');
+                    $('.click-round').css('opacity', '1');
+                    $('.click-round').removeClass("bg-color")
+                    $('.click-one').addClass("bg-color")
+                    setCookie("RTDate","");
+                    setCookie("tripType","0");
+                    //$('.retu-date-n').css('background', '#d1d7e6');
+                });
+                //$( ".toggle" ).click( function() {
+                //$("#image").toggleClass('flip');
+                //});
+    
+                $(".click-one").click(function () {
+                    $('.retu-date-n').css('opacity', '0.4');
+                    $('.rt_cross').hide();
+                    $('#cld_icon').show();
+    
+                });
+                $(".click-round").click(function () {
+                    $('.retu-date-n').css('opacity', '1');
+                });
+    
+            });
+            function autoCompleteDropdownToNew(value, e) {
+    
+                if (e.keyCode == 9) {
+                    return;
+                }
+                //change start
+                if (e.keyCode == 40 || e.keyCode == 38) {
+    
+                    if (e.keyCode == 40) {
+                        jumpToAnchor('.aut-bx-m', '.display_box_hover_to');
+                        Navigate(1);
+                        $('#destCity_show').val($('.display_box_hover_to .clickClass').text().trim());
+                    }
+                    if (e.keyCode == 38) {
+                        jumpToAnchor('.aut-bx-m', '.display_box_hover_to');
+                        Navigate(-1);
+                        $('#destCity_show').val($('.display_box_hover_to .clickClass').text().trim());
+                    }
+                    return;
+                }
+                if (e.keyCode == 13) {
+                    $('.display_box_hover_to .clickClass').click();
+                    //   $('#Editbox13').val($('.display_box_hover .destntn').text().trim());
+                    //$('#toautoFill').hide();
+                    //$('#toautoFill1').hide();
+                    return
+                }
+                //change end
+                $('#toautoFill').hide();
+                //change start
+                document.getElementById("toautoFill").innerHTML = '';
+                //change end
+                document.getElementById("toDivFillNew").innerHTML = '';
+                var htmlAutoCom = "";
+                // debugger;
+                for (var i = 0; i < availableTags.length; i++) {
+    
+                    if (availableTags[i].toLowerCase().indexOf(value) > -1 && value != '') {
+                        var clickFun = 'onclick="autoSelect(this,\'destCity_show\');"'
+                        htmlAutoCom += '<div class="srch-bw toSelaction">'
+                                      + '<div class="fli-im2"></div>'
+                                      + '<div class="destntn clickClass" ' + clickFun + '>'
+                                      + availableTags[i]
+                                      + '</div>'
+                                      + '<div class="city">[' + availableTags[i].split('-')[0] + ']</div>'
+                                      + '<div class="clr"></div>'
+                                      + '</div>'
+    
+                    }
+                }
+                document.getElementById('toDivFillNew').innerHTML = htmlAutoCom;
+                if (value == '') {
+                    $('#toautoFillNew1').hide();
+                }
+                else {
+                    $('#toautoFillNew1').show();
+                }
+                // console.log(availableTags);
+                //chnage start
+                displayBoxIndex = -1;
+                Navigate(1);
+                //chamge end
+            }
+        </script>
+        <script>
+            $(function () {
+                var count_no_Trv1 = parseInt(document.getElementById('optAdult').value) + parseInt(document.getElementById('optChild').value) + parseInt(document.getElementById('optInfant').value);
+                $('.drpNoTrv').text(count_no_Trv1 + " Guest");
+    
+            });
+            function swapValues2() {
+                var tmp = document.getElementById("FromSector_show").value;
+    
+                document.getElementById("FromSector_show").value = document.getElementById("Editbox13_show").value;
+                document.getElementById("Editbox13_show").value = tmp;
+                if (document.getElementById("FromSectorShow") != null) {
+                    document.getElementById("FromSectorShow").value = document.getElementById("FromSector").value;
+                }
+                if (document.getElementById("EditboxShow") != null) {
+                    document.getElementById("EditboxShow").value = document.getElementById("Editbox13_show").value;
+                }
+    
+            }
+    
+    
+            $(document).ready(function () {
+                $('ul.tabs li').click(function () {
+                    var tab_id = $(this).attr('data-tab');
+    
+                    $('ul.tabs li').removeClass('current');
+                    $('.tab-content').removeClass('current');
+    
+                    $(this).addClass('current');
+                    $("#" + tab_id).addClass('current');
+                })
+    
+            })</script>
+    
+        <script>
+            $(".btn_pnl").click(function (e) {
+    
+                // Remove any old one
+                $(".ripple").remove();
+    
+                // Setup
+                var posX = $(this).offset().left,
+                    posY = $(this).offset().top,
+                    buttonWidth = $(this).width(),
+                    buttonHeight = $(this).height();
+    
+                // Add the element
+                $(this).prepend("<span class='ripple'></span>");
+    
+    
+                // Make it round!
+                if (buttonWidth >= buttonHeight) {
+                    buttonHeight = buttonWidth;
+                } else {
+                    buttonWidth = buttonHeight;
+                }
+    
+                // Get the center of the element
+                var x = e.pageX - posX - buttonWidth / 2;
+                var y = e.pageY - posY - buttonHeight / 2;
+    
+    
+                // Add the ripples CSS and start the animation
+                $(".ripple").css({
+                    width: buttonWidth,
+                    height: buttonHeight,
+                    top: y + 'px',
+                    left: x + 'px'
+                }).addClass("rippleEffect");
+            });
+    
+            var count = 0;
+            $('#toggler').on('click', function () {
+                count = count + 1;
+                if (count == 3) {
+                    $('#toggler').hide();
+                }
+            });
+    
+            function hide(target) {
+                document.getElementById(target).style.display = 'none';
+            }
+    
+            //Set up the click event listener
+            $('#toggler').on('click', function () {
+                //Get the 'count' data property from the anchor tag
+                var counter = $(this).data('count');
+                //assign that to be the ID of the message you want to display
+                var nextMessage = '#multicity' + counter;
+                $(nextMessage).show(); //Show that Message
+                counter += 1; //increment counter (for next click)
+                $(this).data('count', counter); //assign new counter var to #toggler
+            });
+    
+    
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction4() {
+                document.getElementById("myDropdown_n").classList.toggle("show");
+            }
+            function myFunction5() {
+                document.getElementById("myDropdown_n2").classList.toggle("show");
+            }
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn_n')) {
+    
+                    var dropdowns = document.getElementsByClassName("dropdown-content-n");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                
+                        }
+                    }
+                }
+            }
+        </script>
+           
+        
+    
 {% endblock %}
