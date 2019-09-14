@@ -1,0 +1,53 @@
+<!----Image container---->
+<div class="jumbotron jumbotron-fluid" style="background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url({{ city.city_pic.url }});">
+    <div class="container">
+        <h1 class="display-2"><b>{{ city.city_name }}</b></h1>
+    </div>
+    
+<!---------- Menu Bar --------->
+                        
+<div class="container">
+    <div class="contentarea">
+        <a class="tablink" href="{% url 'cities-city_detail' city.city_id city.slug %}"  style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+            <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Info</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_place' city.city_id city.slug %}">
+            <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Places</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_packages' city.city_id city.slug %}">
+            <p style="transform: translateY(35%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Packages</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_tarvel' city.city_id city.slug %}">
+            <p style="transform: translateY(35%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Travel</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_hotels' city.city_id city.slug %}">
+            <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Hotels</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_activities' city.city_id city.slug %}">
+            <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Activities</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_events' city.city_id city.slug %}">
+            <p style="transform: translateY(40%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Events</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_foods' city.city_id city.slug %}">
+            <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Food</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_photo' city.city_id city.slug %}">
+            <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Photos</b></span></p>
+        </a>
+        
+        <a class="tablink" href="{% url 'cities-city_map' city.city_id city.slug %}" style="border-top-right-radius: 5px;border-top-right-radius: 5px;">
+            <p style="transform: translateY(50%)!important;color: #333333!important;" id="menu"><span style="letter-spacing: 2px!important;"><b>Map</b></span></p>
+        </a>
+    </div>
+</div> 
+    
+</div>

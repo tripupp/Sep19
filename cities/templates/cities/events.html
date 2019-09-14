@@ -1,0 +1,22 @@
+{% extends 'cities/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Redfab
+{% endblock title %}
+
+
+{% block head_extra %}
+    <link rel="stylesheet" href="{% static 'cities/css/style.css' %}">
+{% endblock %}
+
+
+{% block bodycontent %}
+{% include "cities/menubar.html" %}
+<h1> This is events page </h1>
+{% endblock bodycontent %}
+
+
+{% block scriptcontent %} 
+{% endblock %}

@@ -44,7 +44,7 @@ body, html {
 .jumbotron {
     width: 100%;
     height: 300px;
-    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(../img/goa.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(./goa.jpg);
     background-size: cover;
     background-position: center;
 /*    background-attachment: fixed;*/
@@ -85,7 +85,7 @@ body, html {
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 13px;
+  font-size: 0.8rem;
   width: 10%;
   height: 100px;
   font-family: 'Poppins', sans-serif;
@@ -103,20 +103,21 @@ body, html {
 
 .maincontent {
     display: inline-flex;
+    width: 1300px!important;
 }
 
 .rightsidebar {
     float: right!important;
-    width: 22%;
+    width: 25%!important;
     margin-left: 0px!important;
-    transform: translate(8%,3%);
+    transform: translate(20%,3%);
 }
 
 #leftsidebar {
-    width: 68%!important;
+    width: 75%!important;
     float: left!important;
-    margin-left: 50px!important;
-    margin-right: 10px!important;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
 }
 
 .sidebarcontent {
@@ -127,7 +128,6 @@ body, html {
 .tabcontent {
   background-color: rgb(238,238,238);
   color: black;
-  display: none;
   padding: 0px 20px 100px 20px;
   height: 100%;
 }
@@ -177,9 +177,16 @@ body, html {
     display: none;
 }
 
+.readmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 #myBtn {
     width: 306px!important;
-    height: 45px!important;
+    height: auto!important;
     background-color: #fff!important;
     border: 2px solid tomato!important;
     border-radius: 7px!important;
@@ -274,6 +281,13 @@ hr {
     margin-bottom: 5px!important;
 }
 
+.button-place {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 #explore {
     color: tomato!important;
     width: 306px!important;
@@ -285,7 +299,7 @@ hr {
     font-family: 'Poppins', sans-serif!important;
     letter-spacing: 1px;
     padding: 10px 10px 10px 10px!important;
-    margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 #explore:hover {
@@ -428,6 +442,91 @@ h5 {
 
 } 
 
+@media only screen and (min-width: 377px) and (max-width: 409px) {
+    .display-2 {
+        font-size: 60px!important;
+    }
+    
+    .tablink {
+        width: 20%!important;
+        height: 50px!important;
+    }
+    
+    .contentarea {
+        margin-top: 130px;
+        margin-bottom: 0px;
+    }
+    
+    .cardcontainer {
+        display: block;
+        width: 100%!important;
+        margin-left: 15px!important;
+    }
+    
+    .rightsidebar {
+        display: none!important;
+    }
+    
+    #myBtn {
+        margin-left: 0%!important;
+        transform: translateX(0%)!important;
+    }
+    
+    #leftsidebar {
+        width: 100%!important;
+        float: none!important;
+        margin-left: 0px!important;
+    }
+    
+    #viewall {
+        transform: translateX(5%)!important;
+    }
+
+    #tophotels {
+        height: auto!important;
+    }
+    
+    h5 {
+      margin-top: 0px!important;
+      margin-bottom: 0px!important;
+    }
+    
+    #explore {
+        transform: translateX(7%)!important;
+    }
+    
+    #featured {
+        width: 100%!important;
+        max-height: auto!important;
+    }
+    
+    #menu {
+        display: none;
+    }
+    
+    #icon {
+        transform: translateY(0%)!important;
+        transform: translateX(-20%)!important;
+    }
+    
+    #icon3 {
+        transform: translateY(-40%)!important;
+/*        transform: translateX(-20%)!important;*/
+    }
+    
+    #icon4 {
+        transform: translateY(-40%)!important;
+/*        transform: translateX(-20%)!important;*/
+    }
+    
+    #icon7 {
+        transform: translateY(-40%)!important;
+/*        transform: translateX(-0%)!important;*/
+    }
+
+
+} 
+
 @media only screen and (min-width: 410px) and (max-width:430px){
     .display-2 {
         font-size: 60px!important;
@@ -513,6 +612,94 @@ h5 {
 
 } 
 
+@media only screen and (min-width: 431px) and (max-width:490px) {
+    .display-2 {
+        font-size: 60px!important;
+    }
+    
+    .tablink {
+        width: 20%!important;
+        height: 50px!important;
+    }
+    
+    #myBtn {
+        margin-left: 0%!important;
+        transform: translateX(7%)!important;
+    }
+    
+    .contentarea {
+        margin-top: 130px;
+        margin-bottom: 0px;
+    }
+    
+    .cardcontainer {
+        display: block;
+        width: 100%!important;
+        margin-left: 15px!important;
+    }
+    
+    .rightsidebar {
+        display: none!important;
+    }
+    
+    #leftsidebar {
+        width: 100%!important;
+        float: none!important;
+        margin-left: 0px!important;
+    }
+    
+    #viewall {
+        transform: translateX(5%)!important;
+    }
+
+    #tophotels {
+        height: auto!important;
+    }
+    
+    .tophotel p {
+        margin-bottom: 0px!important;
+    }
+    
+    h5 {
+      margin-top: 0px!important;
+      margin-bottom: 0px!important;
+    }
+    
+    #explore {
+        transform: translateX(7%)!important;
+    }
+    
+    #featured {
+        width: 100%!important;
+        height: auto!important;
+    }
+    
+    #menu {
+        display: none;
+    }
+    
+    #icon {
+        transform: translateY(0%)!important;
+        transform: translateX(-20%)!important;
+    }
+    
+    #icon3 {
+        transform: translateY(-40%)!important;
+/*        transform: translateX(-20%)!important;*/
+    }
+    
+    #icon4 {
+        transform: translateY(-40%)!important;
+/*        transform: translateX(-20%)!important;*/
+    }
+    
+    #icon7 {
+        transform: translateY(-40%)!important;
+/*        transform: translateX(-0%)!important;*/
+    }
+
+
+}
 @media only screen and (max-width: 600px) {
     .cardcontainer {
         display: block;
@@ -579,7 +766,11 @@ h5 {
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+    .maincontent {
+        width: auto!important;
+    }
+    
      .cardcontainer {
         display: block;
         width: 100%!important;
@@ -593,6 +784,7 @@ h5 {
         width: 100%!important;
         float: none!important;
         margin-left: 0px!important;
+        margin-right: 0px!important;
     }
     
     #viewall {
@@ -622,4 +814,121 @@ h5 {
     }
 } 
 
+@media only screen and (min-width: 768px) and (max-width:1000px){
+    .maincontent {
+        width: auto!important;
+    }
+    
+    .rightsidebar {
+        display: none!important;
+    }
+    
+    #leftsidebar {
+        width: 100%!important;
+        float: none!important;
+        margin-left: 0px!important;
+    }
+    
+    .gangtok  {
+        width: 340px;
+    }
+    
+    .gangtok .bottom-left {
+        font-size: 0.8rem!important;
+    }
+    
+    .bestPackages {
+        width: 670px;
+    }
+    
+    .tophotel {
+        width: 345px!important;
+    }
+    
+    .tophotel .place {
+        letter-spacing: 0!important;
+    }
+    
+    .tophotel p {
+        margin-bottom: 0!important;
+    }
+    
+    #ipad {
+        transform: translate(18%,-50%)!important;
+    }
+    
+    #viewall {
+        transform: translateX(57%)!important;
+    }
+    
+    #explore {
+        transform: translateX(65%)!important;
+    }
+}
 
+@media only screen and (min-width: 1080px) and (max-width:1100px){
+    .maincontent {
+        width: auto!important;
+    }
+    
+    .rightsidebar {
+        display: none!important;
+    }
+    
+    #leftsidebar {
+        width: 100%!important;
+        float: none!important;
+        margin-left: 0px!important;
+    }
+    
+    .gangtok  {
+        width: auto;
+    }
+    
+    .gangtok .bottom-left {
+        font-size: 0.8rem!important;
+    }
+    
+    .bestPackages {
+        width: auto;
+    }
+    
+    .tophotel {
+        width: auto!important;
+    }
+    
+    .tophotel .place {
+        letter-spacing: 0!important;
+    }
+    
+    .tophotel p {
+        margin-bottom: 0!important;
+    }
+    
+    #ipad {
+        transform: translate(18%,-50%)!important;
+    }
+    
+    #viewall {
+        transform: translateX(90%)!important;
+    }
+    
+    #explore {
+        transform: translateX(95%)!important;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1130px) {
+    .maincontent {
+        width: auto!important;
+    }
+    
+    .rightsidebar {
+        display: none!important;
+    }
+    
+    #leftsidebar {
+        width: 100%!important;
+    }
+}

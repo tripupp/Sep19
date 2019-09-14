@@ -1,0 +1,176 @@
+{% extends 'cities/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Redfab
+{% endblock title %}
+
+
+{% block head_extra %}
+    <link rel="stylesheet" href="{% static 'cities/css/style.css' %}">
+{% endblock %}
+
+
+{% block bodycontent %}
+{% include "cities/menubar.html" %}
+              
+<!--------------main contents----------->
+         
+<div class="maincontent">
+    <div class="container">
+    <div class="row">
+     <div id="Info" class="tabcontent">
+      <div id="leftsidebar">
+<!--
+       <h3 class="tagline"><i><b>"The Gateway to Sikkim"</b></i></h3>
+       <h3 class="subheading">Gangtok Tourism</h3>
+       <p class="col-lg-12 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.<span id="dots">...</span><span id="more"> Neque voluptatem tenetur magnam velit dolores fugiat commodi aliquid vitae magni ex molestias, placeat ipsam non similique odit nostrum! Aliquid natus et, ipsa quam numquam at perferendis reprehenderit ullam maiores illum, nam eos iste placeat voluptate, laudantium, voluptatibus nesciunt! Facere iste vitae voluptatum, eum modi nisi illum.</span></p>
+     
+     <div class="readmore">
+       <button onclick="myFunction()" id="myBtn">Read more </button>
+     </div>
+-->
+      
+     <div class="gangtok">
+       <h3 class="subheading">Places To Visit In Gangtok</h3>
+       
+       <!---------------Places to visit--------->
+       
+       <div class="cardcontainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card col-sm-4" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url({% static 'cities\img\goa.jpg' %});">
+        <div class="bottom-left">
+            Norway
+        </div>
+        <div class="bottom-right">
+            3 Days
+        </div>
+        </div>
+        <div class="card col-sm-4" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url({% static 'cities\img\goa.jpg' %});">
+        <div class="bottom-left">
+            Norway
+        </div>
+        <div class="bottom-right">
+            3 Days
+        </div>
+        </div>
+        <div class="card col-sm-4" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url({% static 'cities\img\goa.jpg' %});">
+        <div class="bottom-left">
+            Norway
+        </div>
+        <div class="bottom-right">
+            3 Days
+        </div>
+        </div>
+       </div>
+       
+       <div class="cardcontainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card col-sm-4" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url({% static 'cities\img\goa.jpg' %});">
+        <div class="bottom-left">
+            Norway
+        </div>
+        <div class="bottom-right">
+            3 Days
+        </div>
+        </div>
+        <div class="card col-sm-4" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url({% static 'cities\img\goa.jpg' %});">
+        <div class="bottom-left">
+            Norway
+        </div>
+        <div class="bottom-right">
+            3 Days
+        </div>
+        </div>
+        <div class="card col-sm-4" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url({% static 'cities\img\goa.jpg' %});">
+        <div class="bottom-left">
+            Norway
+        </div>
+        <div class="bottom-right">
+            3 Days
+        </div>
+        </div>
+       </div>
+     </div>
+   
+
+       
+       
+ </div>
+     
+  <div class="rightsidebar">
+        <h3 class="subheading">Top Packages</h3>
+        <div class="sidebarcontent">
+         <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities\img\goa.jpg' %});width: 100%!important;height: 200px!important;">
+            <div class="bottom-left">
+                <p style="color:white!important;font-size: 0.8rem!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                <h4 style="margin-bottom: 0px!important;font-size: 1.4rem!important;"><b>Enjoy Singapore</b></h4>
+                <hr>
+                <p style="color:white!important;">John Doe</p>
+                <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+            </div>
+            <div class="bottom-right" style="font-size: 1.2rem!important;color: white!important;">
+                INR 115000
+            </div>
+          </div>
+        </div> 
+        <div class="sidebarcontent">
+         <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),url({% static 'cities\img\goa.jpg' %});width: 100%!important;height: 200px!important;">
+            <div class="bottom-left">
+                <p style="color:white!important;font-size: 0.8rem!important;letter-spacing: 1px!important;margin-bottom: 5px!important;">2N Nathula Pass | 2N MG Road</p>
+                <h4 style="margin-bottom: 0px!important;font-size: 1.4rem!important;"><b>Enjoy Singapore</b></h4>
+                <hr>
+                <p style="color:white!important;">John Doe</p>
+                <p><i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:rgb(245,166,35);"></i> <i class="fas fa-star" style="color:white;"></i></p>
+            </div>
+            <div class="bottom-right" style="font-size: 1.2rem!important;color: white!important;">
+                INR 115000
+            </div>
+          </div>
+        </div> 
+        <h3 class="subheading">Similar Places</h3>
+        <div class="sidebarcontent">
+         <div class="card col-lg-12 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 200px!important;">
+           <img src="{% static 'cities\img\goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+           <div class="card-body">
+             <h5 style="margin-bottom: 1px; text-align: center;"><b><span class="package_h5_rightbar">Himachal Pradesh</span></b></h5>
+           </div>
+         </div>
+        </div> 
+        <div class="sidebarcontent">
+         <div class="card col-lg-12 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 200px!important;">
+           <img src="{% static 'cities\img\goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+           <div class="card-body">
+             <h5 style="margin-bottom: 1px; text-align: center;"><b><span class="package_h5_rightbar">Jammu & Kashmir</span></b></h5>
+           </div>
+         </div>
+        </div>
+        
+       <h3 class="subheading">Top Hotels</h3>
+        <div class="sidebarcontent">
+         <div class="card col-lg-12 col-md-6 col-sm-12 col-xs-12" id="tophotels" style="height: 210px!important;">
+           <img src="{% static 'cities\img\goa.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5px 5px 0px 0px!important;">
+           <div class="card-body">
+             <h5 style="margin-bottom: 1px; text-align: left;"><b><span class="package_h5_hotels">The Leela Palace</span></b></h5>
+             <p><i class="fas fa-star fa-sm" style="color:rgb(245,166,35);"></i> <i class="fas fa-star fa-sm" style="color:rgb(245,166,35);"></i> <i class="fas fa-star fa-sm" style="color:rgb(245,166,35);"></i> <i class="fas fa-star fa-sm" style="color:rgb(245,166,35);"> <span class="reviews" style="font-family: 'Poppins', sans-serif;"> from CNY 564.32</span></i>
+             
+           </div>
+         </div>
+        </div>  
+        
+    </div>
+     
+     </div>
+     </div>
+     
+    </div>
+    
+    
+    
+  </div>
+{% endblock bodycontent %}
+
+
+{% block scriptcontent %} 
+    <script src="{% static 'cities/js/read.js' %}"></script>
+    <script src="{% static 'cities/js/collapsible.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,366 @@
+{% extends 'cities/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Redfab
+{% endblock title %}
+
+
+{% block head_extra %}
+    <link rel="stylesheet" href="{% static 'cities/css/package_style.css' %}">
+{% endblock %}
+
+
+{% block bodycontent %}
+<!-------------Filter---------------->
+      
+<div class="container">
+    <div class="row">
+     <div class="accordion col-sm-3" id="accordionExample">
+       <div class="card" style="border: 0!important;background-color: transparent!important;">
+         <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+             <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 1px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;">
+               <b>Trip Duration</b>
+             </button>
+<!--              </h2>-->
+         </div>
+
+         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+           <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
+               <label class="contain"><span class="filter-font">Up To 3 Nights</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+
+             <label class="contain"><span class="filter-font">4 - 6 Nights</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+
+             <label class="contain"><span class="filter-font">7 - 10 Nights</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+
+             <label class="contain"><span class="filter-font">11 - 15 Nights</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">Above 16 Nights</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+           </div>
+         </div>
+       </div>
+       <div class="card" style="border: 0!important;background-color: transparent!important;">
+         <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+             <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="font-family: 'Poppins', sans-serif;letter-spacing: 1px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;">
+               <b>Budget</b>
+             </button>
+<!--              </h2>-->
+         </div>
+
+         <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+           <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
+             <label class="contain"><span class="filter-font">Less Than 10,000</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+
+             <label class="contain"><span class="filter-font">10,000 - 20,000</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+
+             <label class="contain"><span class="filter-font">20,000 - 40,000</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+
+             <label class="contain"><span class="filter-font">40,000 - 60,000</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">60,000 - 80,000</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">Above 80,000</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+           </div>
+         </div>
+       </div>
+       <div class="card" style="border: 0!important;background-color: transparent!important;">
+         <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+             <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;">
+               <b>Themes</b>
+             </button>
+<!--              </h2>-->
+         </div>
+
+         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+           <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
+            
+             <label class="contain"><span class="filter-font">Adventure</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">Affordable</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">Beach</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">Bestseller</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">Cruise</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+             <label class="contain"><span class="filter-font">Cultural & Heritage</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             
+           </div>
+         </div>
+       </div>
+       
+<!--          Trip Advisor -->
+    
+     <div class="trip_advisor">
+      <div class="card" style="border: 0!important;background-color: transparent!important;">
+         <div class="card-header" id="headingOne" style="background-color: transparent!important;">
+<!--              <h2 class="mb-0">-->
+             <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;transform: translate(-3%)">
+               <b>Star Rating</b>
+             </button>
+<!--              </h2>-->
+         </div>
+
+         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+           <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
+               
+               <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 5 Star</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+              
+              <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 4 Star</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+              
+              <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 3 Star</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+              
+              <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 2 Star</span> 
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+               
+           </div>
+         </div>
+       </div>
+       </div>
+     </div>
+     
+<!----------------Card------------->
+   
+     <div class="card mb-3 col-sm-9" >
+       <div class="row no-gutters space">
+         <div class="col-md-4">
+           <img src="{% static 'cities\img\taj.jpeg' %}" class="card-img" alt="...">
+         </div>
+         <div class="col-md-8">
+           <div class="card-body">
+             <h5 class="card-title">Valley of Flowers Tour Package From Delhi</h5>
+             <p class="card-text"><span class="tomato">8 Days & 7 Nights <i class="fas fa-edit"></i></span></p>
+             <p class="card-text"><small class="text-muted"><b>Starting From:</b></small></p>
+             <p class="card-text"><span class="price"><i class="fas fa-rupee-sign"></i> 23,999/</span><small class="text-muted">Per Person on twin Sharing</small></p>
+             <p class="card-text"><small class="text-muted"><i class="fas fa-hotel" style="color: rosybrown;"></i> <b>Hotel included in package :</b> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i>
+             <span style="color: #333;">2 Star </span></small></p>
+             <p class="card-text"><small class="text-muted"><i class="fas fa-city" style="color: rosybrown;"></i> <b>Cities :</b> Haridwar (2D) > Ghangaria (3D) > Rudraprayag (3D)</small></p>
+             
+             <div class="menu">
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-utensils" style="text-align: center;"></i>
+                         <p class="icon_name">Meals</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-hotel" style="text-align: center;"></i>
+                         <p class="icon_name">Hotel</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-plane" style="text-align: center;"></i>
+                         <p class="icon_name">Flights</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-car" style="text-align: center;"></i>
+                         <p class="icon_name">Transfer</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-binoculars" style="text-align: center;"></i>
+                         <p class="icon_name">Sight</p>
+                     </div>
+                 </div>
+             </div>
+             
+           </div>
+         </div>
+       </div>
+       
+       <div class="hr-style"></div>
+       
+       <div class="row no-gutters space">
+         <div class="col-md-4">
+           <img src="{% static 'cities\img\taj.jpeg' %}" class="card-img" alt="...">
+         </div>
+         <div class="col-md-8">
+           <div class="card-body">
+             <h5 class="card-title">Valley of Flowers Tour Package From Delhi</h5>
+             <p class="card-text"><span class="tomato">8 Days & 7 Nights <i class="fas fa-edit"></i></span></p>
+             <div style="float: right;">
+                 <p class="card-text" ><small class="text-muted"><b>Starting From:</b></small></p>
+                 <p class="card-text" ><span class="price"><i class="fas fa-rupee-sign"></i> 23,999/</span></p>
+                 <button type="button" class="btn btn-secondary" style="background-image: linear-gradient(95deg, #ff4339, #ff567d); ">Explore M.</button>
+             </div>
+             <p class="card-text"><small class="text-muted"><i class="fas fa-hotel" style="color: rosybrown;"></i> <b>Hotel included in package :</b> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i>
+             <span style="color: #333;">2 Star </span></small></p>
+             <p class="card-text"><small class="text-muted"><i class="fas fa-city" style="color: rosybrown;"></i> <b>Cities :</b> Haridwar (2D) > Ghangaria (3D) > Rudraprayag (3D)</small></p>
+             
+             <div class="menu">
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-utensils" style="text-align: center;"></i>
+                         <p class="icon_name">Meals</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-hotel" style="text-align: center;"></i>
+                         <p class="icon_name">Hotel</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-plane" style="text-align: center;"></i>
+                         <p class="icon_name">Flights</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-car" style="text-align: center;"></i>
+                         <p class="icon_name">Transfer</p>
+                     </div>
+                 </div>
+<!--
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-binoculars" style="text-align: center;"></i>
+                         <p class="icon_name">Sight</p>
+                     </div>
+                 </div>
+-->
+             </div>
+             
+           </div>
+         </div>
+       </div>
+       
+       <div class="hr-style"></div>
+       
+       <div class="row no-gutters space">
+         <div class="col-md-4">
+           <img src="{% static 'cities\img\taj.jpeg' %}" class="card-img" alt="...">
+         </div>
+         <div class="col-md-8">
+           <div class="card-body">
+             <h5 class="card-title">Valley of Flowers Tour Package From Delhi</h5>
+             <p class="card-text"><span class="tomato">8 Days & 7 Nights <i class="fas fa-edit"></i></span></p>
+             <p class="card-text"><small class="text-muted">Starting From:</small></p>
+             <p class="card-text"><span class="price"><i class="fas fa-rupee-sign"></i> 23,999/</span><small class="text-muted">Per Person on twin Sharing</small></p>
+             <p class="card-text"><small class="text-muted"><i class="fas fa-hotel" style="color: rosybrown;"></i> <b>Hotel included in package :</b> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i>
+             <span style="color: #333;">2 Star </span></small></p>
+             <p class="card-text"><small class="text-muted"><i class="fas fa-city" style="color: rosybrown;"></i> <b>Cities :</b> Haridwar (2D) > Ghangaria (3D) > Rudraprayag (3D)</small></p>
+             
+             <div class="menu">
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-utensils" style="text-align: center;"></i>
+                         <p class="icon_name">Meals</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-hotel" style="text-align: center;"></i>
+                         <p class="icon_name">Hotel</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-plane" style="text-align: center;"></i>
+                         <p class="icon_name">Flights</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-car" style="text-align: center;"></i>
+                         <p class="icon_name">Transfer</p>
+                     </div>
+                 </div>
+                 <div class="submenu">
+                     <div class="icon">
+                         <i class="fas fa-binoculars" style="text-align: center;"></i>
+                         <p class="icon_name">Sight</p>
+                     </div>
+                 </div>
+             </div>
+             
+           </div>
+         </div>
+       </div>
+       
+     </div>
+     
+    </div>
+ </div>
+{% endblock bodycontent %}
+
+
+{% block scriptcontent %} 
+    <script src="{% static 'cities/js/read.js' %}"></script>
+    <script src="{% static 'cities/js/5more.js' %}"></script>
+    <script src="{% static 'cities/js/filter.js' %}"></script>
+{% endblock %}
