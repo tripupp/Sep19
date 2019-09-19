@@ -1,0 +1,43 @@
+{% load static %}
+<div class="card-deck">
+{% for hotel in hotels %}
+    {% if forloop.counter0|divisibleby:"3" and forloop.counter0 != 0 %}
+        </div>
+        <div class="card-deck">
+    {%endif%}
+    <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
+        <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url({{ hotel.hotel_pic.url }});border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
+           <div class="top-left">
+               <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
+               <div style="float: right;margin-left: 2px;">
+                <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>{{ hotel.city__name }}</b></p>
+                <p style="font-size: 11px;">{{ hotel.state }}</p>
+               </div>
+           </div>
+           <div class="top-right">
+               <div class="gallery">
+                 <i class="far fa-image fa-lg"></i> 20 
+               </div>
+               
+           </div>
+           
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ hotel.name }}</h5>
+          
+            <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
+            
+            <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
+            
+            
+            <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
+                <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> {{ hotel.price }} /-</b></span>
+            </h6>   
+         
+              <div class="btn-1">
+                  <a href="#" class="btn btn-primary">Book Now</a>
+              </div>
+         
+        </div>
+      </div>
+{% endfor %}

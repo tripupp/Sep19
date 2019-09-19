@@ -33,27 +33,27 @@
          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
            <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
                <label class="contain"><span class="filter-font">Up To 3 Nights</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector duration" value="0,3">
                <span class="checkmark"></span>
              </label>
 
              <label class="contain"><span class="filter-font">4 - 6 Nights</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector duration" value="4,6">
                <span class="checkmark"></span>
              </label>
 
              <label class="contain"><span class="filter-font">7 - 10 Nights</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector duration" value="7,10">
                <span class="checkmark"></span>
              </label>
 
              <label class="contain"><span class="filter-font">11 - 15 Nights</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector duration" value="11,15">
                <span class="checkmark"></span>
              </label>
              
              <label class="contain"><span class="filter-font">Above 16 Nights</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector duration" value="16,365">
                <span class="checkmark"></span>
              </label>
              
@@ -72,32 +72,32 @@
          <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
            <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
              <label class="contain"><span class="filter-font">Less Than 10,000</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector price" value="0,10000">
                <span class="checkmark"></span>
              </label>
 
              <label class="contain"><span class="filter-font">10,000 - 20,000</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector price" value="10000,20000">
                <span class="checkmark"></span>
              </label>
 
              <label class="contain"><span class="filter-font">20,000 - 40,000</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector price" value="20000,40000">
                <span class="checkmark"></span>
              </label>
 
              <label class="contain"><span class="filter-font">40,000 - 60,000</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector price" value="40000,60000">
                <span class="checkmark"></span>
              </label>
              
              <label class="contain"><span class="filter-font">60,000 - 80,000</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector price" value="60000,80000">
                <span class="checkmark"></span>
              </label>
              
              <label class="contain"><span class="filter-font">Above 80,000</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector price" value="80000,10000000">
                <span class="checkmark"></span>
              </label>
            </div>
@@ -115,35 +115,12 @@
          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
            <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
             
-             <label class="contain"><span class="filter-font">Adventure</span> 
-               <input type="checkbox">
+            {% for theme in themes %}
+             <label class="contain"><span class="filter-font">{{ theme.theme_name }}</span> 
+               <input type="checkbox" class="common-selector theme" value="{{ theme.pk }}">
                <span class="checkmark"></span>
              </label>
-             
-             <label class="contain"><span class="filter-font">Affordable</span> 
-               <input type="checkbox">
-               <span class="checkmark"></span>
-             </label>
-             
-             <label class="contain"><span class="filter-font">Beach</span> 
-               <input type="checkbox">
-               <span class="checkmark"></span>
-             </label>
-             
-             <label class="contain"><span class="filter-font">Bestseller</span> 
-               <input type="checkbox">
-               <span class="checkmark"></span>
-             </label>
-             
-             <label class="contain"><span class="filter-font">Cruise</span> 
-               <input type="checkbox">
-               <span class="checkmark"></span>
-             </label>
-             
-             <label class="contain"><span class="filter-font">Cultural & Heritage</span> 
-               <input type="checkbox">
-               <span class="checkmark"></span>
-             </label>
+            {% endfor %}
              
            </div>
          </div>
@@ -165,22 +142,22 @@
            <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
                
                <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 5 Star</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector rating" value="5">
                <span class="checkmark"></span>
              </label>
               
               <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 4 Star</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector rating" value="4">
                <span class="checkmark"></span>
              </label>
               
               <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 3 Star</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector rating" value="3">
                <span class="checkmark"></span>
              </label>
               
               <label class="contain"><span class="filter-font"><i class="fas fa-star fa-xs" style="color: goldenrod;"></i><i class="fas fa-star fa-xs" style="color: goldenrod;"></i> 2 Star</span> 
-               <input type="checkbox">
+               <input type="checkbox" class="common-selector rating" value="2">
                <span class="checkmark"></span>
              </label>
                
@@ -192,171 +169,10 @@
      
 <!----------------Card------------->
    
-     <div class="card mb-3 col-sm-9" >
-       <div class="row no-gutters space">
-         <div class="col-md-4">
-           <img src="{% static 'cities\img\taj.jpeg' %}" class="card-img" alt="...">
-         </div>
-         <div class="col-md-8">
-           <div class="card-body">
-             <h5 class="card-title">Valley of Flowers Tour Package From Delhi</h5>
-             <p class="card-text"><span class="tomato">8 Days & 7 Nights <i class="fas fa-edit"></i></span></p>
-             <p class="card-text"><small class="text-muted"><b>Starting From:</b></small></p>
-             <p class="card-text"><span class="price"><i class="fas fa-rupee-sign"></i> 23,999/</span><small class="text-muted">Per Person on twin Sharing</small></p>
-             <p class="card-text"><small class="text-muted"><i class="fas fa-hotel" style="color: rosybrown;"></i> <b>Hotel included in package :</b> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i>
-             <span style="color: #333;">2 Star </span></small></p>
-             <p class="card-text"><small class="text-muted"><i class="fas fa-city" style="color: rosybrown;"></i> <b>Cities :</b> Haridwar (2D) > Ghangaria (3D) > Rudraprayag (3D)</small></p>
-             
-             <div class="menu">
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-utensils" style="text-align: center;"></i>
-                         <p class="icon_name">Meals</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-hotel" style="text-align: center;"></i>
-                         <p class="icon_name">Hotel</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-plane" style="text-align: center;"></i>
-                         <p class="icon_name">Flights</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-car" style="text-align: center;"></i>
-                         <p class="icon_name">Transfer</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-binoculars" style="text-align: center;"></i>
-                         <p class="icon_name">Sight</p>
-                     </div>
-                 </div>
-             </div>
-             
-           </div>
-         </div>
-       </div>
-       
-       <div class="hr-style"></div>
-       
-       <div class="row no-gutters space">
-         <div class="col-md-4">
-           <img src="{% static 'cities\img\taj.jpeg' %}" class="card-img" alt="...">
-         </div>
-         <div class="col-md-8">
-           <div class="card-body">
-             <h5 class="card-title">Valley of Flowers Tour Package From Delhi</h5>
-             <p class="card-text"><span class="tomato">8 Days & 7 Nights <i class="fas fa-edit"></i></span></p>
-             <div style="float: right;">
-                 <p class="card-text" ><small class="text-muted"><b>Starting From:</b></small></p>
-                 <p class="card-text" ><span class="price"><i class="fas fa-rupee-sign"></i> 23,999/</span></p>
-                 <button type="button" class="btn btn-secondary" style="background-image: linear-gradient(95deg, #ff4339, #ff567d); ">Explore M.</button>
-             </div>
-             <p class="card-text"><small class="text-muted"><i class="fas fa-hotel" style="color: rosybrown;"></i> <b>Hotel included in package :</b> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i>
-             <span style="color: #333;">2 Star </span></small></p>
-             <p class="card-text"><small class="text-muted"><i class="fas fa-city" style="color: rosybrown;"></i> <b>Cities :</b> Haridwar (2D) > Ghangaria (3D) > Rudraprayag (3D)</small></p>
-             
-             <div class="menu">
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-utensils" style="text-align: center;"></i>
-                         <p class="icon_name">Meals</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-hotel" style="text-align: center;"></i>
-                         <p class="icon_name">Hotel</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-plane" style="text-align: center;"></i>
-                         <p class="icon_name">Flights</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-car" style="text-align: center;"></i>
-                         <p class="icon_name">Transfer</p>
-                     </div>
-                 </div>
-<!--
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-binoculars" style="text-align: center;"></i>
-                         <p class="icon_name">Sight</p>
-                     </div>
-                 </div>
--->
-             </div>
-             
-           </div>
-         </div>
-       </div>
-       
-       <div class="hr-style"></div>
-       
-       <div class="row no-gutters space">
-         <div class="col-md-4">
-           <img src="{% static 'cities\img\taj.jpeg' %}" class="card-img" alt="...">
-         </div>
-         <div class="col-md-8">
-           <div class="card-body">
-             <h5 class="card-title">Valley of Flowers Tour Package From Delhi</h5>
-             <p class="card-text"><span class="tomato">8 Days & 7 Nights <i class="fas fa-edit"></i></span></p>
-             <p class="card-text"><small class="text-muted">Starting From:</small></p>
-             <p class="card-text"><span class="price"><i class="fas fa-rupee-sign"></i> 23,999/</span><small class="text-muted">Per Person on twin Sharing</small></p>
-             <p class="card-text"><small class="text-muted"><i class="fas fa-hotel" style="color: rosybrown;"></i> <b>Hotel included in package :</b> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i>
-             <span style="color: #333;">2 Star </span></small></p>
-             <p class="card-text"><small class="text-muted"><i class="fas fa-city" style="color: rosybrown;"></i> <b>Cities :</b> Haridwar (2D) > Ghangaria (3D) > Rudraprayag (3D)</small></p>
-             
-             <div class="menu">
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-utensils" style="text-align: center;"></i>
-                         <p class="icon_name">Meals</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-hotel" style="text-align: center;"></i>
-                         <p class="icon_name">Hotel</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-plane" style="text-align: center;"></i>
-                         <p class="icon_name">Flights</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-car" style="text-align: center;"></i>
-                         <p class="icon_name">Transfer</p>
-                     </div>
-                 </div>
-                 <div class="submenu">
-                     <div class="icon">
-                         <i class="fas fa-binoculars" style="text-align: center;"></i>
-                         <p class="icon_name">Sight</p>
-                     </div>
-                 </div>
-             </div>
-             
-           </div>
-         </div>
-       </div>
-       
+     <div class="card mb-3 col-sm-9 fetch-data" >
+       {% include 'cities/package_filter.html' %}  
      </div>
-     
+     <input type="hidden" id="city_id" value="{{city.city_id}}">
     </div>
  </div>
 {% endblock bodycontent %}
@@ -366,4 +182,40 @@
     <script src="{% static 'cities/js/read.js' %}"></script>
     <script src="{% static 'cities/js/5more.js' %}"></script>
     <script src="{% static 'cities/js/filter.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            //filter_data();
+            function filter_data(){
+    
+            var city_id = $("#city_id").val();
+            var rating = get_filter('rating');
+            var theme = get_filter('theme');
+            var price = get_filter('price');
+            var duration = get_filter('duration');
+            $.post({
+                url:"{% url 'cities-city_packages_filter' %}",
+                data:{'city_id':city_id, 'rating':rating, 'price':price,
+                    'duration':duration, 'theme':theme,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'},
+                success:function(data){
+                $('.fetch-data').html(data);
+                }
+            });
+            }
+    
+            function get_filter(class_name){
+            var filter = [];
+            $('.' + class_name + ':checked').each(function(){
+                filter.push($(this).val());
+            });
+            return filter;
+            }
+    
+            $('.common-selector').click(function(){
+            filter_data();
+            });
+    
+        });
+    </script>
 {% endblock %}

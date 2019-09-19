@@ -1172,37 +1172,37 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
                 <label class="contain"><span class="filter-font"> Rs.0 - Rs.999</span> 
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector price" value="0,999">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font"> Rs.1000 - Rs.2000</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector price" value="1000,2000">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font">Rs.2000 - Rs.4000</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector price" value="2000,4000">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font"> Rs.4000 - Rs.6000</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector price" value="4000,6000">
                   <span class="checkmark"></span>
                 </label>
                 
                 <label class="contain"><span class="filter-font"> Rs.6000 - Rs.8000</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector price" value="6000,8000">
                   <span class="checkmark"></span>
                 </label>
                 
                 <label class="contain"><span class="filter-font"> Rs.8000 -Rs.10000</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector price" value="8000,10000">
                   <span class="checkmark"></span>
                 </label>
                 
                 <label class="contain"><span class="filter-font"> Rs.10000 +</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector price" value="10000,1000000000">
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -1219,39 +1219,13 @@
 
             <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
-                <label class="contain"><span class="filter-font">Breakfast Included</span>
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-
-                <label class="contain"><span class="filter-font">Family Rooms</span>
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-
-                <label class="contain"><span class="filter-font">Spa and Wellness</span>
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-
-                <label class="contain"><span class="filter-font">Airport Shuttle</span>
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
                 
-                <label class="contain"><span class="filter-font">Air conditioning</span>
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-                
-                <label class="contain"><span class="filter-font">Free Wifi</span>
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="contain"><span class="filter-font">Parking </span>
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
+                {% for facility in facilities %}
+                    <label class="contain"><span class="filter-font">{{ facility.facility_name }}</span>
+                    <input type="checkbox" class="common-selector facility" value="{{ facility.pk }}">
+                    <span class="checkmark"></span>
+                    </label>
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -1267,39 +1241,37 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
                 <label class="contain"><span class="filter-font">Budget Hotels</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector rating" value="1">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font">2 Star Hotels</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector rating" value="2">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font">3 Star Hotels</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector rating" value="3">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font">4 Star Hotels</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector rating" value="4">
                   <span class="checkmark"></span>
                 </label>
                 
                 <label class="contain"><span class="filter-font">5 Star Hotels</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector rating" value="5">
                   <span class="checkmark"></span>
                 </label>
               </div>
             </div>
           </div>
-          <div class="card" style="border: 0!important;background-color: transparent!important;">
+          <!-- <div class="card" style="border: 0!important;background-color: transparent!important;">
             <div class="card-header" id="headingOne" style="background-color: transparent!important;">
-<!--              <h2 class="mb-0">-->
                 <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;">
                   <b>LOCALITY</b>
                 </button>
-<!--              </h2>-->
             </div>
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -1307,47 +1279,47 @@
               
                <div class="months">
                     <label class="contain"><span class="filter-font">Karol Bagh</span>
-                      <input type="checkbox">
+                      <input type="checkbox" class="common-selector locality" value="{{ meal.pk }}">
                       <span class="checkmark"></span>
                     </label>
                </div>
 
               <div class="months">
                    <label class="contain"><span class="filter-font">Rajiv Chowk</span>
-                      <input type="checkbox">
+                      <input type="checkbox" class="common-selector locality" value="{{ meal.pk }}">
                       <span class="checkmark"></span>
                     </label>
                </div>
                
                <div class="months">
                     <label class="contain"><span class="filter-font">Janpath</span>
-                      <input type="checkbox">
+                      <input type="checkbox" class="common-selector locality" value="">
                       <span class="checkmark"></span>
                     </label>
                </div>
               
                <div class="months">
                     <label class="contain"><span class="filter-font">Dwarka</span>
-                      <input type="checkbox">
+                      <input type="checkbox" class="common-selector locality" value="">
                       <span class="checkmark"></span>
                     </label>
                </div>
                 
                <div class="months">
                    <label class="contain"><span class="filter-font">Mayur Vihar</span>
-                      <input type="checkbox">
+                      <input type="checkbox" class="common-selector locality" value="">
                       <span class="checkmark"></span>
                     </label>
                </div>
                <div class="months">
                     <label class="contain"><span class="filter-font">Patel Nagar</span>
-                      <input type="checkbox">
+                      <input type="checkbox" class="common-selector locality" value="">
                       <span class="checkmark"></span>
                     </label>
                </div>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <div class="card" style="border: 0!important;background-color: transparent!important;">
             <div class="card-header" id="headingOne" style="background-color: transparent!important;">
@@ -1361,26 +1333,26 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body" style="padding-top: 10px!important;padding-left: 0px!important;padding-right: 0px!important">
                 <label class="contain"><span class="filter-font">Apartments</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector type" value="Apartments">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font">Residences</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector type" value="Residences">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="contain"><span class="filter-font">Farm Stays</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector type" value="Farm stays">
                   <span class="checkmark"></span>
                 </label>
                 
                 <label class="contain"><span class="filter-font">Resorts</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector type" value="Resorts">
                   <span class="checkmark"></span>
                 </label>
                 <label class="contain"><span class="filter-font">Hostels</span>
-                  <input type="checkbox">
+                  <input type="checkbox" class="common-selector type" value="Hostels">
                   <span class="checkmark"></span>
                 </label>
                
@@ -1392,500 +1364,51 @@
       
         <div class="holidaycard">     
 <!---------card-1st row------>
-           <div class="card-deck">
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6>   
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-2------------>
-                    
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-3------------>
-            
-             <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
+           <div class="card-deck fetch-data">
+              {% include 'cities/hotel_filter.html' %}
             </div>
             
-<!--            card-4th row-->
-           <div class="card-deck">
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-2------------>
-                    
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-3------------>
-            <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-deck">
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-2------------>
-                    
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-3------------>
-            
-             <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-deck">
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-2------------>
-                    
-              <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-              
-<!------------Card-3------------>
-            
-             <div class="card" style="height: fit-content!important;border-radius: 5px!important;">
-                <div class="image" style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)),url(./assets/img/taj.jpeg);border-top-left-radius: 5px!important;border-top-right-radius: 5px!important;">
-                   <div class="top-left">
-                       <i class="fas fa-map-marker-alt fa-2x" style="margin-top: 3px!important;"></i>
-                       <div style="float: right;margin-left: 2px;">
-                        <p style="margin-bottom: 0!important;letter-spacing: 2px;"><b>Agra</b></p>
-                        <p style="font-size: 11px;">Uttar Pradesh</p>
-                       </div>
-                   </div>
-                   <div class="top-right">
-                       <div class="gallery">
-                         <i class="far fa-image fa-lg"></i> 20 
-                       </div>
-                       
-                   </div>
-                   
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">The New Marrion Paradise</h5>
-                  
-                    <h6 class="card-title" style="color: dimgray!important;font-size: 13px;font-family:'Open sans', sans-serif"><span style="color: tomato!important;font-size: 14px;"><i class="fas fa-map-pin"></i> </span> Landmark : New Army Road | Qutub Minar</h6>
-                    
-                    <h6 class="card-title" style="color: goldenrod;font-size: 13px;font-family:'Poppins', sans-serif;margin-top: 10px!important;"><i class="fas fa-star"></i> <span style="font-size: 15px;"><b>4.5/5 </b></span><span style="color: #999!important;font-size: 13px;">&nbsp; | &nbsp;&nbsp;</span><span style="color: #999!important;font-size: 13px;"><i class="fas fa-users"></i> 1,425 reviews </span></h6>
-                    
-                    
-                    <h6 class="card-title" style="color: tomato;font-size: 16px;font-family:'Poppins', sans-serif;margin-bottom: 8px!important;margin-top: 18px!important; letter-spacing: 1px;font-weight: bold;">
-                        <b><i class="fas fa-money-bill-wave"></i> Price :</b>&nbsp;<span style="color: #666;font-size: 20px;font-family:'Lato', sans-serif;font-weight: 700!important;letter-spacing: 0px;"><b><i class="fas fa-rupee-sign"></i> 5000 /-</b></span>
-                    </h6> 
-                    
-                    
-                  
-                 
-                      <div class="btn-1">
-                          <a href="#" class="btn btn-primary">Book Now</a>
-                      </div>
-                 
-                </div>
-              </div>
-            </div>
         </div>
      </div>
+     <input type="hidden" id="city_id" value="{{city.city_id}}">
 {% endblock bodycontent %}
 
 
 {% block scriptcontent %} 
+<script>
+    $(document).ready(function(){
+      //filter_data();
+      function filter_data(){
+
+        var city_id = $("#city_id").val();
+        var type = get_filter('type');
+        var price = get_filter('price');
+        var rating = get_filter('rating');
+        var facility = get_filter('facility');
+        $.post({
+          url:"{% url 'cities-city_hotels_filter' %}",
+          data:{'city_id':city_id, 'type':type, 'price':price, 'rating':rating,
+                'facility':facility, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+          success:function(data){
+            $('.fetch-data').html(data);
+          }
+        });
+      }
+
+      function get_filter(class_name){
+        var filter = [];
+        $('.' + class_name + ':checked').each(function(){
+            filter.push($(this).val());
+        });
+        return filter;
+      }
+
+      $('.common-selector').click(function(){
+        filter_data();
+      });
+
+    });
+  </script>
     <script src="{% static 'cities/js/CheapFare.js' %}"></script>
 
     <script src="{% static 'cities/js/Calender.js' %}"></script>
@@ -2179,7 +1702,8 @@
                 }
             }
         </script>
-           
+        
+        
         
     
 {% endblock %}

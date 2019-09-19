@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import City, Place, Theme, IdealMonth, Activities
-
+from .models import ( City, Place, Theme, IdealMonth, Activities,
+                      Food, FoodCuisine, FoodDietaryTypes, FoodFeatures, FoodMeal,
+                      Hotel, HotelFacility, Package, photos,
+                    )
 
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
@@ -58,5 +60,15 @@ class ThemeAdmin(admin.ModelAdmin):
     class Meta:
         model = Theme
 
+
 admin.site.register(IdealMonth)
 admin.site.register(Activities)
+admin.site.register(FoodCuisine)
+admin.site.register(FoodDietaryTypes)
+admin.site.register(FoodMeal)
+admin.site.register(FoodFeatures)
+admin.site.register(Food)
+admin.site.register(Hotel)
+admin.site.register(HotelFacility)
+admin.site.register(Package)
+admin.site.register(photos)

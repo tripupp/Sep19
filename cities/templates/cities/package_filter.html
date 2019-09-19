@@ -1,0 +1,58 @@
+{% for package in packages %}
+       <div class="row no-gutters space">
+            <div class="col-md-4">
+              <img src="{{ package.package_pic.url }}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ package.name }}</h5>
+                <p class="card-text"><span class="tomato">{{ package.duration }} days and {{ package.duration|add:"-1" }} nights <i class="fas fa-edit"></i></span></p>
+                <p class="card-text"><small class="text-muted"><b>Starting From:</b></small></p>
+                <p class="card-text"><span class="price"><i class="fas fa-rupee-sign"></i> {{package.price}}/</span><small class="text-muted">Per Person on twin Sharing</small></p>
+                <p class="card-text"><small class="text-muted"><i class="fas fa-hotel" style="color: rosybrown;"></i> <b>Hotel included in package :</b> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i> <i class="fas fa-star fa-xs" style="color: goldenrod;"></i>
+                <span style="color: #333;">2 Star </span></small></p>
+                <p class="card-text"><small class="text-muted"><i class="fas fa-city" style="color: rosybrown;"></i> <b>Cities :</b> 
+                    {% for city in package.city.all %}
+                        {{ city.city_name }},
+                    {% endfor %}
+                </small></p>
+                
+                <div class="menu">
+                    <div class="submenu">
+                        <div class="icon">
+                            <i class="fas fa-utensils" style="text-align: center;"></i>
+                            <p class="icon_name">Meals</p>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <div class="icon">
+                            <i class="fas fa-hotel" style="text-align: center;"></i>
+                            <p class="icon_name">Hotel</p>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <div class="icon">
+                            <i class="fas fa-plane" style="text-align: center;"></i>
+                            <p class="icon_name">Flights</p>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <div class="icon">
+                            <i class="fas fa-car" style="text-align: center;"></i>
+                            <p class="icon_name">Transfer</p>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <div class="icon">
+                            <i class="fas fa-binoculars" style="text-align: center;"></i>
+                            <p class="icon_name">Sight</p>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="hr-style"></div>
+       {% endfor %}

@@ -1,7 +1,6 @@
 {% extends 'cities/base.html' %}
 {% load static %}
 
-
 {% block title %}
     Redfab
 {% endblock title %}
@@ -13,12 +12,14 @@
 
 
 {% block bodycontent %}
-<!--------Cuisine Section------------>
+{% include "cities/menubar.html" %}<br>
+
+  <!--------Cuisine Section------------>
    
-<div class="jumbotron jumbotron-fluid" style="background: linear-gradient(rgba(150,150,150,0.3), rgba(150,150,150,0.7)), url({% static 'cities\img\cuisine.jpeg' %});">
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
+        <div class="row" id="row-align">
+            <div class="col-sm-3">
               <div class="card" id="cuisine-card">
                 <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
                   <div class="centered">
@@ -29,7 +30,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="card" id="cuisine-card">
                 <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
                   <div class="centered">
@@ -40,7 +41,18 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
+              <div class="card" id="cuisine-card">
+                <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
+                  <div class="centered">
+                     <p class="cuisine-font">
+                         Chinese
+                     </p> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
               <div class="card" id="cuisine-card">
                 <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
                   <div class="centered">
@@ -52,8 +64,8 @@
               </div>
             </div>
           </div>
-          <div class="row" style="margin-top: 20px;">
-            <div class="col-sm-4">
+          <div class="row" id="row-align" style="margin-top: 20px;">
+            <div class="col-sm-3">
               <div class="card" id="cuisine-card">
                 <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
                   <div class="centered">
@@ -64,7 +76,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="card" id="cuisine-card">
                 <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
                   <div class="centered">
@@ -75,7 +87,18 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
+              <div class="card" id="cuisine-card">
+                <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
+                  <div class="centered">
+                     <p class="cuisine-font">
+                         Chinese
+                     </p> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
               <div class="card" id="cuisine-card">
                 <div class="card-body" id="cuisine-body" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'cities\img\cuisine.jpeg' %});">
                   <div class="centered">
@@ -97,99 +120,70 @@
       <div class="accordion col-sm-3" id="accordionExample">
         <div class="card" style="border: 0!important;background-color: transparent!important;">
           <div class="card-header" id="headingOne" style="background-color: transparent!important;">
-<!--              <h2 class="mb-0">-->
               <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 1px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;">
                 <b>Meals</b>
               </button>
-<!--              </h2>-->
           </div>
 
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
-                <label class="contain"><span class="filter-font">Dinner</span> 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="contain"><span class="filter-font">Lunch</span> 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="contain"><span class="filter-font">Brunch</span> 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-
-              <label class="contain"><span class="filter-font">Breakfast</span> 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              
+              {% for meal in meals %}  
+                <label class="contain"><span class="filter-font">{{meal.meal_name}}</span> 
+                  <input type="checkbox" class="common-selector meal" value="{{ meal.pk }}">
+                  <span class="checkmark"></span>
+                </label>
+              {% endfor %}
             </div>
           </div>
         </div>
         <div class="card" style="border: 0!important;background-color: transparent!important;">
           <div class="card-header" id="headingOne" style="background-color: transparent!important;">
-<!--              <h2 class="mb-0">-->
               <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="font-family: 'Poppins', sans-serif;letter-spacing: 1px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;">
                 <b>Price</b>
               </button>
-<!--              </h2>-->
           </div>
 
           <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
               <label class="contain"><span class="filter-font">Luxury</span> 
-                <input type="checkbox">
+                <input type="checkbox" class="common-selector price" value="2000,3000">
                 <span class="checkmark"></span>
               </label>
 
               <label class="contain"><span class="filter-font">Fine Dining</span> 
-                <input type="checkbox">
+                <input type="checkbox" class="common-selector price" value="1000,2000">
                 <span class="checkmark"></span>
               </label>
 
               <label class="contain"><span class="filter-font">Mid-Range</span> 
-                <input type="checkbox">
+                <input type="checkbox" class="common-selector price" value="500,1000">
                 <span class="checkmark"></span>
               </label>
 
               <label class="contain"><span class="filter-font">Cheap Eats</span> 
-                <input type="checkbox">
+                <input type="checkbox" class="common-selector price" value="0,500">
                 <span class="checkmark"></span>
               </label>
               
             </div>
           </div>
         </div>
+
         <div class="card" style="border: 0!important;background-color: transparent!important;">
           <div class="card-header" id="headingOne" style="background-color: transparent!important;">
-<!--              <h2 class="mb-0">-->
               <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;">
                 <b>Dietary Types</b>
               </button>
-<!--              </h2>-->
           </div>
 
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
-             
-              <label class="contain"><span class="filter-font">Only Vegetarian</span> 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              
-              <label class="contain"><span class="filter-font">Vegetarian Friendly</span> 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              
-              <label class="contain"><span class="filter-font">Non Vegetarian</span> 
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              
+              {% for dietary_type in dietary_types %}
+                <label class="contain"><span class="filter-font">{{dietary_type.dietary_type_name}}</span> 
+                  <input type="checkbox" class="common-selector dietary" value="{{ dietary_type.pk }}">
+                  <span class="checkmark"></span>
+                </label>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -199,41 +193,20 @@
       <div class="trip_advisor">
        <div class="card" style="border: 0!important;background-color: transparent!important;">
           <div class="card-header" id="headingOne" style="background-color: transparent!important;">
-<!--              <h2 class="mb-0">-->
               <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;transform: translate(-3%)">
                 <b>Cuisine</b>
               </button>
-<!--              </h2>-->
           </div>
 
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
-                
-                <label class="contain"><span class="filter-font">North Indian</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
+                {% for cuisine in cuisines %}
+                  <label class="contain"><span class="filter-font">{{ cuisine.cuisine_name }}</span> 
+                    <input type="checkbox" class="common-selector cuisine" value="{{ cuisine.pk }}">
+                    <span class="checkmark"></span>
+                  </label>
+                {% endfor %}
                
-               <label class="contain"><span class="filter-font">Chinease</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-               </label>
-               
-               <label class="contain"><span class="filter-font">Fast Food</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-               </label>
-               
-               <label class="contain"><span class="filter-font">Mughlai</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-               </label>
-                
-                <label class="contain"><span class="filter-font">Biriyani</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-                
             </div>
           </div>
         </div>
@@ -242,41 +215,22 @@
         <div class="trip_advisor">
        <div class="card" style="border: 0!important;background-color: transparent!important;">
           <div class="card-header" id="headingOne" style="background-color: transparent!important;">
-<!--              <h2 class="mb-0">-->
+ 
               <button class="btn btn-design" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif;letter-spacing: 2px;background-color: rgb(248,248,248)!important;border-color: transparent!important;color: tomato!important;text-align: left!important;padding-left: 0px!important;transform: translate(-3%)">
                 <b>Features</b>
               </button>
-<!--              </h2>-->
+  
           </div>
 
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body" style="padding-top: 10px!important;padding-right: 0px!important;padding-left: 0px!important">
                 
-                <label class="contain"><span class="filter-font">Credit Cards</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-               
-               <label class="contain"><span class="filter-font">Free Wifi</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-               </label>
-               
-               <label class="contain"><span class="filter-font">Delivery</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-               </label>
-               
-               <label class="contain"><span class="filter-font">Serves Alcohol</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-               </label>
-                
-                <label class="contain"><span class="filter-font">Private Dining</span> 
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-                
+                {% for feature in features %}
+                  <label class="contain"><span class="filter-font">{{ feature.feature_name }}</span> 
+                    <input type="checkbox" class="common-selector feature" value="{{ feature.pk }}">
+                    <span class="checkmark"></span>
+                  </label>
+                {% endfor %}
             </div>
           </div>
         </div>
@@ -285,104 +239,54 @@
       
 <!----------------Card------------->
     
-      <div class="card mb-3 col-sm-9" >
-        <div class="row no-gutters space">
-          <div class="col-md-4">
-            <img src="{% static 'cities\img\cuisine.jpeg' %}" class="card-img" alt="...">
-            <div class="top-right" id="rating-photo">
-              <b>4.5</b> 
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Thyme Foods</h5>
-              
-              <p class="card-text" style="color: #777!important;"><small class="text-muted"><b>North Indian &nbsp;|&nbsp; Chinese &nbsp;|&nbsp; Mughlai</b></small></p>
-  
-              <p class="card-text" style="font-size: 1.2rem;margin-top: 0px;margin-bottom: 7px;"><small class="text-muted" style="color: rgba(203,32,45,0.8)!important;"><b>Cost For Two : </b>INR 100 - 500 </small></p>
-              
-              <p class="card-text" style="margin-top: 5px;"><small class="text-muted"><i class="fas fa-clock" style="color: rosybrown; font-size: 1rem;"></i> <b>Duration :</b> 9:30 AM - 10:00 PM </small></p>
-              
-              
-              <p class="card-text"><small class="text-muted"><i class="fas fa-utensils" style="color: rosybrown; font-size: 1rem;"></i> <b>Meals :</b> Lunch | Drinks | Dinner | After-Hours </small></p>
-              
-              <p class="card-text"><small class="text-muted"><i class="fas fa-archive" style="color: rosybrown; font-size: 1rem;"></i> <b>Features :</b> Reservations, Parking Available, Wheelchair Accessible, Serves Alcohol</small></p>
-              
-              <p class="card-text" style="margin-top: 7px;font-style: italic;"><small class="text-muted"><i class="fab fa-telegram-plane" style="color: rosybrown; font-size: 1rem;"></i> <b>Reach Us :</b> Aerocity 1 Asset No, New Delhi
-</small></p>
-              
-            </div>
-          </div>
-        </div>
-        
-        <div class="hr-style"></div>
-        
-        <div class="row no-gutters space">
-          <div class="col-md-4">
-            <img src="{% static 'cities\img\cuisine.jpeg' %}" class="card-img" alt="...">
-            <div class="top-right" id="rating-photo">
-              <b>4.5</b> 
-            </div>
-          </div>
-          <div class="col-md-8">
-             <div class="card-body">
-              <h5 class="card-title">Thyme Foods</h5>
-              
-              <p class="card-text" style="color: #777!important;"><small class="text-muted"><b>North Indian &nbsp;|&nbsp; Chinese &nbsp;|&nbsp; Mughlai</b></small></p>
-  
-              <p class="card-text" style="font-size: 1.2rem;margin-top: 0px;margin-bottom: 7px;"><small class="text-muted" style="color: rgba(203,32,45,0.8)!important;"><b>Cost For Two : </b>INR 100 - 500 </small></p>
-              
-              <p class="card-text" style="margin-top: 5px;"><small class="text-muted"><i class="fas fa-clock" style="color: rosybrown; font-size: 1rem;"></i> <b>Duration :</b> 9:30 AM - 10:00 PM </small></p>
-              
-              
-              <p class="card-text"><small class="text-muted"><i class="fas fa-utensils" style="color: rosybrown; font-size: 1rem;"></i> <b>Meals :</b> Lunch | Drinks | Dinner | After-Hours </small></p>
-              
-              <p class="card-text"><small class="text-muted"><i class="fas fa-archive" style="color: rosybrown; font-size: 1rem;"></i> <b>Features :</b> Reservations, Parking Available, Wheelchair Accessible, Serves Alcohol</small></p>
-              
-              <p class="card-text" style="margin-top: 7px;font-style: italic;"><small class="text-muted"><i class="fab fa-telegram-plane" style="color: rosybrown; font-size: 1rem;"></i> <b>Reach Us :</b> Aerocity 1 Asset No, New Delhi
-</small></p>
-              
-            </div>
-          </div>
-        </div>
-        
-        <div class="hr-style"></div>
-        
-        <div class="row no-gutters space">
-          <div class="col-md-4">
-            <img src="{% static 'cities\img\cuisine.jpeg' %}" class="card-img" alt="...">
-            <div class="top-right" id="rating-photo">
-              <b>4.5</b> 
-            </div>
-          </div>
-          <div class="col-md-8">
-             <div class="card-body">
-              <h5 class="card-title">Thyme Foods</h5>
-              
-              <p class="card-text" style="color: #777!important;"><small class="text-muted"><b>North Indian &nbsp;|&nbsp; Chinese &nbsp;|&nbsp; Mughlai</b></small></p>
-  
-              <p class="card-text" style="font-size: 1.2rem;margin-top: 0px;margin-bottom: 7px;"><small class="text-muted" style="color: rgba(203,32,45,0.8)!important;"><b>Cost For Two : </b>INR 100 - 500 </small></p>
-              
-              <p class="card-text" style="margin-top: 5px;"><small class="text-muted"><i class="fas fa-clock" style="color: rosybrown; font-size: 1rem;"></i> <b>Duration :</b> 9:30 AM - 10:00 PM </small></p>
-              
-              
-              <p class="card-text"><small class="text-muted"><i class="fas fa-utensils" style="color: rosybrown; font-size: 1rem;"></i> <b>Meals :</b> Lunch | Drinks | Dinner | After-Hours </small></p>
-              
-              <p class="card-text"><small class="text-muted"><i class="fas fa-archive" style="color: rosybrown; font-size: 1rem;"></i> <b>Features :</b> Reservations, Parking Available, Wheelchair Accessible, Serves Alcohol</small></p>
-              
-              <p class="card-text" style="margin-top: 7px;font-style: italic;"><small class="text-muted"><i class="fab fa-telegram-plane" style="color: rosybrown; font-size: 1rem;"></i> <b>Reach Us :</b> Aerocity 1 Asset No, New Delhi
-</small></p>
-              
-            </div>
-          </div>
-        </div>
-        
+      <div class="card mb-3 col-sm-9 fetch-data" >
+          {% include "cities/food_filter.html" %}    
       </div>
       
      </div>
   </div>
+  <input type="hidden" id="city_id" value="{{city.city_id}}">
 {% endblock bodycontent %}
 
 
-{% block scriptcontent %} 
+{% block scriptcontent %}
+  <script src="{% static 'cities/js/filter.js' %} "></script>
+  <script src="{% static 'cities/js/read.js' %} "></script>
+  <script src="{% static 'cities/js/5more.js' %} "></script>
+  <script>
+      $(document).ready(function(){
+        //filter_data();
+        function filter_data(){
+
+          var city_id = $("#city_id").val();
+          var meals = get_filter('meal');
+          var price = get_filter('price');
+          var feature = get_filter('feature');
+          var cuisine = get_filter('cuisine');
+          var dietary = get_filter('dietary');
+          $.post({
+            url:"{% url 'cities-city_foods_filter' %}",
+            data:{'city_id':city_id, 'meals':meals, 'price':price, 'feature':feature,
+                  'cuisine':cuisine, 'dietary':dietary,
+                  'csrfmiddlewaretoken': '{{ csrf_token }}'},
+            success:function(data){
+              $('.fetch-data').html(data);
+            }
+          });
+        }
+
+        function get_filter(class_name){
+          var filter = [];
+          $('.' + class_name + ':checked').each(function(){
+              filter.push($(this).val());
+          });
+          return filter;
+        }
+
+        $('.common-selector').click(function(){
+          filter_data();
+        });
+
+      });
+    </script>
 {% endblock %}

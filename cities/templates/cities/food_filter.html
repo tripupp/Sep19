@@ -1,0 +1,57 @@
+{% for food in foods %}
+    <div class="row no-gutters space">
+    <div class="col-md-4">
+        <img src="{{ food.food_pic.url }}" class="card-img" alt="...">
+        <div class="top-right" id="rating-photo">
+        <b>4.5</b> 
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card-body">
+        <h5 class="card-title">{{ food.name }}</h5>
+        
+        <p class="card-text" style="color: #777!important;"><small class="text-muted"><b>
+            {% for cuisine in food.cuisine.all %}
+                {% if forloop.last %}
+                {{cuisine.cuisine_name}} &nbsp;
+                {% else %}
+                {{cuisine.cuisine_name}} &nbsp;|&nbsp;
+                {% endif %}
+            {% endfor %}
+        </b></small></p>
+
+        <p class="card-text" style="font-size: 1.2rem;margin-top: 0px;margin-bottom: 7px;"><small class="text-muted" style="color: rgba(203,32,45,0.8)!important;"><b>Cost For Two : </b>INR {{food.minimum_price}} - {{food.maximum_price}} </small></p>
+        
+        <p class="card-text" style="margin-top: 5px;"><small class="text-muted"><i class="fas fa-clock" style="color: rosybrown; font-size: 1rem;"></i> <b>Duration :</b> {{food.duration_from}} - {{food.duration_to}} </small></p>
+        
+        
+        <p class="card-text">
+            <small class="text-muted"><i class="fas fa-utensils" style="color: rosybrown; font-size: 1rem;"></i> 
+            <b>Meals :</b>  
+            {% for meal in food.meal.all %}
+                {% if forloop.last %}
+                {{meal.meal_name}} &nbsp;
+                {% else %}
+                {{meal.meal_name}} |&nbsp;
+                {% endif %}
+            {% endfor %}
+            </small>
+        </p>
+        
+        <p class="card-text">
+            <small class="text-muted"><i class="fas fa-archive" style="color: rosybrown; font-size: 1rem;"></i> <b>Features :</b> 
+            {% for feature in food.features.all %}
+                {{feature.feature_name}},&nbsp;
+            {% endfor %}
+            </small>
+        </p>
+        
+        <p class="card-text" style="margin-top: 7px;font-style: italic;"><small class="text-muted"><i class="fab fa-telegram-plane" style="color: rosybrown; font-size: 1rem;"></i> <b>Reach Us :</b> {{food.reach_us}}
+</small></p>
+        
+        </div>
+    </div>
+    </div>
+    
+    <div class="hr-style"></div>
+{% endfor %}

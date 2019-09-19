@@ -43,7 +43,7 @@ class FilterView(View):
             day = max([int(i) for i in request.POST.getlist('day[]')])
         else:
             day = None
-        print(day,request.POST)
+        # print(day,request.POST)
         if (not themes) and (not city) and (not month) and (not activity) and (not region) and (not day):
             cities = City.objects.all()
         else:

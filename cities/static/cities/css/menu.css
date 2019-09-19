@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
-<link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css?family=Lato:900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 body, html {
@@ -76,7 +76,7 @@ body, html {
     margin-bottom: 100px;
 }
 
-.tablink {
+.tablink-menubar {
   background-color: white;
   color: black;
   float: left;
@@ -91,12 +91,12 @@ body, html {
   border-bottom: 4px solid rgba(248,105,96,0.5);
 }
 
-.tablink:hover {
+.tablink-menubar:hover {
   background-color: rgb(238,238,238);
   border-bottom: 4px solid rgba(248,105,96,1);
 }
 
-.tablink:focus{
+.tablink-menubar:focus{
     border-bottom: 4px solid tomato;
 }
 
@@ -121,7 +121,7 @@ body, html {
         font-size: 60px!important;
     }
     
-    .tablink {
+    .tablink-menubar {
         width: 20%!important;
         height: 50px!important;
     }
@@ -131,26 +131,26 @@ body, html {
         transform: translateX(0%)!important;
     }
     
-    #menu {
+    #menu-menubar {
         display: none;
     }
     
-    #icon {
+    #icon-menubar {
         transform: translateY(0%)!important;
         transform: translateX(-20%)!important;
     }
     
-    #icon3 {
+    #icon-menubar3 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon4 {
+    #icon-menubar4 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon7 {
+    #icon-menubar7 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-0%)!important;*/
     }
@@ -163,7 +163,7 @@ body, html {
         font-size: 60px!important;
     }
     
-    .tablink {
+    .tablink-menubar {
         width: 20%!important;
         height: 50px!important;
     }
@@ -173,26 +173,26 @@ body, html {
         transform: translateX(0%)!important;
     }
     
-    #menu {
+    #menu-menubar {
         display: none;
     }
     
-    #icon {
+    #icon-menubar {
         transform: translateY(0%)!important;
         transform: translateX(-20%)!important;
     }
     
-    #icon3 {
+    #icon-menubar3 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon4 {
+    #icon-menubar4 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon7 {
+    #icon-menubar7 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-0%)!important;*/
     }
@@ -205,7 +205,7 @@ body, html {
         font-size: 60px!important;
     }
     
-    .tablink {
+    .tablink-menubar {
         width: 20%!important;
         height: 50px!important;
     }
@@ -215,26 +215,26 @@ body, html {
         transform: translateX(7%)!important;
     }
     
-    #menu {
+    #menu-menubar {
         display: none;
     }
     
-    #icon {
+    #icon-menubar {
         transform: translateY(0%)!important;
         transform: translateX(-20%)!important;
     }
     
-    #icon3 {
+    #icon3-menubar {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon4 {
+    #icon-menubar4 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon7 {
+    #icon-menubar7 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-0%)!important;*/
     }
@@ -247,7 +247,7 @@ body, html {
         font-size: 60px!important;
     }
     
-    .tablink {
+    .tablink-menubar {
         width: 20%!important;
         height: 50px!important;
     }
@@ -257,26 +257,26 @@ body, html {
         transform: translateX(7%)!important;
     }
     
-    #menu {
+    #menu-menubar {
         display: none;
     }
     
-    #icon {
+    #icon-menubar {
         transform: translateY(0%)!important;
         transform: translateX(-20%)!important;
     }
     
-    #icon3 {
+    #icon-menubar3 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon4 {
+    #icon-menubar4 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon7 {
+    #icon-menubar7 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-0%)!important;*/
     }
@@ -285,26 +285,26 @@ body, html {
 }
 @media only screen and (max-width: 600px) {
     
-    #menu {
+    #menu-menubar {
         display: none;
     }
     
-    #icon {
+    #icon-menubar {
         transform: translateY(0%)!important;
         transform: translateX(-20%)!important;
     }
     
-    #icon3 {
+    #icon-menubar3 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon4 {
+    #icon-menubar4 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-20%)!important;*/
     }
     
-    #icon7 {
+    #icon-menubar7 {
         transform: translateY(-40%)!important;
 /*        transform: translateX(-0%)!important;*/
     }
@@ -314,7 +314,7 @@ body, html {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
-    #menu {
+    #menu-menubar {
         display: none;
     }
 } 
